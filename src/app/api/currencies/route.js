@@ -6,8 +6,7 @@ export async function GET() {
     {
       headers: {
         "Content-Type": "application/json",
-        "X-Api-Key":
-          "TAc3SNMUCWALWwWdLZTmBRX19FwjJworpD8qrG2vQTlXaGhxtZwCE83o7CFOChlp",
+        "X-Api-Key": process.env.YODAFOREX_API_KEY,
       },
     }
   );
