@@ -9,9 +9,6 @@ export default function ExchangeTable() {
 
   const [exchangeData, setExchangeData] = useState();
 
-  const resolution = window.innerWidth;
-  const isMobile = resolution >= 320 && resolution <= 480;
-
   useEffect(() => {
     const exCall = async () => {
       const res = await fetch("/api/currencies").then((res) => res.json());
