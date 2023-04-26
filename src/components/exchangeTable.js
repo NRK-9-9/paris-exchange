@@ -104,3 +104,15 @@ export default function ExchangeTable() {
     </div>
   );
 }
+
+{
+  /* <div className="p-3 flex flex-row place-items-center border-l-secondary border-l-2 mt-6 ">
+            <BuildingIcon />
+            <Link
+              className="font-semibold lg:p-2 p-1 lg:pl-3 pl-2 text-sm lg:text-lg text-gray-600 underline underline-offset-4"
+              href="/"
+            >
+              4 Bd Saint-Michel, 75006 Paris
+            </Link>
+          </div> */
+}
