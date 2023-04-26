@@ -10,7 +10,6 @@ const Navbar = () => {
           href="/"
           className="text-lg font-extrabold flex place-items-center justify-center lg:flex-1 lg:justify-center lg:ml-32 lg:text-xl "
         >
-          {/* <Logo className="w-20 h-20 lg:-mr-5 -mr-4 -my-1" /> */}
           <p className="lg:text-4xl text-2xl ">PARIS EXCHANGE</p>
         </Link>
         <h1 href="/" className="lg:mr-4 lg:visible  invisible">

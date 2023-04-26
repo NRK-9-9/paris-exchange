@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React from "react";
+import LogoIcon from "./icons/logoIcon";
 // import Logo from "../../public/Logo.svg";
 
 const Footer = () => {
@@ -9,6 +10,7 @@ const Footer = () => {
       <div>
         <div className="flex flex-row">
           {/* <Logo className="w-16 h-16 -mt-4 -mr-4" /> */}
+          <LogoIcon></LogoIcon>
           <p className="font-bold text-xl">PARIS EXCHANGE</p>
         </div>
 

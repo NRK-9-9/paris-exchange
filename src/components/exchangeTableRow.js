@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import FlagCoded from "../components/flagCoded";
 
-const ExchangeTableRow = ({
-  code,
-  currency,
-  name,
-  buyRate,
-  sellRate,
-  index,
-}) => {
+const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
   const [sellNum1, setSellNum1] = useState();
   const [sellNum2, setSellNum2] = useState();
   const [buyNum1, setBuyNum1] = useState();

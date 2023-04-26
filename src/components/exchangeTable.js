@@ -4,39 +4,64 @@ import ExchangeTableRow from "./exchangeTableRow";
 import SearchTable from "./searchTable";
 
 export default function ExchangeTable() {
-  const [filteredList, setFilteredList] = useState();
   const [countries, setCountries] = useState([]);
 
   const [exchangeData, setExchangeData] = useState();
 
+  const [selectedValue, setValue] = useState("none");
+  const [selectedCountry, setCountry] = useState();
+
   useEffect(() => {
     const exCall = async () => {
       const res = await fetch("/api/currencies").then((res) => res.json());
-      setExchangeData(res.data);
-      setFilteredList(res.data);
-      setCountries(res.data);
+      const sortedList = res.data.sort((a, b) =>
+        a.country.localeCompare(b.country)
+      );
+      setExchangeData(sortedList);
+      setCountries(sortedList);
+      console.log(sortedList);
     };
     exCall();
-    console.log(exchangeData);
   }, []);
 
-  const filterBySearch = (event) => {
-    const query = event.target.value;
-    var updatedList = [...countries];
-    updatedList = updatedList.filter((item) => {
-      const out =
-        item.country.toLowerCase().indexOf(query.toLowerCase()) !== -1;
-
-      return out;
-    });
-    setFilteredList(updatedList);
+  const handleTypeSelect = (e) => {
+    setValue(e.target.value);
+    const searchObject =
+      e.target.value !== "none"
+        ? exchangeData.find((country) => country.country === e.target.value)
+        : "none";
+    setCountry(searchObject);
+    console.log(selectedCountry);
   };
 
   return (
     <div>
-      <div className="flex justify-center mt-10">
-        <SearchTable search={filterBySearch} />
-      </div>
+      {exchangeData && (
+        <div className="flex justify-center mt-10">
+          <div className="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text">
+                Choisissez le pays que vous voulez
+              </span>
+            </label>
+            <select
+              // options={exchangeData.map((country) => country.country)}
+              className="select select-bordered"
+              onChange={handleTypeSelect}
+              value={selectedValue}
+            >
+              <option value={"none"} className="text-neutral-400">
+                Choisissez un pays
+              </option>
+              {exchangeData.map((option) => (
+                <option key={option.id} value={option.country}>
+                  {option.country}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+      )}
       <table className="table table-compact lg:w-full w-[95%] mx-[2.5%] lg:mt-10 mt-7">
         <thead>
           <tr>
@@ -53,39 +78,29 @@ export default function ExchangeTable() {
           </tr>
         </thead>
         <tbody>
-          {filteredList
-            ? filteredList
-                .slice(0, 6)
-                .map((country, index) => (
-                  <ExchangeTableRow
-                    key={country.code}
-                    code={country.countryIso2}
-                    currency={country.iso}
-                    name={country.country}
-                    buyRate={country.deskBuyRate}
-                    sellRate={country.deskSellRate}
-                    index={index}
-                  ></ExchangeTableRow>
-                ))
-            : null}
+          {selectedValue === "none" ? (
+            countries.map((country) => (
+              <ExchangeTableRow
+                key={country.code}
+                code={country.countryIso2}
+                currency={country.iso}
+                name={country.country}
+                buyRate={country.deskBuyRate}
+                sellRate={country.deskSellRate}
+              ></ExchangeTableRow>
+            ))
+          ) : (
+            <ExchangeTableRow
+              key={selectedCountry.code}
+              code={selectedCountry.countryIso2}
+              currency={selectedCountry.iso}
+              name={selectedCountry.country}
+              buyRate={selectedCountry.deskBuyRate}
+              sellRate={selectedCountry.deskSellRate}
+            ></ExchangeTableRow>
+          )}
         </tbody>
       </table>
-      {/* <div className="bg-base-200 mt-8 p-4 rounded-t-lg lg:text-2xl text-xl justify-center flex">
-        Exchange Table
-      </div>
-      <div>
-        {filteredList?.map((country, index) => (
-          <ExchangeTableRow
-            key={country.code}
-            code={country.countryIso2}
-            currency={country.iso}
-            name={country.country}
-            buyRate={country.deskBuyRate}
-            sellRate={country.deskSellRate}
-            index={index}
-          ></ExchangeTableRow>
-        ))}
-      </div> */}
     </div>
   );
 }
