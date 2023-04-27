@@ -10,7 +10,9 @@ const Navbar = () => {
           href="/"
           className="text-lg font-extrabold flex place-items-center justify-center lg:flex-1 lg:justify-center lg:ml-32 lg:text-xl "
         >
-          <p className="lg:text-4xl text-2xl font-logoFont">PARIS EXCHANGE</p>
+          <p className="lg:text-4xl text-2xl font-logoFont mt-3">
+            PARIS EXCHANGE
+          </p>
         </Link>
         <h1 href="/" className="lg:mr-4 lg:visible  invisible">
           <p> Télé: 0954111110</p>
