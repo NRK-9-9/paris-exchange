@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        logoFont: "Hatton",
+        logoFont: "Agrandir",
       },
     },
   },

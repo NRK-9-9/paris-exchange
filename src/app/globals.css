@@ -6,24 +6,13 @@
 
 
 @font-face {
-    font-family: "Hatton";
-    src: url("../../public/hatton.otf");
+    font-family: "Agrandir";
+    src: url("../../public/Agrandir-Regular.otf");
   }
-
-/* @font-face {
-font-family: "Poppins";
-src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-} */
-
-
-@font-face {
-font-family: "Poppins";
-src: url("../../public/Poppins-Medium.ttf");
-}
 
 
 body {
-  font-family: "Poppins";
+  font-family: "Roboto";
 }
 
 
