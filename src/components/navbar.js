@@ -15,7 +15,7 @@ const Navbar = () => {
           </p>
         </Link>
         <h1 href="/" className="lg:mr-4 lg:visible  invisible">
-          <p> Télé: 0954111110</p>
+          <p> Tél: 0954111110</p>
         </h1>
       </div>
       <div className="tabs lg:ml-3">
