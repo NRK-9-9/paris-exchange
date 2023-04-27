@@ -1,3 +1,27 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');  */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: "Hatton";
+    src: url("../../public/hatton.otf");
+  }
+
+/* @font-face {
+font-family: "Poppins";
+src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+} */
+
+
+@font-face {
+font-family: "Poppins";
+src: url("../../public/Poppins-Medium.ttf");
+}
+
+
+body {
+  font-family: "Poppins";
+}

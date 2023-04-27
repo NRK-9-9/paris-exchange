@@ -62,10 +62,10 @@ export default function ExchangeTable() {
           </div>
         </div>
       )}
-      <table className="table table-compact lg:w-full w-[95%] mx-[2.5%] lg:mt-10 mt-7">
+      <table className="table table-compact lg:w-full w-min mx-[2%] lg:mt-10 mt-7">
         <thead>
           <tr>
-            <th className="bg-neutral-900 text-neutral-content lg:text-xl text-lg  lg:block hidden h-16"></th>
+            <th className="bg-neutral-900 text-neutral-content lg:text-xl text-lg lg:block hidden h-16"></th>
             <th className="bg-neutral-900 text-neutral-content lg:text-xl text-lg lg:rounded-none rounded-tl-md">
               PAYS
             </th>
@@ -85,8 +85,8 @@ export default function ExchangeTable() {
                 code={country.countryIso2}
                 currency={country.iso}
                 name={country.country}
-                buyRate={country.deskBuyRate}
-                sellRate={country.deskSellRate}
+                buyRate={country.webBuyRate}
+                sellRate={country.webSellRate}
               ></ExchangeTableRow>
             ))
           ) : (

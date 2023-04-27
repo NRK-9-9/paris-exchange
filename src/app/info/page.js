@@ -12,7 +12,7 @@ import MailIcon from "@/components/icons/mailIcon";
 const Info = () => {
   return (
     <div className="lg:m-16 mx-5 lg:mt-0 mt-16">
-      <h1 className="font-extrabold lg:text-3xl text-2xl lg:mb-5 mb-4">
+      <h1 className="font-extrabold lg:text-3xl text-2xl lg:mb-5 mb-4  font-logoFont">
         Nos Bureaux:
       </h1>
       <h5 className="lg:text-xl text-md  text-gray-500">
