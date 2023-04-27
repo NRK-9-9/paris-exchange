@@ -10,7 +10,7 @@ const Navbar = () => {
           href="/"
           className="text-lg font-extrabold flex place-items-center justify-center lg:flex-1 lg:justify-center lg:ml-32 lg:text-xl "
         >
-          <p className="lg:text-4xl text-2xl font-logoFont mt-3">
+          <p className="lg:text-4xl text-2xl font-logoFont lg:mt-3">
             PARIS EXCHANGE
           </p>
         </Link>
