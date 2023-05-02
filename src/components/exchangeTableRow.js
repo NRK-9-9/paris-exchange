@@ -65,10 +65,10 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
 
           <div className="mt-1 mb-0">
             <p className="text-xs text-neutral-500 lg:text-sm ">
-              1 {currency} = {sellRate} EUR
+              1 {currency} = {(1 * buyRate).toFixed(3)} EUR
             </p>
             <p className="text-xs text-neutral-500 lg:text-sm ">
-              1 EUR = {sellRate} {currency}
+              1 EUR = {(1 / buyRate).toFixed(3)} {currency}
             </p>
           </div>
         </div>
@@ -91,10 +91,10 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
           </div>
           <div className="mt-1 mb-0">
             <p className="text-xs text-neutral-500 lg:text-sm ">
-              1 {currency} = {buyRate} EUR
+              1 {currency} = {1 * sellRate.toFixed(3)} EUR
             </p>
             <p className="text-xs text-neutral-500 lg:text-sm ">
-              1 EUR = {buyRate} {currency}
+              1 EUR = {(1 / sellRate).toFixed(3)} {currency}
             </p>
           </div>
         </div>
