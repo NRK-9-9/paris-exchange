@@ -106,13 +106,27 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
           <div>
             {AchatRes === "num2" ? (
               <YesNoQuestion
-                Question={`Pour ${sellEur} EUR changer ${sellCur} ${currency}`}
+                Question1={`Pour ${sellEur} EUR `}
+                Question2={`changer ${sellCur} ${currency}?`}
                 noFunc={() => setAchatRes(false)}
+                yesData={{
+                  orderType: "sell",
+                  currency: currency,
+                  currencyAmount: sellCur,
+                  eurAmount: sellEur,
+                }}
               />
             ) : (
               <YesNoQuestion
-                Question={`Changer ${sellCur} ${currency} pour ${sellEur} EUR`}
+                Question1={`Changer ${sellCur} ${currency}`}
+                Question2={`pour ${sellEur} EUR?`}
                 noFunc={() => setAchatRes(false)}
+                yesData={{
+                  orderType: "sell",
+                  currency: currency,
+                  currencyAmount: sellCur,
+                  eurAmount: sellEur,
+                }}
               />
             )}
           </div>
@@ -174,13 +188,27 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
           <div>
             {VenteRes === "num2" ? (
               <YesNoQuestion
-                Question={`Changer ${buyCur} ${currency} pour ${buyEur} EUR`}
+                Question1={`Changer ${buyCur} ${currency}`}
+                Question2={` pour ${buyEur} EUR?`}
                 noFunc={() => setVenteRes(false)}
+                yesData={{
+                  orderType: "buy",
+                  currency: currency,
+                  currencyAmount: buyCur,
+                  eurAmount: buyEur,
+                }}
               />
             ) : (
               <YesNoQuestion
-                Question={`Pour ${buyEur} EUR changer ${buyCur} ${currency}`}
+                Question1={`Pour ${buyEur} EUR `}
+                Question2={`changer ${buyCur} ${currency}?`}
                 noFunc={() => setVenteRes(false)}
+                yesData={{
+                  orderType: "buy",
+                  currency: currency,
+                  currencyAmount: buyCur,
+                  eurAmount: buyEur,
+                }}
               />
             )}
           </div>

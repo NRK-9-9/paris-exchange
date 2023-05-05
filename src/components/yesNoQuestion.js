@@ -1,18 +1,33 @@
+import Link from "next/link";
 import React from "react";
 
-const YesNoQuestion = ({ Question, noFunc, yesFunc }) => {
+const YesNoQuestion = ({ Question1, Question2, noFunc, yesData }) => {
   return (
-    <div className="card lg:p-4 p-1 bg-secondary ">
-      <p className="font-semibold lg:text-lg text-xs flex flex-row justify-center ">
-        {Question}
+    <div className="lg:p-2 p-1 bg-neutral text-neutral-content rounded-md">
+      <p className="font-semibold lg:text-sm text-xs flex flex-row justify-center ">
+        {Question1}
+      </p>
+      <p className="font-semibold lg:text-sm text-xs flex flex-row justify-center ">
+        {Question2}
       </p>
       <div className="flex flex-row justify-evenly mt-3">
-        <button className="btn btn-xs  btn-error" onClick={noFunc}>
-          NO
+        <button className="btn btn-xs btn-ghost" onClick={noFunc}>
+          back
         </button>
-        <button className="btn btn-xs  btn-success" onClick={yesFunc}>
-          YES
-        </button>
+        <Link
+          className="btn btn-xs btn-primary"
+          href={{
+            pathname: "/reserve/",
+            query: {
+              order_type: yesData.orderType,
+              currency: yesData.currency,
+              currency_amount: yesData.currencyAmount,
+              eur_amount: yesData.eurAmount,
+            },
+          }}
+        >
+          reserver
+        </Link>
       </div>
     </div>
   );

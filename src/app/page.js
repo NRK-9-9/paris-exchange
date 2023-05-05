@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <div className="lg:mt-10 mt-5 lg:grid lg:grid-cols-4 lg:gap-10 lg:mx-10">
-        <div className="col-span-3">
+      <div className=" mt-5 lg:grid lg:grid-cols-4 lg:gap-10 lg:mx-10">
+        <div className="col-span-3 place-items-center">
           <ExchangeTable />
         </div>
         <div className="card lg:w-full lg:h-full bg-base-300 p-3 lg:mt-0 mt-14">
