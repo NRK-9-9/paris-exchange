@@ -19,14 +19,14 @@ const Order = () => {
   const [date, setExchangeDate] = useState();
   const [email, setEmail] = useState();
 
-  if (order_type === null) {
-    router.push("/");
-  }
+  // if (order_type === null) {
+  //   router.push("/");
+  // }
 
   const form = useRef();
 
   const sendEmail = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     // console.log(form.current);
 
     send(
@@ -51,6 +51,7 @@ const Order = () => {
         console.log(error.text);
       }
     );
+    router.push("/");
   };
 
   return (
