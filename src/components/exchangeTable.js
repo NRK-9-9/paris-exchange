@@ -1,22 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ExchangeTableRow from "./exchangeTableRow";
 
-async function getData() {
-  return await (
-    await fetch(
-      "https://demo.web-connect.api.yodaforex.fr/v1/products/currencies",
-      {
-        headers: {
-          "Content-Type": "application/json",
-          "X-Api-Key": process.env.YODAFOREX_API_KEY,
-        },
-        cache: "no-store",
-      }
-    )
-  ).json();
-}
-
-export default function ExchangeTable() {
+export default function ExchangeTable({ res }) {
   const [countries, setCountries] = useState([]);
 
   const [exchangeData, setExchangeData] = useState();
@@ -26,10 +11,15 @@ export default function ExchangeTable() {
 
   useEffect(() => {
     const exCall = async () => {
-      const res = await fetch("/api/currencies").then((res) => res.json());
-      const sortedList = res.data.sort((a, b) =>
-        a.country.localeCompare(b.country)
-      );
+      const res = await fetch("/api/countryexchange", {
+        headers: {
+          "Content-Type": "application/json",
+          "X-Api-Key": process.env.NEXT_PUBLIC_YODAFOREX,
+        },
+      }).then((res) => res.json());
+      console.log(res);
+
+      const sortedList = res.sort((a, b) => a.country.localeCompare(b.country));
       setExchangeData(sortedList);
       setCountries(sortedList);
       console.log(sortedList);
@@ -92,9 +82,9 @@ export default function ExchangeTable() {
         </thead>
         <tbody>
           {selectedValue === "none" ? (
-            countries.map((country) => (
+            countries.map((country, index) => (
               <ExchangeTableRow
-                key={country.code}
+                key={index}
                 code={country.countryIso2}
                 currency={country.iso}
                 name={country.country}
@@ -118,14 +108,14 @@ export default function ExchangeTable() {
   );
 }
 
-{
-  /* <div className="p-3 flex flex-row place-items-center border-l-secondary border-l-2 mt-6 ">
-            <BuildingIcon />
-            <Link
-              className="font-semibold lg:p-2 p-1 lg:pl-3 pl-2 text-sm lg:text-lg text-gray-600 underline underline-offset-4"
-              href="/"
-            >
-              4 Bd Saint-Michel, 75006 Paris
-            </Link>
-          </div> */
+export async function getServerSideProps(context) {
+  const res = (
+    await fetch("http://worldtimeapi.org/api/timezone/Asia/Beirut")
+  ).json();
+
+  console.log(res);
+
+  return {
+    props: { res }, // will be passed to the page component as props
+  };
 }
