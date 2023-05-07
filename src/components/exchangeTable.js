@@ -1,7 +1,20 @@
-"use client";
 import React, { useEffect, useState } from "react";
 import ExchangeTableRow from "./exchangeTableRow";
-import SearchTable from "./searchTable";
+
+async function getData() {
+  return await (
+    await fetch(
+      "https://demo.web-connect.api.yodaforex.fr/v1/products/currencies",
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "X-Api-Key": process.env.YODAFOREX_API_KEY,
+        },
+        cache: "no-store",
+      }
+    )
+  ).json();
+}
 
 export default function ExchangeTable() {
   const [countries, setCountries] = useState([]);
