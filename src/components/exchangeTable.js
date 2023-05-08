@@ -17,6 +17,7 @@ export default function ExchangeTable({ res }) {
           "Content-Type": "application/json",
           "X-Api-Key": process.env.NEXT_PUBLIC_YODAFOREX,
         },
+        cache: "no-store",
       });
       const data = await res.json();
 

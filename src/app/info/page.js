@@ -24,7 +24,7 @@ const Info = () => {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.2696999599048!2d2.3437508999999994!3d48.8530673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671a23e631517%3A0x6312825ff4fd03f1!2sCHANGE%20Saint-Michel%20-%20Bureau%20de%20Change%20-%20Rachat%20Or%20Bijoux%20Pi%C3%A8ces%20Lingots!5e0!3m2!1sen!2slb!4v1682548192067!5m2!1sen!2slb"
             allowfullscreen=""
-            className="w-[80vw] h-[40vh] lg:h-[70vh] rounded-md"
+            className="w-[40vw] h-[40vh] lg:h-[70vh] rounded-md"
             loading="lazy"
           ></iframe>
         </div>
