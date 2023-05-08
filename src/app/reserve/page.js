@@ -56,7 +56,7 @@ const Order = () => {
 
   return (
     <div className="lg:flex lg:justify-center">
-      <div className="card bg-base-200">
+      <div className="card bg-base-200 shadow-xl">
         <h1 className="text-2xl font-bold font-logoFont flex justify-center mt-7">
           RESERVER DEVISE
         </h1>
