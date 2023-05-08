@@ -12,22 +12,21 @@ export default function ExchangeTable({ res }) {
 
   useEffect(() => {
     async function exCall() {
-      const res = await fetch("/api/asia", {
-        // headers: {
-        //   "Content-Type": "application/json",
-        //   "X-Api-Key": process.env.NEXT_PUBLIC_YODAFOREX,
-        // },
+      const res = await fetch("/api/countryexchange", {
+        headers: {
+          "Content-Type": "application/json",
+          "X-Api-Key": process.env.NEXT_PUBLIC_YODAFOREX,
+        },
       });
       const data = await res.json();
 
       console.log(data);
 
-      const sortedList = data.sort((a, b) =>
-        a.country.localeCompare(b.country)
-      );
-      setExchangeData(sortedList);
-      setCountries(sortedList);
-      console.log(sortedList);
+      // const sortedList = data.sort((a, b) =>
+      //   a.country.localeCompare(b.country)
+      // );
+      setExchangeData(data);
+      setCountries(data);
     }
     exCall();
   }, []);
@@ -39,7 +38,7 @@ export default function ExchangeTable({ res }) {
         ? exchangeData.find((country) => country.country === e.target.value)
         : "none";
     setCountry(searchObject);
-    console.log(selectedCountry);
+    // console.log(selectedCountry);
   };
 
   return (
