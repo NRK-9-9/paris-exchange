@@ -20,7 +20,7 @@ export default function ExchangeTable({ res }) {
       });
       const data = await res.json();
 
-      console.log(data);
+      // console.log(data);
 
       // const sortedList = data.sort((a, b) =>
       //   a.country.localeCompare(b.country)
