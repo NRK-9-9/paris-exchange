@@ -20,6 +20,10 @@ const nextConfig = {
         destination:
           "https://demo.web-connect.api.yodaforex.fr/v1/products/currencies",
       },
+      {
+        source: "/api/asia",
+        destination: "http://worldtimeapi.org/api/timezone/Asia/Beirut",
+      },
     ];
   },
 };

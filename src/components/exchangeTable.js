@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import ExchangeTableRow from "./exchangeTableRow";
 
@@ -10,20 +11,24 @@ export default function ExchangeTable({ res }) {
   const [selectedCountry, setCountry] = useState();
 
   useEffect(() => {
-    const exCall = async () => {
-      const res = await fetch("/api/countryexchange", {
-        headers: {
-          "Content-Type": "application/json",
-          "X-Api-Key": process.env.NEXT_PUBLIC_YODAFOREX,
-        },
-      }).then((res) => res.json());
-      console.log(res);
+    async function exCall() {
+      const res = await fetch("/api/asia", {
+        // headers: {
+        //   "Content-Type": "application/json",
+        //   "X-Api-Key": process.env.NEXT_PUBLIC_YODAFOREX,
+        // },
+      });
+      const data = await res.json();
 
-      const sortedList = res.sort((a, b) => a.country.localeCompare(b.country));
+      console.log(data);
+
+      const sortedList = data.sort((a, b) =>
+        a.country.localeCompare(b.country)
+      );
       setExchangeData(sortedList);
       setCountries(sortedList);
       console.log(sortedList);
-    };
+    }
     exCall();
   }, []);
 
@@ -106,16 +111,4 @@ export default function ExchangeTable({ res }) {
       </table>
     </div>
   );
-}
-
-export async function getServerSideProps(context) {
-  const res = (
-    await fetch("http://worldtimeapi.org/api/timezone/Asia/Beirut")
-  ).json();
-
-  console.log(res);
-
-  return {
-    props: { res }, // will be passed to the page component as props
-  };
 }
