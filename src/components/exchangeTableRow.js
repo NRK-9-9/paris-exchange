@@ -46,21 +46,21 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
         <FlagCoded code={code} render="h-20 " />
       </th>
       <td className="w-28 gap-1">
-        <p className="truncate font-semibold w-20 lg:pb-0 pb-1 lg:text-md">
+        <p className="truncate font-semibold max-w-md lg:pb-0 pb-1 lg:text-md">
           {name}
         </p>
         <FlagCoded code={code} render="lg:hidden block " />
       </td>
-      <td className="flex-row">
+      <td className="flex-row ">
         {!AchatRes ? (
           <div className="lg:flex lg:flex-row gap-1 lg:gap-4">
             <div className="flex flex-col gap-2">
               <div className="gap-1 flex place-items-center">
                 <input
-                  className="input input-bordered font-semibold lg:input-xs input-xs resize-none lg:w-20 w-16 "
+                  className="input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 "
                   value={sellCur}
                   onChange={changesellEur}
-                  placeholder={currency}
+                  placeholder={`Saisir en ${currency}`}
                 ></input>
                 <button
                   className="btn btn-xs btn-primary "
@@ -75,10 +75,10 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
               </div>
               <div className="gap-1 flex place-items-center">
                 <input
-                  className="input input-bordered font-semibold lg:input-xs input-xs resize-none lg:w-20 w-16 "
+                  className="input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 "
                   value={sellEur}
                   onChange={changesellCur}
-                  placeholder="EUR"
+                  placeholder="Saisir en EUR"
                 ></input>
                 <button
                   className="btn btn-xs btn-primary "
@@ -95,10 +95,10 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
 
             <div className="mt-1 mb-0">
               <p className="text-md font-bold text-neutral-500 lg:text-sm ">
-                1 {currency} = {(1 / buyRate).toFixed(3)} EUR
+                1 EUR = {(1 * buyRate).toFixed(3)} {currency}
               </p>
               <p className="text-xs text-neutral-500 lg:text-sm ">
-                1 EUR = {(1 * buyRate).toFixed(3)} {currency}
+                1 {currency} = {(1 / buyRate).toFixed(3)} EUR
               </p>
             </div>
           </div>
@@ -139,10 +139,10 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
             <div className="flex flex-col gap-2">
               <div className="gap-1 flex place-items-center">
                 <input
-                  className="input input-bordered font-semibold lg:input-xs input-xs resize-none lg:w-20 w-16 "
+                  className="input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 "
                   value={buyCur}
                   onChange={changebuyEur}
-                  placeholder={currency}
+                  placeholder={`Saisir en ${currency}`}
                 ></input>
                 <button
                   className="btn btn-xs btn-primary "
@@ -157,10 +157,10 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
               </div>
               <div className="gap-1 flex place-items-center">
                 <input
-                  className="input input-bordered font-semibold lg:input-xs input-xs resize-none lg:w-20 w-16 "
+                  className="input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 "
                   value={buyEur}
                   onChange={changebuyCur}
-                  placeholder="EUR"
+                  placeholder="Saisir en EUR"
                 ></input>
                 <button
                   className="btn btn-xs btn-primary "
@@ -177,10 +177,10 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
 
             <div className="mt-1 mb-0">
               <p className="text-md font-bold text-neutral-500 lg:text-sm ">
-                1 {currency} = {(1 / sellRate).toFixed(3)} EUR
+                1 EUR = {(1 * sellRate).toFixed(3)} {currency}
               </p>
               <p className="text-xs text-neutral-500 lg:text-sm ">
-                1 EUR = {(1 * sellRate).toFixed(3)} {currency}
+                1 {currency} = {(1 / sellRate).toFixed(3)} EUR
               </p>
             </div>
           </div>
