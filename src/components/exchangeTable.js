@@ -23,9 +23,9 @@ export default function ExchangeTable({ res }) {
 
       console.log(data);
 
-      // const sortedList = data.sort((a, b) =>
-      //   a.country.localeCompare(b.country)
-      // );
+      const sortedList = data.sort((a, b) =>
+        a.country.localeCompare(b.country)
+      );
       setExchangeData(data);
       setCountries(data);
     }
@@ -42,7 +42,7 @@ export default function ExchangeTable({ res }) {
     exCall();
     const interval = setInterval(() => {
       exCall();
-    }, 2000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);
