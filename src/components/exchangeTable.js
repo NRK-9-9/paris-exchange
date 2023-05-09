@@ -42,7 +42,7 @@ export default function ExchangeTable({ res }) {
     exCall();
     const interval = setInterval(() => {
       exCall();
-    }, 5000);
+    }, 60000);
 
     return () => {
       clearInterval(interval);
