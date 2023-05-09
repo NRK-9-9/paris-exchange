@@ -1,7 +1,5 @@
 "use client";
-import Link from "next/link";
 import React from "react";
-import LogoIcon from "./icons/logoIcon";
 import Image from "next/image";
 import LOGO from "../../public/LOGO.png";
 

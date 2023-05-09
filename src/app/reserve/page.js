@@ -3,7 +3,7 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import { addDays } from "date-fns";
 import React, { useRef, useState } from "react";
-import { sendForm, send } from "emailjs-com";
+import { send } from "emailjs-com";
 
 const Order = () => {
   const sp = useSearchParams();
@@ -18,6 +18,7 @@ const Order = () => {
   const [prenom, setPrenom] = useState();
   const [date, setExchangeDate] = useState();
   const [email, setEmail] = useState();
+  const [phone, setPhone] = useState();
 
   // if (order_type === null) {
   //   router.push("/");
@@ -41,6 +42,7 @@ const Order = () => {
         from_prenom: prenom,
         from_email: email,
         exchange_date: date,
+        phone_num: phone,
       },
       "PS8ZYXeBp37p8U570"
     ).then(
@@ -118,6 +120,23 @@ const Order = () => {
                 required
                 type="email"
                 placeholder="johndoe@gmail.com"
+                className="input input-bordered w-full max-w-xs"
+              />
+            </div>
+            <div className="form-control w-full max-w-xs mt-5">
+              <label className="label">
+                <span className="label-text font-logoFont text-lg">Phone:</span>
+              </label>
+              <input
+                onChange={(e) => {
+                  console.log(e.target.value);
+                  setPhone(e.target.value);
+                }}
+                value={phone}
+                name="from_email"
+                required
+                type="tel"
+                placeholder="+33 777 888 999"
                 className="input input-bordered w-full max-w-xs"
               />
             </div>

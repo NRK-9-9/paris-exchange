@@ -21,7 +21,7 @@ export default function ExchangeTable({ res }) {
       });
       const data = await res.json();
 
-      // console.log(data);
+      console.log(data);
 
       // const sortedList = data.sort((a, b) =>
       //   a.country.localeCompare(b.country)
@@ -29,7 +29,24 @@ export default function ExchangeTable({ res }) {
       setExchangeData(data);
       setCountries(data);
     }
+    // exCall();
+
+    // async function exCall2() {
+    //   const res = await fetch("/api/asia", {
+    //     cache: "no-store",
+    //   });
+    //   const data = await res.json();
+
+    //   console.log(data);
+    // }
     exCall();
+    const interval = setInterval(() => {
+      exCall();
+    }, 2000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   const handleTypeSelect = (e) => {
