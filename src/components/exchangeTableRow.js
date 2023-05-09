@@ -51,168 +51,172 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
         </p>
         <FlagCoded code={code} render="lg:hidden block " />
       </td>
-      <td className="flex-row ">
-        {!AchatRes ? (
-          <div className="lg:flex lg:flex-row gap-1 lg:gap-4">
-            <div className="flex flex-col gap-2">
-              <div className="gap-1 flex place-items-center">
-                <input
-                  className="input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 "
-                  value={sellCur}
-                  onChange={changesellEur}
-                  placeholder={`Saisir en ${currency}`}
-                ></input>
-                <button
-                  className="btn btn-xs btn-primary "
-                  disabled={sellCur === ""}
-                  onClick={() => {
-                    setAchatRes(true);
-                    setVenteRes(false);
-                  }}
-                >
-                  {">>"}
-                </button>
+      <td className="">
+        <div className="flex justify-center">
+          {!AchatRes ? (
+            <div className="lg:flex lg:flex-row gap-1 lg:gap-4">
+              <div className="flex flex-col gap-2">
+                <div className="gap-1 flex place-items-center">
+                  <input
+                    className="input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 "
+                    value={sellCur}
+                    onChange={changesellEur}
+                    placeholder={`Saisir en ${currency}`}
+                  ></input>
+                  <button
+                    className="btn btn-xs btn-primary "
+                    disabled={sellCur === ""}
+                    onClick={() => {
+                      setAchatRes(true);
+                      setVenteRes(false);
+                    }}
+                  >
+                    {">>"}
+                  </button>
+                </div>
+                <div className="gap-1 flex place-items-center">
+                  <input
+                    className="input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 "
+                    value={sellEur}
+                    onChange={changesellCur}
+                    placeholder="Saisir en EUR"
+                  ></input>
+                  <button
+                    className="btn btn-xs btn-primary "
+                    disabled={sellEur === ""}
+                    onClick={() => {
+                      setAchatRes("num2");
+                      setVenteRes(false);
+                    }}
+                  >
+                    {">>"}
+                  </button>
+                </div>
               </div>
-              <div className="gap-1 flex place-items-center">
-                <input
-                  className="input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 "
-                  value={sellEur}
-                  onChange={changesellCur}
-                  placeholder="Saisir en EUR"
-                ></input>
-                <button
-                  className="btn btn-xs btn-primary "
-                  disabled={sellEur === ""}
-                  onClick={() => {
-                    setAchatRes("num2");
-                    setVenteRes(false);
-                  }}
-                >
-                  {">>"}
-                </button>
-              </div>
-            </div>
 
-            <div className="mt-1 mb-0">
-              <p className="text-md font-bold text-neutral-500 lg:text-sm ">
-                1 EUR = {(1 * buyRate).toFixed(3)} {currency}
-              </p>
-              <p className="text-xs text-neutral-500 lg:text-sm ">
-                1 {currency} = {(1 / buyRate).toFixed(3)} EUR
-              </p>
+              <div className="mt-1 mb-0">
+                <p className="text-md font-bold text-neutral-500 lg:text-sm ">
+                  1 EUR = {(1 * buyRate).toFixed(3)} {currency}
+                </p>
+                <p className="text-xs text-neutral-500 lg:text-sm ">
+                  1 {currency} = {(1 / buyRate).toFixed(3)} EUR
+                </p>
+              </div>
             </div>
-          </div>
-        ) : (
-          <div>
-            {AchatRes === "num2" ? (
-              <YesNoQuestion
-                Question1={`Pour ${sellEur} EUR `}
-                Question2={`changer ${sellCur} ${currency}?`}
-                noFunc={() => setAchatRes(false)}
-                yesData={{
-                  orderType: "sell",
-                  currency: currency,
-                  currencyAmount: sellCur,
-                  eurAmount: sellEur,
-                }}
-              />
-            ) : (
-              <YesNoQuestion
-                Question1={`Changer ${sellCur} ${currency}`}
-                Question2={`pour ${sellEur} EUR?`}
-                noFunc={() => setAchatRes(false)}
-                yesData={{
-                  orderType: "sell",
-                  currency: currency,
-                  currencyAmount: sellCur,
-                  eurAmount: sellEur,
-                }}
-              />
-            )}
-          </div>
-        )}
+          ) : (
+            <div>
+              {AchatRes === "num2" ? (
+                <YesNoQuestion
+                  Question1={`Pour ${sellEur} EUR `}
+                  Question2={`changer ${sellCur} ${currency}?`}
+                  noFunc={() => setAchatRes(false)}
+                  yesData={{
+                    orderType: "sell",
+                    currency: currency,
+                    currencyAmount: sellCur,
+                    eurAmount: sellEur,
+                  }}
+                />
+              ) : (
+                <YesNoQuestion
+                  Question1={`Changer ${sellCur} ${currency}`}
+                  Question2={`pour ${sellEur} EUR?`}
+                  noFunc={() => setAchatRes(false)}
+                  yesData={{
+                    orderType: "sell",
+                    currency: currency,
+                    currencyAmount: sellCur,
+                    eurAmount: sellEur,
+                  }}
+                />
+              )}
+            </div>
+          )}
+        </div>
       </td>
 
-      <td className="flex-row">
-        {!VenteRes ? (
-          <div className="lg:flex lg:flex-row gap-1 lg:gap-4">
-            <div className="flex flex-col gap-2">
-              <div className="gap-1 flex place-items-center">
-                <input
-                  className="input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 "
-                  value={buyCur}
-                  onChange={changebuyEur}
-                  placeholder={`Saisir en ${currency}`}
-                ></input>
-                <button
-                  className="btn btn-xs btn-primary "
-                  disabled={buyCur === ""}
-                  onClick={() => {
-                    setVenteRes(true);
-                    setAchatRes(false);
-                  }}
-                >
-                  {">>"}
-                </button>
+      <td className="">
+        <div className="flex justify-center">
+          {!VenteRes ? (
+            <div className="lg:flex lg:flex-row gap-1 lg:gap-4">
+              <div className="flex flex-col gap-2">
+                <div className="gap-1 flex place-items-center">
+                  <input
+                    className="input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 "
+                    value={buyCur}
+                    onChange={changebuyEur}
+                    placeholder={`Saisir en ${currency}`}
+                  ></input>
+                  <button
+                    className="btn btn-xs btn-primary "
+                    disabled={buyCur === ""}
+                    onClick={() => {
+                      setVenteRes(true);
+                      setAchatRes(false);
+                    }}
+                  >
+                    {">>"}
+                  </button>
+                </div>
+                <div className="gap-1 flex place-items-center">
+                  <input
+                    className="input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 "
+                    value={buyEur}
+                    onChange={changebuyCur}
+                    placeholder="Saisir en EUR"
+                  ></input>
+                  <button
+                    className="btn btn-xs btn-primary "
+                    disabled={buyEur === ""}
+                    onClick={() => {
+                      setVenteRes("num2");
+                      setAchatRes(false);
+                    }}
+                  >
+                    {">>"}
+                  </button>
+                </div>
               </div>
-              <div className="gap-1 flex place-items-center">
-                <input
-                  className="input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 "
-                  value={buyEur}
-                  onChange={changebuyCur}
-                  placeholder="Saisir en EUR"
-                ></input>
-                <button
-                  className="btn btn-xs btn-primary "
-                  disabled={buyEur === ""}
-                  onClick={() => {
-                    setVenteRes("num2");
-                    setAchatRes(false);
-                  }}
-                >
-                  {">>"}
-                </button>
-              </div>
-            </div>
 
-            <div className="mt-1 mb-0">
-              <p className="text-md font-bold text-neutral-500 lg:text-sm ">
-                1 EUR = {(1 * sellRate).toFixed(3)} {currency}
-              </p>
-              <p className="text-xs text-neutral-500 lg:text-sm ">
-                1 {currency} = {(1 / sellRate).toFixed(3)} EUR
-              </p>
+              <div className="mt-1 mb-0">
+                <p className="text-md font-bold text-neutral-500 lg:text-sm ">
+                  1 EUR = {(1 * sellRate).toFixed(3)} {currency}
+                </p>
+                <p className="text-xs text-neutral-500 lg:text-sm ">
+                  1 {currency} = {(1 / sellRate).toFixed(3)} EUR
+                </p>
+              </div>
             </div>
-          </div>
-        ) : (
-          <div>
-            {VenteRes === "num2" ? (
-              <YesNoQuestion
-                Question1={`Changer ${buyCur} ${currency}`}
-                Question2={` pour ${buyEur} EUR?`}
-                noFunc={() => setVenteRes(false)}
-                yesData={{
-                  orderType: "buy",
-                  currency: currency,
-                  currencyAmount: buyCur,
-                  eurAmount: buyEur,
-                }}
-              />
-            ) : (
-              <YesNoQuestion
-                Question1={`Pour ${buyEur} EUR `}
-                Question2={`changer ${buyCur} ${currency}?`}
-                noFunc={() => setVenteRes(false)}
-                yesData={{
-                  orderType: "buy",
-                  currency: currency,
-                  currencyAmount: buyCur,
-                  eurAmount: buyEur,
-                }}
-              />
-            )}
-          </div>
-        )}
+          ) : (
+            <div>
+              {VenteRes === "num2" ? (
+                <YesNoQuestion
+                  Question1={`Changer ${buyCur} ${currency}`}
+                  Question2={` pour ${buyEur} EUR?`}
+                  noFunc={() => setVenteRes(false)}
+                  yesData={{
+                    orderType: "buy",
+                    currency: currency,
+                    currencyAmount: buyCur,
+                    eurAmount: buyEur,
+                  }}
+                />
+              ) : (
+                <YesNoQuestion
+                  Question1={`Pour ${buyEur} EUR `}
+                  Question2={`changer ${buyCur} ${currency}?`}
+                  noFunc={() => setVenteRes(false)}
+                  yesData={{
+                    orderType: "buy",
+                    currency: currency,
+                    currencyAmount: buyCur,
+                    eurAmount: buyEur,
+                  }}
+                />
+              )}
+            </div>
+          )}
+        </div>
       </td>
     </tr>
   );
