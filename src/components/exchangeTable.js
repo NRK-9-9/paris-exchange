@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ExchangeTableRow from "./exchangeTableRow";
+import CountrySelect from "./countrySelect";
 
 export default function ExchangeTable({ res }) {
   const [countries, setCountries] = useState([]);
@@ -26,66 +27,28 @@ export default function ExchangeTable({ res }) {
       const sortedList = data.sort((a, b) =>
         a.country.localeCompare(b.country)
       );
-      setExchangeData(data);
-      setCountries(data);
+
+      setExchangeData(sortedList);
+      setCountries(sortedList);
     }
-    // exCall();
-
-    // async function exCall2() {
-    //   const res = await fetch("/api/asia", {
-    //     cache: "no-store",
-    //   });
-    //   const data = await res.json();
-
-    //   console.log(data);
-    // }
     exCall();
     const interval = setInterval(() => {
       exCall();
     }, 60000);
-
     return () => {
       clearInterval(interval);
     };
   }, []);
 
-  const handleTypeSelect = (e) => {
-    setValue(e.target.value);
-    const searchObject =
-      e.target.value !== "none"
-        ? exchangeData.find((country) => country.country === e.target.value)
-        : "none";
-    setCountry(searchObject);
-    // console.log(selectedCountry);
-  };
-
   return (
     <div>
       {exchangeData && (
-        <div className="flex justify-center mt-10">
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">
-                Choisissez le pays que vous voulez
-              </span>
-            </label>
-            <select
-              // options={exchangeData.map((country) => country.country)}
-              className="select select-bordered"
-              onChange={handleTypeSelect}
-              value={selectedValue}
-            >
-              <option value={"none"} className="text-neutral-400">
-                Choisissez un pays
-              </option>
-              {exchangeData.map((option) => (
-                <option key={option.id} value={option.country}>
-                  {option.country}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
+        <CountrySelect
+          selectedValue={selectedValue}
+          setValue={setValue}
+          setCountry={setCountry}
+          exchangeData={exchangeData}
+        />
       )}
       <table className="table table-compact lg:w-full w-min mx-[2%] lg:mt-10 mt-7">
         <thead>

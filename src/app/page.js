@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <div className=" mt-5 lg:grid lg:grid-cols-4 lg:gap-10 lg:mx-10">
+      <div className=" mt-5 lg:grid  lg:grid-cols-4 lg:gap-10 lg:mx-10">
         <div className="col-span-3 place-items-center">
           <ExchangeTable />
         </div>
