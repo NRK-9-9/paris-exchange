@@ -1,7 +1,5 @@
-import ExchangeTable from "@/components/exchangeTable";
 import Hero from "@/components/hero";
 import IndexPage from "@/components/indexPage";
-import MetalPrice from "@/components/metalPrice";
 import React from "react";
 
 const Home = () => {

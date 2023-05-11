@@ -7,10 +7,6 @@ import { useRouter } from "next/navigation";
 const Footer = () => {
   const router = useRouter();
 
-  const push = (link) => {
-    router.push(link);
-  };
-
   return (
     <footer className="flex flex-col">
       <div className="footer p-10 mt-10 bg-neutral text-neutral-content lg:px-80">

@@ -100,7 +100,7 @@ export default function ExchangeTable({ setGold }) {
               ></ExchangeTableRow>
             )
           ) : (
-            <LoadingTableRow key={"asd"}></LoadingTableRow>
+            [1, 2, 3, 4, 5, 6].map((coun, ind) => <LoadingTableRow key={ind} />)
           )}
           {}
         </tbody>

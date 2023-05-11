@@ -11,12 +11,13 @@ const MetalPrice = ({ gold }) => {
       </div>
       <div>
         <h2 className="text-xl font-semibold mt-5">Nous Achetons:</h2>
-        <div className="flex flex-row place-items-center">
+        <div className="flex flex-row place-items-center mt-1">
           <Image src={goldpng} width={50} height={50} alt="gold_png" />
           {gold && (
-            <p className="text-lg">
-              18K/ gram :<text className="font-semibold"> {gold}</text>€
-            </p>
+            <div className="flex flex-row place-items-center">
+              <p className="text-lg">18K/ gram :</p>
+              <p className="font-semibold"> {gold}€</p>
+            </div>
           )}
         </div>
       </div>

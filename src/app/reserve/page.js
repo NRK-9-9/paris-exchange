@@ -76,7 +76,6 @@ const Order = () => {
               </label>
               <input
                 onChange={(e) => {
-                  console.log(e.target.value);
                   setNom(e.target.value);
                 }}
                 value={nom}
@@ -95,7 +94,6 @@ const Order = () => {
               </label>
               <input
                 onChange={(e) => {
-                  console.log(e.target.value);
                   setPrenom(e.target.value);
                 }}
                 value={prenom}
@@ -112,7 +110,6 @@ const Order = () => {
               </label>
               <input
                 onChange={(e) => {
-                  console.log(e.target.value);
                   setEmail(e.target.value);
                 }}
                 value={email}
@@ -129,7 +126,6 @@ const Order = () => {
               </label>
               <input
                 onChange={(e) => {
-                  console.log(e.target.value);
                   setPhone(e.target.value);
                 }}
                 value={phone}
@@ -150,7 +146,6 @@ const Order = () => {
                 <select
                   className="select select-sm"
                   onChange={(e) => {
-                    console.log(e.target.value);
                     setExchangeDate(e.target.value);
                   }}
                 >

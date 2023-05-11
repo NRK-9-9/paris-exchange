@@ -30,7 +30,6 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
     e.target.value != ""
       ? setsellCur((e.target.value.replace(/\D/, "") * buyRate).toFixed(3))
       : setsellCur("");
-    console.log(e.target.value);
   }
 
   function changesellEur(e) {
