@@ -15,7 +15,7 @@ const Navbar = () => {
           </p>
         </Link>
         <h1 href="/" className="lg:mr-4 lg:visible  invisible">
-          <p> Tél: 0954111110</p>
+          <p className="font-logoFont font-[600]"> Tél: +33 954 455 444</p>
         </h1>
       </div>
       <div className="tabs lg:ml-3">
@@ -28,11 +28,16 @@ const Navbar = () => {
         </Link>
 
         <Link
-          // className="tab tabs-boxed tab-lg"
+          className="lg:btn lg:text-md lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
+          href="/contact"
+        >
+          Contact
+        </Link>
+        <Link
           className="lg:btn lg:text-md lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
           href="/info"
         >
-          Contact
+          Info
         </Link>
       </div>
     </div>

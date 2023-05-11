@@ -24,7 +24,7 @@ function CountrySelect({ selectedValue, setValue, setCountry, exchangeData }) {
           <option value={"none"} className="text-neutral-400">
             Choisissez un pays
           </option>
-          {exchangeData.map((option) => (
+          {exchangeData?.map((option) => (
             <option key={option.id} value={option.country}>
               {option.country}
             </option>

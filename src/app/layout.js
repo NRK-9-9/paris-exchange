@@ -10,7 +10,20 @@ export const metadata = {
   },
   description:
     "Meilleur bureau de change pour changer les devises sur paris Saint michel , à gauche de la fontaine. Currency exchange shop in paris Saint Michel , best exchange rate guaranteed",
-  keywords: [],
+  keywords: [
+    "currency",
+    "best exchange rate",
+    "meilleur echange rate",
+    "Meilleurs prix de change",
+    "paris",
+    "france",
+    "fontaine saint michel",
+    "saint michel",
+    "devise",
+    "devises",
+    "best rate",
+    "paris stock exchange",
+  ],
 };
 
 const poppins = Poppins({
