@@ -5,20 +5,22 @@ import Image from "next/image";
 
 const MetalPrice = ({ gold }) => {
   return (
-    <div className="p-4">
+    <div className="p-3">
       <div className="flex justify-center mb-3">
         <h1 className="font-semibold text-3xl">Prix Or du jour:</h1>
       </div>
-      <div>
-        <h2 className="text-xl font-semibold mt-5">Nous Achetons:</h2>
-        <div className="flex flex-row place-items-center mt-1">
-          <Image src={goldpng} width={50} height={50} alt="gold_png" />
-          {gold && (
-            <div className="flex flex-row place-items-center">
-              <p className="text-lg">18K/ gram :</p>
-              <p className="font-semibold"> {gold}€</p>
-            </div>
-          )}
+      <div className="card rounded-t-md bg-white mt-6">
+        <div className="flex justify-center place-items-center m-3 mt-5">
+          <Image src={goldpng} width={150} height={150} alt="gold_png"></Image>
+        </div>
+        <div className="bg-neutral-800 p-4 text-neutral-content rounded-b-md">
+          <p className="flex justify-center text-xl font-semibold">
+            Nous Achetons:
+          </p>
+          <div className="flex flex-row mt-2 text-lg ">
+            <p>18k/gram d&apos;Or</p>
+            <p className="font-bold"> {`: ${gold && gold}`}€</p>
+          </div>
         </div>
       </div>
     </div>
