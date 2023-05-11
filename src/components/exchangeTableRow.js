@@ -40,17 +40,17 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
   }
 
   return (
-    <tr className="hover">
-      <th className="pl-1 lg:flex hidden lg:justify-center pt-5">
+    <tr className="hover ">
+      <th className="pl-1 lg:flex hidden lg:justify-center pt-5 bg-base-200">
         <FlagCoded code={code} render="h-20 " />
       </th>
-      <td className="w-28 gap-1">
+      <td className="w-28 gap-1 bg-base-200">
         <p className="truncate font-semibold max-w-md lg:pb-0 pb-1 lg:text-md">
           {name}
         </p>
         <FlagCoded code={code} render="lg:hidden block " />
       </td>
-      <td className="">
+      <td className=" bg-base-200">
         <div className="flex justify-center">
           {!AchatRes ? (
             <div className="lg:flex lg:flex-row gap-1 lg:gap-4">
@@ -134,7 +134,7 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
         </div>
       </td>
 
-      <td className="">
+      <td className=" bg-base-200">
         <div className="flex justify-center">
           {!VenteRes ? (
             <div className="lg:flex lg:flex-row gap-1 lg:gap-4">
