@@ -14,5 +14,14 @@ body {
   font-family: "Roboto";
 }
 
+@keyframes pulse-blac-red {
+  50% {
+      color: crimson;
+  }
+}
+.animate-pulse-blackred {
+  animation: pulse-blac-red 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 
 
