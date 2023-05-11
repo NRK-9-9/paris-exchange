@@ -19,9 +19,9 @@ const MetalPrice = ({ gold }) => {
           <p className="flex justify-center text-2xl font-semibold">
             Nous Achetons:
           </p>
-          <div className="flex flex-row mt-2 text-lg ">
+          <div className="flex flex-col justify-center place-items-center mt-2 text-xl gap-4">
             <p>18k/gram d&apos;Or</p>
-            <p className="font-bold"> {`: ${gold && gold}`}€</p>
+            <p className="font-bold text-5xl">{gold && gold}€</p>
           </div>
         </div>
       </div>
