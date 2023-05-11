@@ -10,7 +10,7 @@ const IndexPage = () => {
       <div className="lg:col-span-3 place-items-center">
         <ExchangeTable setGold={setGold} />
       </div>
-      <div className="card lg:w-full lg:h-full bg-base-300 p-3 lg:mt-0 mt-14">
+      <div className="card lg:w-full lg:h-full bg-base-300 p-3 lg:mt-0 mt-14 flex flex-col justify-center">
         <MetalPrice gold={gold} />
       </div>
     </div>
