@@ -4,14 +4,6 @@ import ExchangeTableRow from "./exchangeTableRow";
 import CountrySelect from "./countrySelect";
 import LoadingTableRow from "./loadingTableRow";
 
-function removeItem(arr, val) {
-  const index = arr.indexOf(val);
-  if (index > -1) {
-    arr.splice(index, 1);
-  }
-  return arr;
-}
-
 export default function ExchangeTable({ setGold }) {
   const [countries, setCountries] = useState([]);
   const [exchangeData, setExchangeData] = useState();
