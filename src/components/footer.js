@@ -48,19 +48,19 @@ const Footer = () => {
           <span className="footer-title">Legal</span>
           <button
             onClick={() => {
-              router.push("/");
+              router.push("/cgv");
             }}
             className="link link-hover"
           >
-            Terms of use
+            CGV{" "}
           </button>
           <button
             onClick={() => {
-              router.push("/");
+              router.push("/antiblanc");
             }}
             className="link link-hover"
           >
-            Privacy policy
+            Lutte Anti-Blachiment
           </button>
           <button
             onClick={() => {
