@@ -2,8 +2,8 @@ import React from "react";
 
 export default function AntiBlanchiment() {
   return (
-    <div>
-      <div className="flex flex-col lg:w-[60vw] gap-2 p-2">
+    <div className="lg:place-items-center lg:flex lg:flex-col">
+      <div className="flex flex-col lg:w-[60vw] gap-2 p-2 ">
         <p className="text-sm text-neutral-600">
           Paris Exchange est soumis à la Loi française concernant les mesures de
           la lutte contre le blanchiment d&apos;argent et contre le financement
@@ -20,9 +20,9 @@ export default function AntiBlanchiment() {
         <p>
           Paris Exchange a une présence physique en France avec un siège au 9,
           rue Scribe 75009 Paris, une succursale au 8 place de l&apos;Opéra
-          75009 Paris. Paris Exchange esWEBSITE_URLat supervisé par la Banque de
-          France et en particulier par l&apos;Autorité de Contrôle Prudentiel et
-          de Résolution, entité en charge de la supervision des institutions
+          75009 Paris. Paris Exchange es WEBSITE_URL at supervisé par la Banque
+          de France et en particulier par l&apos;Autorité de Contrôle Prudentiel
+          et de Résolution, entité en charge de la supervision des institutions
           financières (61 rue Taitbout 75009 Paris).
           <br />
         </p>
@@ -136,11 +136,11 @@ export default function AntiBlanchiment() {
           réglementation en matière de LABFT ?
         </h3>
 
-        <pre>
+        <p className="text-lg font-mono">
           En tant que client privé ou professionnel réalisant une transaction ou
           un cumul d&apos;opérations d&apos;un montant supérieur à 8000 euros,
           PARIS EXCHANGE doit :
-        </pre>
+        </p>
 
         <p>
           - m&apos;identifier et connaître mon adresse actuelle
