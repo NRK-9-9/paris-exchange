@@ -2,20 +2,13 @@ import React, { useState } from "react";
 import FlagCoded from "../components/flagCoded";
 import YesNoQuestion from "./yesNoQuestion";
 
-const ExchangeTableRow = ({
-  code,
-  currency,
-  name,
-  buyRate,
-  sellRate,
-  index,
-}) => {
+const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate, index}) => {
   const [sellCur, setsellCur] = useState("");
   const [sellEur, setsellEur] = useState("");
   const [buyCur, setbuyCur] = useState("");
   const [buyEur, setbuyEur] = useState("");
 
-  const color = index % 2 == 0 ? "bg-base-200" : "bg-base-100";
+  const color = index %2==0?"bg-base-200":"bg-base-100"
 
   const [VenteRes, setVenteRes] = useState(false);
   const [AchatRes, setAchatRes] = useState(false);
@@ -51,8 +44,8 @@ const ExchangeTableRow = ({
   return (
     <tr className="">
       <td className={` ${color}`}>
-        <FlagCoded code={code} render="" />
-        <p className="truncate text-neutral-500 font-semibold max-w-md text-xs ">
+      <FlagCoded code={code} render="" />
+        <p className="truncate text-neutral-500 font-semibold max-w-md lg:text-md lg:text-sm text-xs ">
           {name}
         </p>
       </td>
@@ -98,7 +91,6 @@ const ExchangeTableRow = ({
                   </button>
                 </div>
               </div>
-
               <div className="mt-1 mb-0">
                 <p className="text-md font-bold text-neutral-500 lg:text-sm ">
                   1 EUR = {(1 * buyRate).toFixed(3)} {currency}

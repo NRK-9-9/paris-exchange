@@ -6,7 +6,7 @@ import LoadingTableRow from "./loadingTableRow";
 import { CH, GB } from "country-flag-icons/react/3x2";
 
 export default function ExchangeTable({ setGold }) {
-  const [countries, setCountries] = useState([]);
+  const [alphaOrder, setalphaOrder] = useState([]);
   const [exchangeData, setExchangeData] = useState();
   const [selectedValue, setValue] = useState("none");
   const [selectedCountry, setCountry] = useState(false);
@@ -36,8 +36,9 @@ export default function ExchangeTable({ setGold }) {
       })
       newData = newData.concat(data)
       console.log(data,newData);
+
       setExchangeData(newData);
-      setCountries(newData);
+      setalphaOrder(newData.sort((a, b) => a.country.localeCompare(b.country)));
       setLoading(false);
     }
     exCall();
@@ -60,7 +61,7 @@ export default function ExchangeTable({ setGold }) {
         selectedValue={selectedValue}
         setValue={setValue}
         setCountry={setCountry}
-        exchangeData={exchangeData.sort((a, b) => a.country.localeCompare(b.country))}
+        exchangeData={exchangeData}
       />
       <table className="table table-compact w-min lg:mt-7 mt-7 ">
         <thead>
@@ -79,7 +80,7 @@ export default function ExchangeTable({ setGold }) {
         <tbody >
           {!loading ? (
             selectedValue === "none" ? (
-              countries.map((country, index) => (
+              exchangeData.map((country, index) => (
                 <ExchangeTableRow
                   key={index}
                   index={index}
