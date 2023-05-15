@@ -43,16 +43,16 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate, index}) => 
 
   return (
     <tr className="">
-      <td className={`${color}`}>
-      <FlagCoded code={code} render=""/>
+      <td className={` ${color}`}>
+      <FlagCoded code={code} render="" />
         <p className="truncate text-neutral-500 font-semibold max-w-md lg:text-md lg:text-sm text-xs ">
           {name}
         </p>
       </td>
       <td className={`${color}`}>
-        <div className="flex justify-center ">
+        <div className="flex justify-center">
           {!AchatRes ? (
-            <div className="lg:flex lg:flex-row gap-1 lg:gap-4 ">
+            <div className="lg:flex lg:flex-row gap-1 lg:gap-4">
               <div className="flex flex-col gap-2">
                 <div className="gap-1 flex place-items-center">
                   <input
@@ -132,16 +132,11 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate, index}) => 
           )}
         </div>
       </td>
-      <td className={`${color}  border-l-2 border-l-neutral-700`}>
-      <FlagCoded code={code} render=""/>
-        <p className="truncate text-neutral-500 font-semibold max-w-md lg:text-md lg:text-sm text-xs ">
-          {name}
-        </p>
-      </td>
-      <td className={`${color}` }>
-        <div className="flex justify-center ">
+
+      <td className={`${color}`}>
+        <div className="flex justify-center">
           {!VenteRes ? (
-            <div className="lg:flex lg:flex-row gap-1 lg:gap-4 ">
+            <div className="lg:flex lg:flex-row gap-1 lg:gap-4">
               <div className="flex flex-col gap-2">
                 <div className="gap-1 flex place-items-center">
                   <input
