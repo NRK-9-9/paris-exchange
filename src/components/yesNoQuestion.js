@@ -4,10 +4,10 @@ import React from "react";
 const YesNoQuestion = ({ Question1, Question2, noFunc, yesData }) => {
   return (
     <div className="lg:p-2 p-1 bg-neutral text-neutral-content rounded-md">
-      <p className="font-semibold lg:text-sm text-xs flex flex-row justify-center ">
+      <p className="font-semibold text-xs flex flex-row justify-center ">
         {Question1}
       </p>
-      <p className="font-semibold lg:text-sm text-xs flex flex-row justify-center ">
+      <p className="font-semibold text-xs flex flex-row justify-center ">
         {Question2}
       </p>
       <div className="flex flex-row justify-evenly mt-3">

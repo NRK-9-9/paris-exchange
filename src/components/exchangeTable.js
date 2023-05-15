@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import ExchangeTableRow from "./exchangeTableRow";
 import CountrySelect from "./countrySelect";
 import LoadingTableRow from "./loadingTableRow";
-import { CH, GB } from "country-flag-icons/react/3x2";
+import Table from "./table";
 
 export default function ExchangeTable({ setGold }) {
   const [alphaOrder, setalphaOrder] = useState([]);
@@ -33,8 +33,10 @@ export default function ExchangeTable({ setGold }) {
       arr.forEach((x) => {
         const indx = data.findIndex((c) => c.iso === x);
         newData.push(data[indx]);
-        console.log(newData, x, data[indx]);
+        data.splice(indx, 1);
       });
+
+      newData.push(...data);
 
       setExchangeData(newData);
       setalphaOrder(newData);
@@ -52,66 +54,30 @@ export default function ExchangeTable({ setGold }) {
   return (
     <div className="">
       <div className=" flex flex-row justify-center">
-        <p className="lg:text-2xl text-xl font-semibold font-logoFont p-7 my-7 border-y-2">{`Exchange Rates at: ${todayDate.toLocaleDateString()}`}</p>
+        <p className="lg:text-2xl text-xl font-semibold font-logoFont p-7 my-7 border-y-2">{`Taux de change du: ${todayDate.toLocaleDateString()}`}</p>
       </div>
 
       <div className="flex flex-col items-center">
         <CountrySelect
           selectedValue={selectedValue}
-          setValue={setValue}
           setCountry={setCountry}
+          setValue={setValue}
           exchangeData={exchangeData}
         />
-        <table className="table table-compact w-min lg:mt-7 mt-7 ">
-          <thead>
-            <tr>
-              <th className="bg-neutral-900 text-neutral-content lg:text-sm text-xs">
-                PAYS
-              </th>
-              <th className="bg-neutral-900 text-neutral-content lg:text-sm text-xs">
-                <div className="flex justify-center">paris exchange achete</div>
-              </th>
-              <th className="bg-neutral-900 text-neutral-content lg:text-sm text-xs">
-                PAYS
-              </th>
-              <th className="p-0 bg-neutral-900 text-neutral-content lg:text-sm text-xs">
-                <div className="flex justify-center">paris exchange vend</div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {!loading ? (
-              selectedValue === "none" ? (
-                exchangeData.map((country, index) => (
-                  <ExchangeTableRow
-                    key={index}
-                    index={index}
-                    code={country.countryIso2}
-                    currency={country.iso}
-                    name={country.country}
-                    buyRate={country.webBuyRate}
-                    sellRate={country.webSellRate}
-                  ></ExchangeTableRow>
-                ))
-              ) : (
-                <ExchangeTableRow
-                  index={0}
-                  key={selectedCountry.code}
-                  code={selectedCountry.countryIso2}
-                  currency={selectedCountry.iso}
-                  name={selectedCountry.country}
-                  buyRate={selectedCountry.deskBuyRate}
-                  sellRate={selectedCountry.deskSellRate}
-                ></ExchangeTableRow>
-              )
-            ) : (
-              [1, 2, 3, 4, 5, 6].map((coun, ind) => (
-                <LoadingTableRow key={ind} />
-              ))
-            )}
-            {}
-          </tbody>
-        </table>
+        {exchangeData && (
+          <div className="flex lg:flex-row flex-col gap-2">
+            <Table
+              exchangeData={exchangeData}
+              selectedCountry={selectedCountry}
+              type="sell"
+            />
+            <Table
+              exchangeData={exchangeData}
+              selectedCountry={selectedCountry}
+              type="buy"
+            />
+          </div>
+        )}
       </div>
     </div>
   );
