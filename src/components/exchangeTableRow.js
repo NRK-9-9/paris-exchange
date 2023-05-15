@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import FlagCoded from "../components/flagCoded";
 import YesNoQuestion from "./yesNoQuestion";
 
-const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
+const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate, index}) => {
   const [sellCur, setsellCur] = useState("");
   const [sellEur, setsellEur] = useState("");
   const [buyCur, setbuyCur] = useState("");
   const [buyEur, setbuyEur] = useState("");
+
+  const color = index %2==0?"bg-base-200":"bg-base-100"
 
   const [VenteRes, setVenteRes] = useState(false);
   const [AchatRes, setAchatRes] = useState(false);
@@ -40,17 +42,14 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
   }
 
   return (
-    <tr className="hover ">
-      <th className="pl-1 lg:flex hidden lg:justify-center pt-5 bg-base-200">
-        <FlagCoded code={code} render="h-20 " />
-      </th>
-      <td className="w-28 gap-1 bg-base-200">
-        <p className="truncate font-semibold max-w-md lg:pb-0 pb-1 lg:text-md">
+    <tr className="">
+      <td className={` ${color}`}>
+      <FlagCoded code={code} render="" />
+        <p className="truncate text-neutral-500 font-semibold max-w-md lg:text-md lg:text-sm text-xs ">
           {name}
         </p>
-        <FlagCoded code={code} render="lg:hidden block " />
       </td>
-      <td className=" bg-base-200">
+      <td className={`${color}`}>
         <div className="flex justify-center">
           {!AchatRes ? (
             <div className="lg:flex lg:flex-row gap-1 lg:gap-4">
@@ -134,7 +133,7 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate }) => {
         </div>
       </td>
 
-      <td className=" bg-base-200">
+      <td className={`${color}`}>
         <div className="flex justify-center">
           {!VenteRes ? (
             <div className="lg:flex lg:flex-row gap-1 lg:gap-4">

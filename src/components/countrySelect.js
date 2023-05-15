@@ -1,6 +1,7 @@
 import React from "react";
 
 function CountrySelect({ selectedValue, setValue, setCountry, exchangeData }) {
+
   const handleTypeSelect = (e) => {
     setValue(e.target.value);
     const searchObject =
@@ -9,15 +10,16 @@ function CountrySelect({ selectedValue, setValue, setCountry, exchangeData }) {
         : "none";
     setCountry(searchObject);
   };
+
   return (
-    <div className="flex justify-center mt-10">
+    <div className="flex justify-center ">
       <div className="form-control w-full max-w-xs">
         <label className="label">
           <span className="label-text">Choisissez le pays que vous voulez</span>
         </label>
         <select
           // options={exchangeData.map((country) => country.country)}
-          className="select select-bordered"
+          className="select select-bordered select-lg"
           onChange={handleTypeSelect}
           value={selectedValue}
         >

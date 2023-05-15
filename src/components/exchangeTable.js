@@ -11,6 +11,7 @@ export default function ExchangeTable({ setGold }) {
   const [selectedCountry, setCountry] = useState(false);
 
   const [loading, setLoading] = useState(true);
+  const todayDate = new Date()
 
   useEffect(() => {
     setLoading(true);
@@ -45,35 +46,37 @@ export default function ExchangeTable({ setGold }) {
   }, []);
 
   return (
-    <div>
+    <div className="">
+      <div className=" flex flex-row justify-center ">
+        <p className="text-2xl font-semibold font-logoFont p-5 mt-3 border-y-2">{`Exchange Rates at: ${todayDate.toLocaleDateString()}`}</p>
+      </div>
       <CountrySelect
         selectedValue={selectedValue}
         setValue={setValue}
         setCountry={setCountry}
         exchangeData={exchangeData}
       />
-
-      <table className="table table-compact w-full lg:mt-10 mt-7">
+      <div className="flex flex-row justify-center"><table className="table table-compact w-min lg:mt-10 mt-7 ">
         <thead>
           <tr>
-            <th className="bg-neutral-900 text-neutral-content lg:text-xl text-lg lg:block hidden h-16"></th>
-            <th className="bg-neutral-900 text-neutral-content lg:text-xl text-lg lg:rounded-none rounded-tl-md">
+            <th className="bg-neutral-900 text-neutral-content lg:text-sm text-xs">
               PAYS
             </th>
-            <th className="bg-neutral-900 text-neutral-content lg:text-xl text-lg">
-              <div className="flex justify-center">ON ACHETE</div>
+            <th className="bg-neutral-900 text-neutral-content lg:text-sm text-xs">
+              <div className="flex justify-center">paris exchange achete</div>
             </th>
-            <th className="p-0 bg-neutral-900 text-neutral-content lg:text-xl text-lg">
-              <div className="flex justify-center min-w-full p-0">ON VEND</div>
+            <th className="p-0 bg-neutral-900 text-neutral-content lg:text-sm text-xs">
+              <div className="flex justify-center">ON VEND</div>
             </th>
           </tr>
         </thead>
-        <tbody className="aspect-auto">
+        <tbody >
           {!loading ? (
             selectedValue === "none" ? (
               countries.map((country, index) => (
                 <ExchangeTableRow
                   key={index}
+                  index={index}
                   code={country.countryIso2}
                   currency={country.iso}
                   name={country.country}
@@ -83,6 +86,7 @@ export default function ExchangeTable({ setGold }) {
               ))
             ) : (
               <ExchangeTableRow
+                index={0}
                 key={selectedCountry.code}
                 code={selectedCountry.countryIso2}
                 currency={selectedCountry.iso}
@@ -96,7 +100,8 @@ export default function ExchangeTable({ setGold }) {
           )}
           {}
         </tbody>
-      </table>
+      </table></div>
+      
     </div>
   );
 }

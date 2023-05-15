@@ -7,7 +7,7 @@ const FlagCoded = ({ code, width, render }) => {
 
   return (
     <div className={render}>
-      <Flag className="lg:w-16 w-10 rounded-md "></Flag>
+      <Flag className="lg:w-16 w-10 rounded-md"></Flag>
     </div>
   );
 };
