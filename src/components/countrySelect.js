@@ -23,8 +23,8 @@ function CountrySelect({ selectedValue, setValue, setCountry, exchangeData }) {
             Choisissez le pays que vous voulez
           </option>
           {exchangeData?.map((option) => (
-            <option key={option.id} value={option.country}>
-              {option.country}
+            <option key={option.id} value={option.country} >
+              {`${option.country} (${option.iso})`}
             </option>
           ))}
         </select>
