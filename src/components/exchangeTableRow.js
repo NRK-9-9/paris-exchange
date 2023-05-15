@@ -132,8 +132,13 @@ const ExchangeTableRow = ({ code, currency, name, buyRate, sellRate, index}) => 
           )}
         </div>
       </td>
-
-      <td className={`${color} border-l-2 border-l-neutral-700` }>
+      <td className={`${color}  border-l-2 border-l-neutral-700`}>
+      <FlagCoded code={code} render=""/>
+        <p className="truncate text-neutral-500 font-semibold max-w-md lg:text-md lg:text-sm text-xs ">
+          {name}
+        </p>
+      </td>
+      <td className={`${color}` }>
         <div className="flex justify-center ">
           {!VenteRes ? (
             <div className="lg:flex lg:flex-row gap-1 lg:gap-4 ">
