@@ -12,14 +12,14 @@ function CountrySelect({ selectedValue, setValue, setCountry, exchangeData }) {
   };
 
   return (
-    <div className="flex justify-center ">
+    <div className="">
       <div className="form-control w-full max-w-xs">
         <select
-          className="select select-bordered select-primary border-2 w-full"
+          className="select select-bordered  text-lg animate-pulse-blackred "
           onChange={handleTypeSelect}
           value={selectedValue}
         >
-          <option value={"none"} className="text-neutral-400">
+          <option value={"none"} className="">
             Choisissez le pays que vous voulez
           </option>
           {exchangeData?.map((option) => (
