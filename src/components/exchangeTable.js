@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ExchangeTableRow from "./exchangeTableRow";
 import CountrySelect from "./countrySelect";
 import LoadingTableRow from "./loadingTableRow";
+import { CH, GB } from "country-flag-icons/react/3x2";
 
 export default function ExchangeTable({ setGold }) {
   const [countries, setCountries] = useState([]);
@@ -23,17 +24,20 @@ export default function ExchangeTable({ setGold }) {
         },
       });
       let data = await res.json();
-
       const indx = data.findIndex((v) => v.id === 1);
-
       setGold(data[indx].webBuyRate);
       data.splice(indx, 1);
-
-      const sortedList = data.sort((a, b) =>
-        a.country.localeCompare(b.country)
-      );
-      setExchangeData(sortedList);
-      setCountries(sortedList);
+      let newData  = []
+      const arr = ["USD", "GBP", "CHF", "JPY",  "CAD", "AUD"]
+      arr.forEach((x)=>{
+        const indx = data.findIndex(c => c.iso === x)
+        newData.push(data[indx])
+        data.splice(indx,1)
+      })
+      newData = newData.concat(data)
+      console.log(data,newData);
+      setExchangeData(newData);
+      setCountries(newData);
       setLoading(false);
     }
     exCall();
@@ -56,7 +60,7 @@ export default function ExchangeTable({ setGold }) {
         selectedValue={selectedValue}
         setValue={setValue}
         setCountry={setCountry}
-        exchangeData={exchangeData}
+        exchangeData={exchangeData.sort((a, b) => a.country.localeCompare(b.country))}
       />
       <table className="table table-compact w-min lg:mt-7 mt-7 ">
         <thead>
