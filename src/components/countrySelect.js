@@ -14,9 +14,6 @@ function CountrySelect({ selectedValue, setValue, setCountry, exchangeData }) {
   return (
     <div className="flex justify-center ">
       <div className="form-control w-full max-w-xs">
-        <label className="label">
-          <span className="label-text">Choisissez le pays que vous voulez</span>
-        </label>
         <select
           // options={exchangeData.map((country) => country.country)}
           className="select select-bordered select-lg"
@@ -24,7 +21,7 @@ function CountrySelect({ selectedValue, setValue, setCountry, exchangeData }) {
           value={selectedValue}
         >
           <option value={"none"} className="text-neutral-400">
-            Choisissez un pays
+            Choisissez le pays que vous voulez
           </option>
           {exchangeData?.map((option) => (
             <option key={option.id} value={option.country}>
