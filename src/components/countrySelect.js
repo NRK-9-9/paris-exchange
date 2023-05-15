@@ -15,8 +15,7 @@ function CountrySelect({ selectedValue, setValue, setCountry, exchangeData }) {
     <div className="flex justify-center ">
       <div className="form-control w-full max-w-xs">
         <select
-          // options={exchangeData.map((country) => country.country)}
-          className="select select-bordered select-lg"
+          className="select select-bordered select-primary border-2 w-full"
           onChange={handleTypeSelect}
           value={selectedValue}
         >

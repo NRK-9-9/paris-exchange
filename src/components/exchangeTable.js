@@ -48,7 +48,7 @@ export default function ExchangeTable({ setGold }) {
   return (
     <div className="">
       <div className=" flex flex-row justify-center">
-        <p className="text-2xl font-semibold font-logoFont p-5 my-5 border-y-2">{`Exchange Rates at: ${todayDate.toLocaleDateString()}`}</p>
+        <p className="lg:text-2xl text-xl font-semibold font-logoFont p-7 my-7 border-y-2">{`Exchange Rates at: ${todayDate.toLocaleDateString()}`}</p>
       </div>
       <CountrySelect
         selectedValue={selectedValue}
@@ -56,7 +56,7 @@ export default function ExchangeTable({ setGold }) {
         setCountry={setCountry}
         exchangeData={exchangeData}
       />
-      <div className="flex flex-row justify-center"><table className="table table-compact w-min lg:mt-10 mt-7 ">
+      <div className="flex flex-row justify-center"><table className="table table-compact w-min lg:mt-7 mt-7 ">
         <thead>
           <tr>
             <th className="bg-neutral-900 text-neutral-content lg:text-sm text-xs">
