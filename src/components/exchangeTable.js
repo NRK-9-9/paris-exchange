@@ -65,7 +65,7 @@ export default function ExchangeTable({ setGold }) {
           exchangeData={exchangeData}
         />
         {exchangeData && (
-          <div className="flex lg:flex-row flex-col gap-2">
+          <div className="flex lg:flex-row-reverse flex-col-reverse gap-2">
             <Table
               exchangeData={exchangeData}
               selectedCountry={selectedCountry}

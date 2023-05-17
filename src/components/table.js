@@ -50,6 +50,17 @@ export default function Table({ exchangeData, type, selectedCountry }) {
         )}
         {}
       </tbody>
+      <tfoot
+        onClick={() => {
+          console.log("asdasd");
+        }}
+      >
+        <tr className="bg-primary hover:bg-primary-focus text-primary-content">
+          <td></td>
+          <td className="flex justify-end ">show all currencies</td>
+          <td></td>
+        </tr>
+      </tfoot>
     </table>
   );
 }
