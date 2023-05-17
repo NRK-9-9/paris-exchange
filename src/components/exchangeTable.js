@@ -6,13 +6,12 @@ import LoadingTableRow from "./loadingTableRow";
 import Table from "./table";
 
 export default function ExchangeTable({ setGold }) {
-  const [alphaOrder, setalphaOrder] = useState([]);
   const [exchangeData, setExchangeData] = useState();
   const [selectedValue, setValue] = useState("none");
   const [selectedCountry, setCountry] = useState(false);
 
   const [loading, setLoading] = useState(true);
-  const todayDate = new Date();
+  const [todayDate, setTodayDate] = useState(new Date());
 
   useEffect(() => {
     setLoading(true);
@@ -29,17 +28,13 @@ export default function ExchangeTable({ setGold }) {
       data.splice(indx, 1);
       let newData = [];
       const arr = ["USD", "GBP", "CHF", "JPY", "CAD", "AUD"];
-
       arr.forEach((x) => {
         const indx = data.findIndex((c) => c.iso === x);
         newData.push(data[indx]);
         data.splice(indx, 1);
       });
-
       newData.push(...data);
-
       setExchangeData(newData);
-      setalphaOrder(newData);
       setLoading(false);
     }
     exCall();
@@ -50,6 +45,8 @@ export default function ExchangeTable({ setGold }) {
       clearInterval(interval);
     };
   }, []);
+
+  useEffect(() => {}, []);
 
   return (
     <div className="">

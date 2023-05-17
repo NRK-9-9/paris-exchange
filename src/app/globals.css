@@ -1,14 +1,11 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-    font-family: "Agrandir";
-    src: url("../../public/Agrandir-Regular.otf");
-  }
-
+  font-family: "Agrandir";
+  src: url("../../public/Agrandir-Regular.otf");
+}
 
 body {
   font-family: "Roboto";
@@ -16,12 +13,22 @@ body {
 
 @keyframes pulse-blac-red {
   50% {
-      color: crimson;
+    color: crimson;
   }
 }
 .animate-pulse-blackred {
   animation: pulse-blac-red 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+@keyframes move-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
 
-
+.animate-conveyor-belt {
+  animation: move-left-to-right linear 12.5s infinite;
+}
