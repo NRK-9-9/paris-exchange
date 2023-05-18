@@ -10,5 +10,5 @@ export const client = createClient({
 });
 
 export async function getSentence() {
-  return client.fetch(`*[_type =="project"]`, { caches: "no-store" });
+  return client.fetch(groq`*[_type =="project"]`);
 }

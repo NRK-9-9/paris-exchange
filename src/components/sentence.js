@@ -18,3 +18,5 @@ export default async function Sentence() {
     </div>
   );
 }
+
+export const revalidate = 5;
