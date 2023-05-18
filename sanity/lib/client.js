@@ -10,5 +10,5 @@ export const client = createClient({
 });
 
 export async function getSentence() {
-  return client.fetch(groq`*[_type =="project"]`);
+  return client.fetch(groq`*[_type =="project"]`, { next: { revalidate: 60 } });
 }
