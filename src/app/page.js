@@ -13,4 +13,6 @@ const Home = () => {
   );
 };
 
+export const revalidate = 5;
+
 export default Home;
