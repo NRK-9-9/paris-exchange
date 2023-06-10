@@ -2,8 +2,8 @@ import React from "react";
 import FlagCoded from "./flagCoded";
 import ExchangeTableRow from "./exchangeTableRow";
 
-export default function Table({ exchangeData, type, selectedCountry }) {
-  console.log(selectedCountry);
+export default function Table({ exchangeData, type, selectedCountry, toggle }) {
+  // console.log(selectedCountry);
 
   return (
     <table className="mt-5 lg:w-[30vw] w-min">
@@ -50,11 +50,7 @@ export default function Table({ exchangeData, type, selectedCountry }) {
         )}
         {}
       </tbody>
-      <tfoot
-        onClick={() => {
-          console.log("asdasd");
-        }}
-      >
+      <tfoot onClick={toggle}>
         <tr className="bg-primary hover:bg-primary-focus text-primary-content">
           <td></td>
           <td className="flex justify-end ">show all currencies</td>

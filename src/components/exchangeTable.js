@@ -7,6 +7,10 @@ import Table from "./table";
 
 export default function ExchangeTable({ setGold }) {
   const [exchangeData, setExchangeData] = useState();
+  const [shownData, setShownData] = useState();
+
+  const [dataToggle, setToggle] = useState(false);
+
   const [selectedValue, setValue] = useState("none");
   const [selectedCountry, setCountry] = useState(false);
 
@@ -35,6 +39,7 @@ export default function ExchangeTable({ setGold }) {
       });
       newData.push(...data);
       setExchangeData(newData);
+      setShownData(newData.slice(0, 3));
       setLoading(false);
     }
     exCall();
@@ -46,7 +51,16 @@ export default function ExchangeTable({ setGold }) {
     };
   }, []);
 
-  useEffect(() => {}, []);
+  const togg = () => {
+    // console.log(dataToggle);
+    setToggle(!dataToggle);
+    if (dataToggle == true) {
+      setShownData(exchangeData);
+    } else {
+      setShownData(exchangeData.slice(0, 3));
+    }
+    // console.log(shownData);
+  };
 
   return (
     <div className="">
@@ -64,14 +78,16 @@ export default function ExchangeTable({ setGold }) {
         {exchangeData && (
           <div className="flex lg:flex-row-reverse flex-col-reverse gap-2">
             <Table
-              exchangeData={exchangeData}
+              exchangeData={shownData}
               selectedCountry={selectedCountry}
               type="sell"
+              toggle={togg}
             />
             <Table
-              exchangeData={exchangeData}
+              exchangeData={shownData}
               selectedCountry={selectedCountry}
               type="buy"
+              toggle={togg}
             />
           </div>
         )}
