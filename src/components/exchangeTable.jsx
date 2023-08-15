@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ExchangeTableRow from "./exchangeTableRow";
 import CountrySelect from "./countrySelect";
-import LoadingTableRow from "./loadingTableRow";
 import Table from "./table";
 
 export default function ExchangeTable({ setGold }) {
@@ -15,7 +13,7 @@ export default function ExchangeTable({ setGold }) {
   const [selectedCountry, setCountry] = useState(false);
 
   const [loading, setLoading] = useState(true);
-  const [todayDate, setTodayDate] = useState(new Date());
+  const todayDate = new Date();
 
   useEffect(() => {
     setLoading(true);
