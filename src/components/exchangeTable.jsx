@@ -7,7 +7,7 @@ export default function ExchangeTable({ setGold }) {
   const [exchangeData, setExchangeData] = useState();
   const [shownData, setShownData] = useState();
 
-  const [dataToggle, setToggle] = useState(false);
+  const [dataToggle, setToggle] = useState(true);
 
   const [selectedValue, setValue] = useState("none");
   const [selectedCountry, setCountry] = useState(false);
@@ -63,7 +63,7 @@ export default function ExchangeTable({ setGold }) {
   return (
     <div className="">
       <div className=" flex flex-row justify-center">
-        <p className="lg:text-2xl text-xl font-semibold font-logoFont p-7 my-7 border-y-2">{`Taux de change du: ${todayDate.toLocaleDateString()}`}</p>
+        <p className="lg:text-2xl text-xl font-semibold font-logoFont p-7 my-5 border-y-2">{`Taux de change du: ${todayDate.toLocaleDateString()}`}</p>
       </div>
 
       <div className="flex flex-col items-center">
@@ -80,12 +80,14 @@ export default function ExchangeTable({ setGold }) {
               selectedCountry={selectedCountry}
               type="sell"
               toggle={togg}
+              dataToggle={dataToggle}
             />
             <Table
               exchangeData={shownData}
               selectedCountry={selectedCountry}
               type="buy"
               toggle={togg}
+              dataToggle={dataToggle}
             />
           </div>
         )}

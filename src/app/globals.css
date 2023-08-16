@@ -7,8 +7,13 @@
   src: url("../../public/Agrandir-Regular.otf");
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/Poppins-Light.ttf");
+}
+
 body {
-  font-family: "Roboto";
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 @keyframes pulse-blac-red {
@@ -22,10 +27,10 @@ body {
 
 @keyframes move-left-to-right {
   from {
-    transform: translateX(-100%);
+    transform: translateX(100vw);
   }
   to {
-    transform: translateX(100vw);
+    transform: translateX(-100%);
   }
 }
 
