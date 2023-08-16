@@ -7,9 +7,9 @@ const Hero = () => {
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-2xl">
-          <h1 className="mb-5 lg:text-5xl text-3xl font-bold font-logoFont">
+          <h2 className="mb-5 lg:text-5xl text-3xl font-bold font-logoFont">
             Bureau de change sur Paris
-          </h1>
+          </h2>
           <p className="">
             Notre bureau de change est situé aux 4 boulevard saint michel
           </p>

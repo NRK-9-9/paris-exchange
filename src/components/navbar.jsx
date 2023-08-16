@@ -14,9 +14,9 @@ const Navbar = () => {
             PARIS EXCHANGE
           </p>
         </Link>
-        <h1 href="/" className="lg:mr-4 lg:visible  invisible">
+        <div href="/" className="lg:mr-4 lg:visible  invisible">
           <p className="font-logoFont font-[600]"> Tél: +33 954 455 444</p>
-        </h1>
+        </div>
       </div>
       <div className="tabs lg:ml-3">
         <Link

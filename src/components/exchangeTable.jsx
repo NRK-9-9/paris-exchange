@@ -1,7 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import CountrySelect from "./countrySelect";
 import Table from "./table";
+import TableSkeleton from "./skeletons/tableSkeleton";
 
 export default function ExchangeTable({ setGold }) {
   const [exchangeData, setExchangeData] = useState();
@@ -75,20 +76,25 @@ export default function ExchangeTable({ setGold }) {
         />
         {exchangeData && (
           <div className="flex lg:flex-row-reverse flex-col-reverse gap-2">
-            <Table
-              exchangeData={shownData}
-              selectedCountry={selectedCountry}
-              type="sell"
-              toggle={togg}
-              dataToggle={dataToggle}
-            />
-            <Table
-              exchangeData={shownData}
-              selectedCountry={selectedCountry}
-              type="buy"
-              toggle={togg}
-              dataToggle={dataToggle}
-            />
+            <Suspense fallback={<TableSkeleton type="sell" />}>
+              <Table
+                exchangeData={shownData}
+                selectedCountry={selectedCountry}
+                type="sell"
+                toggle={togg}
+                dataToggle={dataToggle}
+              />
+            </Suspense>
+
+            <Suspense>
+              <Table
+                exchangeData={shownData}
+                selectedCountry={selectedCountry}
+                type="sell"
+                toggle={togg}
+                dataToggle={dataToggle}
+              />
+            </Suspense>
           </div>
         )}
       </div>
