@@ -74,27 +74,29 @@ export default function ExchangeTable({ setGold }) {
           setValue={setValue}
           exchangeData={exchangeData}
         />
-        {exchangeData && (
+        {exchangeData ? (
           <div className="flex lg:flex-row-reverse flex-col-reverse gap-2">
-            <Suspense fallback={<TableSkeleton type="sell" />}>
-              <Table
-                exchangeData={shownData}
-                selectedCountry={selectedCountry}
-                type="sell"
-                toggle={togg}
-                dataToggle={dataToggle}
-              />
-            </Suspense>
+            <Table
+              exchangeData={shownData}
+              selectedCountry={selectedCountry}
+              type="sell"
+              toggle={togg}
+              dataToggle={dataToggle}
+            />
+            {/* <TableSkeleton></TableSkeleton> */}
 
-            <Suspense fallback={<TableSkeleton type="buy" />}>
-              <Table
-                exchangeData={shownData}
-                selectedCountry={selectedCountry}
-                type="buy"
-                toggle={togg}
-                dataToggle={dataToggle}
-              />
-            </Suspense>
+            <Table
+              exchangeData={shownData}
+              selectedCountry={selectedCountry}
+              type="buy"
+              toggle={togg}
+              dataToggle={dataToggle}
+            />
+          </div>
+        ) : (
+          <div className="flex lg:flex-row-reverse flex-col-reverse gap-2">
+            <TableSkeleton></TableSkeleton>
+            <TableSkeleton></TableSkeleton>
           </div>
         )}
       </div>

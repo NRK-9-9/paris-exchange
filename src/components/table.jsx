@@ -1,6 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import FlagCoded from "./flagCoded";
 import ExchangeTableRow from "./exchangeTableRow";
+import RowSkeleton from "./skeletons/rowSkeleton";
+import TableSkeleton from "./skeletons/tableSkeleton";
 
 export default function Table({
   exchangeData,
@@ -9,8 +11,6 @@ export default function Table({
   toggle,
   dataToggle,
 }) {
-  // console.log(selectedCountry);
-
   return (
     <div>
       <table className="mt-5 lg:w-[30vw] w-min">
@@ -43,7 +43,7 @@ export default function Table({
               type={type}
             ></ExchangeTableRow>
           ) : (
-            exchangeData.map((country, i) => (
+            exchangeData?.map((country, i) => (
               <ExchangeTableRow
                 key={i}
                 index={i}
@@ -55,7 +55,6 @@ export default function Table({
               ></ExchangeTableRow>
             ))
           )}
-          {}
         </tbody>
       </table>
       <div

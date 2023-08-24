@@ -8,13 +8,13 @@ const TableSkeleton = ({ type }) => {
         <thead className="">
           <tr>
             <th className="bg-neutral lg:text-xs text-xs text-neutral-content px-6 py-3 rounded-tl-lg">
-              Pays
+              <div class="lg:h-3 lg:w-10 w-10 h-3 bg-gray-400 rounded-full dark:bg-gray-500  my-0.5"></div>
             </th>
             <th className="bg-neutral lg:text-xs text-xs text-neutral-content px-6 py-3">
-              {type === "sell" ? "PARS EXCHANGE VEND" : "PARS EXCHANGE ACHETE"}
+              <div class="lg:h-3 lg:w-32 w-16 h-3 bg-gray-400 rounded-full dark:bg-gray-500  my-0.5"></div>
             </th>
             <th className="bg-neutral lg:text-xs text-xs text-neutral-content px-6 py-3 rounded-tr-lg">
-              {type === "sell" ? "PE VEND" : "PE ACHETE"}
+              <div class="lg:h-3 lg:w-32 w-20 h-3 bg-gray-400 rounded-full dark:bg-gray-500  my-0.5"></div>
             </th>
           </tr>
         </thead>
