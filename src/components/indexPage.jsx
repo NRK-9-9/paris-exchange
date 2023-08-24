@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import ExchangeTable from "./exchangeTable";
-import tableSkeleton from "./skeletons/tableSkeleton";
 import MetalPrice from "./metalPrice";
 
 const IndexPage = () => {

@@ -86,11 +86,11 @@ export default function ExchangeTable({ setGold }) {
               />
             </Suspense>
 
-            <Suspense>
+            <Suspense fallback={<TableSkeleton type="buy" />}>
               <Table
                 exchangeData={shownData}
                 selectedCountry={selectedCountry}
-                type="sell"
+                type="buy"
                 toggle={togg}
                 dataToggle={dataToggle}
               />
