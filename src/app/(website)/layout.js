@@ -53,6 +53,9 @@ export const metadata = {
     locale: "fr_FR",
     type: "website",
   },
+  verification: {
+    google: "kBJm9wyrpm0r_gQLJ71zSqneHWbFjqmG2_th1DkF018",
+  },
 };
 
 export default function RootLayout({ children }) {
