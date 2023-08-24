@@ -62,8 +62,6 @@ export default function ExchangeTable({ setGold }) {
     // console.log(shownData);
   };
 
-  const [questionCUR, setquestionCUR] = useState();
-
   return (
     <div className="">
       <div className=" flex flex-row justify-center">
