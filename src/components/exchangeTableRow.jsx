@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import FlagCoded from "../components/flagCoded";
 import YesNoQuestion from "./yesNoQuestion";
 
-const ExchangeTableRow = ({ code, currency, name, Rate, index, type }) => {
+const ExchangeTableRow = ({
+  code,
+  currency,
+  name,
+  Rate,
+  index,
+  type,
+  questionCUR,
+  setquestionCUR,
+}) => {
   const [buyCur, setbuyCur] = useState("");
   const [buyEur, setbuyEur] = useState("");
-
-  const color = index % 2 == 0 ? "bg-base-200" : "bg-base-100";
-
-  const [VenteRes, setVenteRes] = useState(false);
-  const [AchatRes, setAchatRes] = useState(false);
 
   function changebuyCur(e) {
     setbuyEur(e.target.value.replace(/\D/, ""));
@@ -24,6 +28,14 @@ const ExchangeTableRow = ({ code, currency, name, Rate, index, type }) => {
       ? setbuyEur((e.target.value.replace(/\D/, "") / Rate).toFixed(3))
       : setbuyEur("");
   }
+
+  const [reserveType, setReserveType] = useState();
+
+  function setQuestionCur() {
+    setquestionCUR(currency);
+  }
+
+  const color = index % 2 == 0 ? "bg-base-200" : "bg-base-100";
 
   return (
     <tr
@@ -44,7 +56,7 @@ const ExchangeTableRow = ({ code, currency, name, Rate, index, type }) => {
         </div>
       </td>
       <td className="p-2">
-        {!VenteRes ? (
+        {questionCUR != currency ? (
           <div className="lg:flex lg:flex-row gap-1 lg:gap-4">
             <div className="flex flex-col gap-1">
               <div className="gap-1 flex place-items-center">
@@ -55,11 +67,11 @@ const ExchangeTableRow = ({ code, currency, name, Rate, index, type }) => {
                   placeholder={`Saisir en ${currency}`}
                 ></input>
                 <button
-                  className="btn btn-xs btn-primary hover:btn-info"
-                  disabled={buyCur === ""}
+                  className="btn btn-xs btn-secondary hover:btn-info"
                   onClick={() => {
-                    setVenteRes(true);
-                    setAchatRes(false);
+                    setQuestionCur();
+                    setReserveType("1");
+                    console.log(reserveType);
                   }}
                 >
                   {">>"}
@@ -73,11 +85,11 @@ const ExchangeTableRow = ({ code, currency, name, Rate, index, type }) => {
                   placeholder="Saisir en EUR"
                 ></input>
                 <button
-                  className="btn btn-xs btn-primary hover:btn-info "
-                  disabled={buyEur === ""}
+                  className="btn btn-xs btn-secondary hover:btn-info "
                   onClick={() => {
-                    setVenteRes("num2");
-                    setAchatRes(false);
+                    setQuestionCur();
+                    setReserveType("2");
+                    console.log(reserveType);
                   }}
                 >
                   {">>"}
@@ -89,11 +101,11 @@ const ExchangeTableRow = ({ code, currency, name, Rate, index, type }) => {
           <div>
             {type === "sell" ? (
               <div>
-                {VenteRes === "num2" ? (
+                {reserveType === "1" ? (
                   <YesNoQuestion
                     Question1={`Changer ${buyCur} ${currency}`}
                     Question2={` pour ${buyEur} EUR?`}
-                    noFunc={() => setVenteRes(false)}
+                    noFunc={() => setquestionCUR(null)}
                     yesData={{
                       orderType: "buy",
                       currency: currency,
@@ -101,11 +113,11 @@ const ExchangeTableRow = ({ code, currency, name, Rate, index, type }) => {
                       eurAmount: buyEur,
                     }}
                   />
-                ) : (
+                ) : reserveType === "2" ? (
                   <YesNoQuestion
                     Question1={`Pour ${buyEur} EUR `}
                     Question2={`changer ${buyCur} ${currency}?`}
-                    noFunc={() => setVenteRes(false)}
+                    noFunc={() => setquestionCUR(null)}
                     yesData={{
                       orderType: "buy",
                       currency: currency,
@@ -113,15 +125,15 @@ const ExchangeTableRow = ({ code, currency, name, Rate, index, type }) => {
                       eurAmount: buyEur,
                     }}
                   />
-                )}
+                ) : null}
               </div>
-            ) : (
+            ) : type === "buy" ? (
               <div>
-                {AchatRes === "num2" ? (
+                {reserveType === "1" ? (
                   <YesNoQuestion
                     Question1={`Pour ${buyEur} EUR `}
                     Question2={`changer ${buyCur} ${currency}?`}
-                    noFunc={() => setAchatRes(false)}
+                    noFunc={() => setquestionCUR(null)}
                     yesData={{
                       orderType: "sell",
                       currency: currency,
@@ -129,11 +141,11 @@ const ExchangeTableRow = ({ code, currency, name, Rate, index, type }) => {
                       eurAmount: buyEur,
                     }}
                   />
-                ) : (
+                ) : reserveType === "2" ? (
                   <YesNoQuestion
                     Question1={`Changer ${buyCur} ${currency}`}
                     Question2={`pour ${buyEur} EUR?`}
-                    noFunc={() => setAchatRes(false)}
+                    noFunc={() => setquestionCUR(null)}
                     yesData={{
                       orderType: "sell",
                       currency: currency,
@@ -141,8 +153,12 @@ const ExchangeTableRow = ({ code, currency, name, Rate, index, type }) => {
                       eurAmount: buyEur,
                     }}
                   />
+                ) : (
+                  <p>1</p>
                 )}
               </div>
+            ) : (
+              <p>2</p>
             )}
           </div>
         )}

@@ -1,9 +1,5 @@
-import React, { Suspense } from "react";
-import FlagCoded from "./flagCoded";
+import React, { useState } from "react";
 import ExchangeTableRow from "./exchangeTableRow";
-import RowSkeleton from "./skeletons/rowSkeleton";
-import TableSkeleton from "./skeletons/tableSkeleton";
-
 export default function Table({
   exchangeData,
   type,
@@ -11,6 +7,8 @@ export default function Table({
   toggle,
   dataToggle,
 }) {
+  const [questionCUR, setquestionCUR] = useState();
+
   return (
     <div>
       <table className="mt-5 lg:w-[30vw] w-min">
@@ -41,6 +39,8 @@ export default function Table({
                   : selectedCountry.webBuyRate
               }
               type={type}
+              questionCUR={questionCUR}
+              setquestionCUR={setquestionCUR}
             ></ExchangeTableRow>
           ) : (
             exchangeData?.map((country, i) => (
@@ -52,6 +52,8 @@ export default function Table({
                 name={country.country}
                 Rate={type == "sell" ? country.webSellRate : country.webBuyRate}
                 type={type}
+                questionCUR={questionCUR}
+                setquestionCUR={setquestionCUR}
               ></ExchangeTableRow>
             ))
           )}
@@ -61,7 +63,11 @@ export default function Table({
         className="flex justify-center w-full bg-primary hover:bg-primary-focus text-primary-content rounded-b-sm"
         onClick={toggle}
       >
-        {dataToggle ? <p>show all currencies</p> : <p>show less</p>}
+        {dataToggle ? (
+          <p>Visualise toutes les devises</p>
+        ) : (
+          <p>Visualise moins de devises</p>
+        )}
       </div>
     </div>
   );
