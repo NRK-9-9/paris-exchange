@@ -18,23 +18,23 @@ const Navbar = () => {
           <p className="font-logoFont font-[600]"> Tél: +33 954 455 444</p>
         </div>
       </div>
-      <div className="tabs lg:ml-3">
+      <div className="tabs lg:ml-3  ">
         <Link
           // className="tab tabs-boxed tab-lg"
-          className="lg:btn lg:text-md lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
+          className="lg:btn lg:text-lg lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
           href="/"
         >
           Acceuil
         </Link>
 
         <Link
-          className="lg:btn lg:text-md lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
+          className="lg:btn lg:text-lg lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
           href="/contact"
         >
           Contact
         </Link>
         <Link
-          className="lg:btn lg:text-md lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
+          className="lg:btn lg:text-lg lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
           href="/info"
         >
           Info

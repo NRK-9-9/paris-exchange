@@ -1,7 +1,7 @@
 import Hero from "@/components/hero";
 import IndexPage from "@/components/indexPage";
 import React from "react";
-import Sentence from "@/components/sentence";
+import Sentence from "@/components/ribbon";
 
 const Home = () => {
   return (
