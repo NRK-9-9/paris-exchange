@@ -32,17 +32,19 @@ export default function CGV() {
         </h3>
 
         <p>
-          Aucune transaction ne pourra intervenir avant, d&apos;une part, que le
-          Client ait créé et renseigné une fiche d&apos;identification de
-          clientèle dénommé « Compte Client » et remis à la Société les
-          documents qu&apos;il doit, le cas échéant lui faire parvenir et
-          d&apos;autre part, attesté avoir accepté les présentes Conditions
-          Générales de ventes. Dans l&apos;hypothèse où le montant de la
-          transaction à réaliser et/ou le montant cumulé des transactions déjà
-          réalisées justifierait la fourniture de renseignements et/ou documents
-          complémentaires, aucune transaction ne pourra intervenir tant que le
-          Client ne les aura pas adressés ou remis à la Société, comme indiqué
-          ci-dessous.
+          Avant toute transaction, deux conditions essentielles doivent
+          &ecirc;tre remplies. Tout d'abord, le Client doit cr&eacute;er et
+          compl&eacute;ter un formulaire d'identification client, connu sous le
+          nom de &quot;Compte Client&quot;, et transmettre &agrave; la
+          Soci&eacute;t&eacute; les documents requis, s'il y a lieu. Ensuite, le
+          Client doit &eacute;galement confirmer qu'il a accept&eacute; les
+          Conditions G&eacute;n&eacute;rales de vente. Si le montant de la
+          transaction &agrave; effectuer et/ou le cumul des transactions
+          d&eacute;j&agrave; r&eacute;alis&eacute;es justifient la fourniture de
+          renseignements ou de documents suppl&eacute;mentaires, aucune
+          transaction ne pourra &ecirc;tre r&eacute;alis&eacute;e tant que le
+          Client n'aura pas fourni ces &eacute;l&eacute;ments &agrave; la
+          Soci&eacute;t&eacute;, conform&eacute;ment aux indications ci-dessous.
         </p>
 
         <h4 className="text-xl font-semibold p-1">
@@ -50,17 +52,20 @@ export default function CGV() {
         </h4>
 
         <p>
-          Le Client s&apos;identifie en créant un Compte Client comprenant,
-          notamment, ses nom, prénom, adresse mail, numéro de téléphone, une
-          adresse de livraison et une adresse de facturation si elle est
-          différente. Les éléments précités doivent impérativement être remplis
-          pour que puisse être créé le Compte Client. Le Client devra fournir à
-          la Société PARIS EXCHANGE une copie de sa pièce d&apos;identité, en
-          cours de validité ainsi qu&apos;un justificatif de domicile. Sont
-          considérés comme justificatif de domicile les documents suivants :
-          Facture d&apos;eau, électricité, téléphone, avis d&apos;imposition ou
-          certificat de non-imposition, attestation ou facture d&apos;assurance
-          du logement.
+          Pour l'identification du Client, il est n&eacute;cessaire de
+          cr&eacute;er un Compte Client comprenant diverses informations, telles
+          que le nom, pr&eacute;nom, adresse e-mail, num&eacute;ro de
+          t&eacute;l&eacute;phone, adresse de livraison, et, le cas
+          &eacute;ch&eacute;ant, une adresse de facturation distincte. Toutes
+          les informations mentionn&eacute;es doivent obligatoirement &ecirc;tre
+          fournies pour cr&eacute;er le Compte Client. Le Client devra
+          &eacute;galement fournir &agrave; la Soci&eacute;t&eacute; PARIS
+          EXCHANGE une copie de sa pi&egrave;ce d'identit&eacute; en cours de
+          validit&eacute;, ainsi qu'un justificatif de domicile. Les
+          justificatifs de domicile accept&eacute;s comprennent des documents
+          tels que des factures d'eau, d'&eacute;lectricit&eacute;, de
+          t&eacute;l&eacute;phone, des avis d'imposition ou de non-imposition,
+          ainsi que des attestations ou des factures d'assurance du logement.
         </p>
 
         <h4 className="text-xl font-semibold p-1">
@@ -71,8 +76,8 @@ export default function CGV() {
           Après avoir créé le Compte Client, le Client doit lire et accepter
           pleinement et sans aucune réserve les Conditions Générales de Vente.
           Cet accord est matérialisé par le Client lorsque ce dernier valide sur
-          le site internet WEBSITE_URL qu&apos;il accepte pleinement et sans
-          aucune réserve les Conditions Générales de Vente.
+          le site internet <a href="WEBSITE_URL">WEBSITE_URL</a> qu'il accepte
+          pleinement et sans aucune réserve les Conditions Générales de Vente.
         </p>
 
         <h4 className="text-xl font-semibold p-1">
@@ -80,11 +85,15 @@ export default function CGV() {
         </h4>
 
         <p>
-          Après avoir créé le Compte Client et accepté les Conditions Générales
-          de Vente, la Société adresse au Client un email, (i) lui confirmant la
-          création du Compte Client, (ii) auquel est obligatoirement joint un
-          exemplaire des Conditions Générales de Ventes qu&apos;il a accepté sur
-          un support durable.
+          <p>
+            Après avoir créé le Compte Client et accepté les Conditions
+            Générales de Vente, la Société adresse au Client un email :
+          </p>
+          <p>(i) lui confirmant la création du Compte Client,</p>
+          <p>
+            (ii) auquel est obligatoirement joint un exemplaire des Conditions
+            Générales de Vente qu'il a accepté sur un support durable.
+          </p>
         </p>
 
         <h3 className="text-primary text-2xl font-semibold font-logoFont  mt-4">
@@ -92,33 +101,55 @@ export default function CGV() {
         </h3>
 
         <p>
-          PARIS EXCHANGE propose un service d&apos;opération de change à
-          distance. Le Client se connecte au Site Internet de PARIS EXCHANGE
-          afin de commander des devises étrangères en billets de banque ou des
-          métaux précieux sous forme de pièces et lingots d&apos;or, qui lui
-          seront envoyées par transporteur privé, soit mises à sa disposition au
-          bureau du PARIS EXCHANGE, situé 9 rue Scribe, 75009 PARIS  France ou
-          dans sa succursale située 8 place de l&apos;Opéra 75009 PARIS  France.
-          Ainsi, Pour les devises : le Client après s&apos;être connecté au site
-          internet sécurisé de WEBSITE_URL, doit : (i) s&apos;identifier, (ii)
-          choisir la devise désirée et la quantité requise, (iii) choisir le
-          mode de règlement et celui de livraison, (iv) indiquer s&apos;il
-          souhaite ou non que la prestation soit intégralement exécutée sans
-          attendre l&apos;expiration du délai de rétractation (v), valider sa
-          commande. Pour l&apos;or et l&apos;argent sous forme de pièces et
-          lingot : le Client après s&apos;être connecté au site internet
-          sécurisé de WEBSITE_URL, doit : (i) s&apos;identifier, (ii) choisir le
-          type de pièce ou lingot et la quantité requise, (iii) choisir le type
-          d&apos;achat (ferme, ordre au mieux ou ordre limité à une certaine
-          valeur à indiquer), (iv) choisir le nombre de sacs scellés et le mode
-          de livraison, (v) indiquer la date à partir de laquelle son ordre sera
-          exécuté(vi), valider sa commande. Après chaque commande faite par le
-          Client, un récapitulatif et un accusé de réception de cette commande
-          lui sont envoyés par mail, à l&apos;adresse communiquée lors de son
-          identification, par PARIS EXCHANGE. Cet accusé de réception est
-          accompagné des Conditions Générales de Vente applicable au jour de la
-          transaction. Les informations contractuelles sont présentées en langue
-          française.
+          <p>
+            PARIS EXCHANGE propose un service d'opération de change à distance.
+            Le Client se connecte au Site Internet de PARIS EXCHANGE afin de
+            commander des devises étrangères en billets de banque ou des métaux
+            précieux sous forme de pièces et lingots d'or, qui lui seront
+            envoyées par transporteur privé, soit mises à sa disposition au
+            bureau du PARIS EXCHANGE, situé 9 rue Scribe, 75009 PARIS – France
+            ou dans sa succursale située 8 place de l'Opéra 75009 PARIS –
+            France.
+          </p>
+          <p>Ainsi, pour les devises :</p>
+          <p>
+            Le Client, après s'être connecté au site internet sécurisé de{" "}
+            <a href="WEBSITE_URL">WEBSITE_URL</a>, doit :
+          </p>
+          <p>(i) s'identifier,</p>
+          <p>(ii) choisir la devise désirée et la quantité requise,</p>
+          <p>(iii) choisir le mode de règlement et celui de livraison,</p>
+          <p>
+            (iv) indiquer s'il souhaite ou non que la prestation soit
+            intégralement exécutée sans attendre l'expiration du délai de
+            rétractation (v),
+          </p>
+          <p>(v) valider sa commande.</p>
+          <p>Pour l'or et l'argent sous forme de pièces et lingots :</p>
+          <p>
+            Le Client, après s'être connecté au site internet sécurisé de{" "}
+            <a href="WEBSITE_URL">WEBSITE_URL</a>, doit :
+          </p>
+          <p>(i) s'identifier,</p>
+          <p>(ii) choisir le type de pièce ou lingot et la quantité requise,</p>
+          <p>
+            (iii) choisir le type d'achat (ferme, ordre au mieux ou ordre limité
+            à une certaine valeur à indiquer),
+          </p>
+          <p>(iv) choisir le nombre de sacs scellés et le mode de livraison,</p>
+          <p>
+            (v) indiquer la date à partir de laquelle son ordre sera exécuté
+            (vi),
+          </p>
+          <p>(vi) valider sa commande.</p>
+          <p>
+            Après chaque commande faite par le Client, un récapitulatif et un
+            accusé de réception de cette commande lui sont envoyés par mail, à
+            l'adresse communiquée lors de son identification, par PARIS
+            EXCHANGE. Cet accusé de réception est accompagné des Conditions
+            Générales de Vente applicables au jour de la transaction. Les
+            informations contractuelles sont présentées en langue française.
+          </p>
         </p>
 
         <h4 className="text-xl font-semibold p-1">1. Prix</h4>
@@ -127,29 +158,32 @@ export default function CGV() {
           Les cours des devises et les prix des métaux précieux sont indiqués en
           Euros (toutes taxes comprises : TVA et autres taxes), hors
           participation aux frais de port et frais liés aux modes de paiement.
-          Toutes les commandes sont payables exclusivement en Euros. PARIS
-          EXCHANGE se réserve le droit de modifier ses taux et cours à tout
-          moment ainsi que le prix des pièces et lingots d&apos;or. Toutefois,
+          Toutes les commandes sont payables exclusivement en Euros.
+        </p>
+        <p>
+          PARIS EXCHANGE se réserve le droit de modifier ses taux et cours à
+          tout moment ainsi que le prix des pièces et lingots d'or. Toutefois,
           les devises seront facturées sur la base des taux et cours en vigueur
-          au moment de l&apos;enregistrement des commandes tel qu&apos;indiqué
-          au Client lors de la validation de sa commande, mais sous réserve de
-          disponibilité de la devise à cette date. Les devises et métaux
-          précieux demeurent la propriété de PARIS EXCHANGE jusqu&apos;au
-          complet encaissement du paiement du prix.
+          au moment de l'enregistrement des commandes tel qu'indiqué au Client
+          lors de la validation de sa commande, mais sous réserve de
+          disponibilité de la devise à cette date.
+        </p>
+        <p>
+          Les devises et métaux précieux demeurent la propriété de PARIS
+          EXCHANGE jusqu'au complet encaissement du paiement du prix.
         </p>
 
         <h4 className="text-xl font-semibold p-1">2. Disponibilités</h4>
 
         <p>
           Les offres de devises et de métaux précieux sous forme de pièces et
-          lingots d&apos;or et d&apos;argent, sont proposées dans la limite des
-          stocks disponibles. Des indications sur la disponibilité des devises
-          et des métaux précieux sont fournies dans l&apos;email de confirmation
-          adressé par PARIS EXCHANGE. L&apos;indisponibilité d&apos;une ou
-          plusieurs devises, ou d&apos;une ou plusieurs pièces d&apos;argent ou
-          lingot d&apos;argent ou d&apos;une ou plusieurs pièces d&apos;or ou
-          lingot d&apos;or pour des achats dits fermes&apos; ne peut engager la
-          responsabilité de PARIS EXCHANGE.
+          lingots d'or et d'argent, sont proposées dans la limite des stocks
+          disponibles. Des indications sur la disponibilité des devises et des
+          métaux précieux sont fournies dans l'email de confirmation adressé par
+          PARIS EXCHANGE. L'indisponibilité d'une ou plusieurs devises, ou d'une
+          ou plusieurs pièces d'argent ou lingot d'argent ou d'une ou plusieurs
+          pièces d'or ou lingot d'or pour des achats dits 'fermes' ne peut
+          engager la responsabilité de PARIS EXCHANGE.
         </p>
 
         <h4 className="text-xl font-semibold p-1">
