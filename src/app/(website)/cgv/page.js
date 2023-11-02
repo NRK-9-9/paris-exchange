@@ -33,18 +33,19 @@ export default function CGV() {
 
         <p>
           Avant toute transaction, deux conditions essentielles doivent
-          &ecirc;tre remplies. Tout d'abord, le Client doit cr&eacute;er et
-          compl&eacute;ter un formulaire d'identification client, connu sous le
-          nom de &quot;Compte Client&quot;, et transmettre &agrave; la
-          Soci&eacute;t&eacute; les documents requis, s'il y a lieu. Ensuite, le
-          Client doit &eacute;galement confirmer qu'il a accept&eacute; les
-          Conditions G&eacute;n&eacute;rales de vente. Si le montant de la
-          transaction &agrave; effectuer et/ou le cumul des transactions
-          d&eacute;j&agrave; r&eacute;alis&eacute;es justifient la fourniture de
-          renseignements ou de documents suppl&eacute;mentaires, aucune
-          transaction ne pourra &ecirc;tre r&eacute;alis&eacute;e tant que le
-          Client n'aura pas fourni ces &eacute;l&eacute;ments &agrave; la
-          Soci&eacute;t&eacute;, conform&eacute;ment aux indications ci-dessous.
+          &ecirc;tre remplies. Tout d&apos;abord, le Client doit cr&eacute;er et
+          compl&eacute;ter un formulaire d&apos;identification client, connu
+          sous le nom de &quot;Compte Client&quot;, et transmettre &agrave; la
+          Soci&eacute;t&eacute; les documents requis, s&apos;il y a lieu.
+          Ensuite, le Client doit &eacute;galement confirmer qu&apos;il a
+          accept&eacute; les Conditions G&eacute;n&eacute;rales de vente. Si le
+          montant de la transaction &agrave; effectuer et/ou le cumul des
+          transactions d&eacute;j&agrave; r&eacute;alis&eacute;es justifient la
+          fourniture de renseignements ou de documents suppl&eacute;mentaires,
+          aucune transaction ne pourra &ecirc;tre r&eacute;alis&eacute;e tant
+          que le Client n&apos;aura pas fourni ces &eacute;l&eacute;ments
+          &agrave; la Soci&eacute;t&eacute;, conform&eacute;ment aux indications
+          ci-dessous.
         </p>
 
         <h4 className="text-xl font-semibold p-1">
@@ -52,7 +53,7 @@ export default function CGV() {
         </h4>
 
         <p>
-          Pour l'identification du Client, il est n&eacute;cessaire de
+          Pour l&apos;identification du Client, il est n&eacute;cessaire de
           cr&eacute;er un Compte Client comprenant diverses informations, telles
           que le nom, pr&eacute;nom, adresse e-mail, num&eacute;ro de
           t&eacute;l&eacute;phone, adresse de livraison, et, le cas
@@ -60,12 +61,13 @@ export default function CGV() {
           les informations mentionn&eacute;es doivent obligatoirement &ecirc;tre
           fournies pour cr&eacute;er le Compte Client. Le Client devra
           &eacute;galement fournir &agrave; la Soci&eacute;t&eacute; PARIS
-          EXCHANGE une copie de sa pi&egrave;ce d'identit&eacute; en cours de
-          validit&eacute;, ainsi qu'un justificatif de domicile. Les
+          EXCHANGE une copie de sa pi&egrave;ce d&apos;identit&eacute; en cours
+          de validit&eacute;, ainsi qu&apos;un justificatif de domicile. Les
           justificatifs de domicile accept&eacute;s comprennent des documents
-          tels que des factures d'eau, d'&eacute;lectricit&eacute;, de
-          t&eacute;l&eacute;phone, des avis d'imposition ou de non-imposition,
-          ainsi que des attestations ou des factures d'assurance du logement.
+          tels que des factures d&apos;eau, d&apos;&eacute;lectricit&eacute;, de
+          t&eacute;l&eacute;phone, des avis d&apos;imposition ou de
+          non-imposition, ainsi que des attestations ou des factures
+          d&apos;assurance du logement.
         </p>
 
         <h4 className="text-xl font-semibold p-1">
@@ -76,8 +78,9 @@ export default function CGV() {
           Après avoir créé le Compte Client, le Client doit lire et accepter
           pleinement et sans aucune réserve les Conditions Générales de Vente.
           Cet accord est matérialisé par le Client lorsque ce dernier valide sur
-          le site internet <a href="WEBSITE_URL">WEBSITE_URL</a> qu'il accepte
-          pleinement et sans aucune réserve les Conditions Générales de Vente.
+          le site internet <a href="WEBSITE_URL">WEBSITE_URL</a> qu&apos;il
+          accepte pleinement et sans aucune réserve les Conditions Générales de
+          Vente.
         </p>
 
         <h4 className="text-xl font-semibold p-1">
@@ -92,7 +95,7 @@ export default function CGV() {
           <p>(i) lui confirmant la création du Compte Client,</p>
           <p>
             (ii) auquel est obligatoirement joint un exemplaire des Conditions
-            Générales de Vente qu'il a accepté sur un support durable.
+            Générales de Vente qu&apos;il a accepté sur un support durable.
           </p>
         </p>
 
@@ -102,39 +105,41 @@ export default function CGV() {
 
         <p>
           <p>
-            PARIS EXCHANGE propose un service d'opération de change à distance.
-            Le Client se connecte au Site Internet de PARIS EXCHANGE afin de
-            commander des devises étrangères en billets de banque ou des métaux
-            précieux sous forme de pièces et lingots d'or, qui lui seront
-            envoyées par transporteur privé, soit mises à sa disposition au
-            bureau du PARIS EXCHANGE, situé 9 rue Scribe, 75009 PARIS – France
-            ou dans sa succursale située 8 place de l'Opéra 75009 PARIS –
-            France.
+            PARIS EXCHANGE propose un service d&apos;opération de change à
+            distance. Le Client se connecte au Site Internet de PARIS EXCHANGE
+            afin de commander des devises étrangères en billets de banque ou des
+            métaux précieux sous forme de pièces et lingots d&apos;or, qui lui
+            seront envoyées par transporteur privé, soit mises à sa disposition
+            au bureau du PARIS EXCHANGE, situé 9 rue Scribe, 75009 PARIS –
+            France ou dans sa succursale située 8 place de l&apos;Opéra 75009
+            PARIS – France.
           </p>
           <p>Ainsi, pour les devises :</p>
           <p>
-            Le Client, après s'être connecté au site internet sécurisé de{" "}
+            Le Client, après s&apos;être connecté au site internet sécurisé de{" "}
             <a href="WEBSITE_URL">WEBSITE_URL</a>, doit :
           </p>
-          <p>(i) s'identifier,</p>
+          <p>(i) s&apos;identifier,</p>
           <p>(ii) choisir la devise désirée et la quantité requise,</p>
           <p>(iii) choisir le mode de règlement et celui de livraison,</p>
           <p>
-            (iv) indiquer s'il souhaite ou non que la prestation soit
-            intégralement exécutée sans attendre l'expiration du délai de
+            (iv) indiquer s&apos;il souhaite ou non que la prestation soit
+            intégralement exécutée sans attendre l&apos;expiration du délai de
             rétractation (v),
           </p>
           <p>(v) valider sa commande.</p>
-          <p>Pour l'or et l'argent sous forme de pièces et lingots :</p>
           <p>
-            Le Client, après s'être connecté au site internet sécurisé de{" "}
+            Pour l&apos;or et l&apos;argent sous forme de pièces et lingots :
+          </p>
+          <p>
+            Le Client, après s&apos;être connecté au site internet sécurisé de{" "}
             <a href="WEBSITE_URL">WEBSITE_URL</a>, doit :
           </p>
-          <p>(i) s'identifier,</p>
+          <p>(i) s&apos;identifier,</p>
           <p>(ii) choisir le type de pièce ou lingot et la quantité requise,</p>
           <p>
-            (iii) choisir le type d'achat (ferme, ordre au mieux ou ordre limité
-            à une certaine valeur à indiquer),
+            (iii) choisir le type d&apos;achat (ferme, ordre au mieux ou ordre
+            limité à une certaine valeur à indiquer),
           </p>
           <p>(iv) choisir le nombre de sacs scellés et le mode de livraison,</p>
           <p>
@@ -145,7 +150,7 @@ export default function CGV() {
           <p>
             Après chaque commande faite par le Client, un récapitulatif et un
             accusé de réception de cette commande lui sont envoyés par mail, à
-            l'adresse communiquée lors de son identification, par PARIS
+            l&apos;adresse communiquée lors de son identification, par PARIS
             EXCHANGE. Cet accusé de réception est accompagné des Conditions
             Générales de Vente applicables au jour de la transaction. Les
             informations contractuelles sont présentées en langue française.
@@ -162,27 +167,28 @@ export default function CGV() {
         </p>
         <p>
           PARIS EXCHANGE se réserve le droit de modifier ses taux et cours à
-          tout moment ainsi que le prix des pièces et lingots d'or. Toutefois,
-          les devises seront facturées sur la base des taux et cours en vigueur
-          au moment de l'enregistrement des commandes tel qu'indiqué au Client
-          lors de la validation de sa commande, mais sous réserve de
-          disponibilité de la devise à cette date.
+          tout moment ainsi que le prix des pièces et lingots d&apos;or.
+          Toutefois, les devises seront facturées sur la base des taux et cours
+          en vigueur au moment de l&apos;enregistrement des commandes tel
+          qu&apos;indiqué au Client lors de la validation de sa commande, mais
+          sous réserve de disponibilité de la devise à cette date.
         </p>
         <p>
           Les devises et métaux précieux demeurent la propriété de PARIS
-          EXCHANGE jusqu'au complet encaissement du paiement du prix.
+          EXCHANGE jusqu&apos;au complet encaissement du paiement du prix.
         </p>
 
         <h4 className="text-xl font-semibold p-1">2. Disponibilités</h4>
 
         <p>
           Les offres de devises et de métaux précieux sous forme de pièces et
-          lingots d'or et d'argent, sont proposées dans la limite des stocks
-          disponibles. Des indications sur la disponibilité des devises et des
-          métaux précieux sont fournies dans l'email de confirmation adressé par
-          PARIS EXCHANGE. L'indisponibilité d'une ou plusieurs devises, ou d'une
-          ou plusieurs pièces d'argent ou lingot d'argent ou d'une ou plusieurs
-          pièces d'or ou lingot d'or pour des achats dits 'fermes' ne peut
+          lingots d&apos;or et d&apos;argent, sont proposées dans la limite des
+          stocks disponibles. Des indications sur la disponibilité des devises
+          et des métaux précieux sont fournies dans l&apos;email de confirmation
+          adressé par PARIS EXCHANGE. L&apos;indisponibilité d&apos;une ou
+          plusieurs devises, ou d&apos;une ou plusieurs pièces d&apos;argent ou
+          lingot d&apos;argent ou d&apos;une ou plusieurs pièces d&apos;or ou
+          lingot d&apos;or pour des achats dits &apos;fermes&apos; ne peut
           engager la responsabilité de PARIS EXCHANGE.
         </p>
 
@@ -191,19 +197,27 @@ export default function CGV() {
         </h4>
 
         <p>
-          La date de cotation pour la réalisation des achats sur ordre au mieux
-          ou des achats sur ordre limité, indiquée sur l&apos;email envoyé au
-          Client lors de la validation de son ordre, est une date indicative. La
-          date effective de réalisation des achats sur ordre au mieux ou limité
-          sera définie par la Société à partir du moment où celle-ci a reçu
-          l&apos;acompte du Client par virement bancaire et les documents
-          complémentaires demandés au Client. Ces documents figurent sur
-          l&apos;ordre de virement de la Société. La Société informera le Client
-          par email de la date de prise d&apos;effet de l&apos;ordre
-          d&apos;achat du Client avant 12h le jour de la cotation en cause. Sans
-          contrindication du client par retour de mail avant 12h le jour de la
-          cotation en cause, aucune modification d&apos;ordre d&apos;achat ne
-          sera recevable par la Société.
+          <p>
+            La date de cotation pour la réalisation des achats sur ordre au
+            mieux ou des achats sur ordre limité, indiquée sur l&apos;email
+            envoyé au Client lors de la validation de son ordre, est une date
+            indicative.
+          </p>
+          <p>
+            La date effective de réalisation des achats sur ordre au mieux ou
+            limité sera définie par la Société à partir du moment où celle-ci a
+            reçu l&apos;acompte du Client par virement bancaire et les documents
+            complémentaires demandés au Client. Ces documents figurent sur
+            l&apos;ordre de virement de la Société.
+          </p>
+          <p>
+            La Société informera le Client par email de la date de prise
+            d&apos;effet de l&apos;ordre d&apos;achat du Client avant 12h le
+            jour de la cotation en cause. Sans contrindication du client par
+            retour de mail avant 12h le jour de la cotation en cause, aucune
+            modification d&apos;ordre d&apos;achat ne sera recevable par la
+            Société.
+          </p>
         </p>
 
         <h3 className="text-primary text-2xl font-semibold font-logoFont  mt-4">
@@ -211,49 +225,80 @@ export default function CGV() {
         </h3>
 
         <p>
-          Aucun règlement ne pourra intervenir avant l&apos;expiration du délai
-          de rétractation visé à l&apos;article VII. Toutefois, si le Client a
-          demandé à la Société l&apos;exécution intégrale du contrat, en cochant
-          la case « Le Client sollicite l&apos;exécution intégrale du contrat
-          interdisant dès lors l&apos;exercice du droit de rétractation dès
-          l&apos;exécution intégrale du contrat », la Société sera en droit de
-          procéder à l&apos;encaissement intégral du prix de la vente. Pour tout
-          règlement par virement bancaire, PARIS EXCHANGE ne procédera à la
-          livraison de la commande qu&apos;après réception et parfait
-          encaissement du paiement du Client. Seuls seront acceptés les
-          virements en provenance de comptes bancaires domiciliés en France.
-          Pour tout règlement par carte bancaire, PARIS EXCHANGE ne procédera à
-          la collecte du paiement du Client, figurant en attente sur la
-          plateforme de paiement Paybox Services, qu&apos;après l&apos;envoi de
-          la commande.
+          <p>
+            Aucun règlement ne pourra intervenir avant l&apos;expiration du
+            délai de rétractation visé à l&apos;article VII. Toutefois, si le
+            Client a demandé à la Société l&apos;exécution intégrale du contrat,
+            en cochant la case « Le Client sollicite l&apos;exécution intégrale
+            du contrat interdisant dès lors l&apos;exercice du droit de
+            rétractation dès l&apos;exécution intégrale du contrat », la Société
+            sera en droit de procéder à l&apos;encaissement intégral du prix de
+            la vente.
+          </p>
+          <p>
+            Pour tout règlement par virement bancaire, PARIS EXCHANGE ne
+            procédera à la livraison de la commande qu&apos;après réception et
+            parfait encaissement du paiement du Client. Seuls seront acceptés
+            les virements en provenance de comptes bancaires domiciliés en
+            France.
+          </p>
+          <p>
+            Pour tout règlement par carte bancaire, PARIS EXCHANGE ne procédera
+            à la collecte du paiement du Client, figurant en attente sur la
+            plateforme de paiement Paybox Services, qu&apos;après l&apos;envoi
+            de la commande.
+          </p>
         </p>
 
         <h4 className="text-xl font-semibold p-1">1. Modes de règlement</h4>
 
         <p>
-          Pour les devises : Le règlement des achats de devises peut
-          s&apos;effectuer soit par virement bancaire, soit par cartes
-          bancaires, étant précisé que seules les cartes Visa et MasterCard,
-          émises en France, sont acceptées, à l&apos;exclusion de tout autre
-          moyen de paiement. Aucune carte bancaire étrangère n&apos;est acceptée
-          sur le Site Internet de PARIS EXCHANGE. Pour les pièces et lingots
-          d&apos;or : Le règlement des acomptes pour des achats de pièces
-          d&apos;or et lingots d&apos;or, pièces d&apos;argent et lingots
-          d&apos;argent, peut s&apos;effectuer par virement bancaire ou par
-          chèque personnel. Les commandes fermes de pièces ou lingots d&apos;or,
-          de pièces ou lingots d&apos;argent, peuvent également être réglées par
-          cartes bancaires.
+          <p>
+            Pour les devises : Le règlement des achats de devises peut
+            s&apos;effectuer soit par virement bancaire, soit par cartes
+            bancaires, étant précisé que seules les cartes Visa et MasterCard,
+            émises en France, sont acceptées, à l&apos;exclusion de tout autre
+            moyen de paiement. Aucune carte bancaire étrangère n&apos;est
+            acceptée sur le Site Internet de PARIS EXCHANGE.
+          </p>
+          <p>
+            Pour les pièces et lingots d&apos;or : Le règlement des acomptes
+            pour des achats de pièces d&apos;or et lingots d&apos;or, pièces
+            d&apos;argent et lingots d&apos;argent, peut s&apos;effectuer par
+            virement bancaire ou par chèque personnel. Les commandes fermes de
+            pièces ou lingots d&apos;or, de pièces ou lingots d&apos;argent,
+            peuvent également être réglées par cartes bancaires.
+          </p>
+          <p>
+            Pour les devises : Le règlement des achats de devises peut
+            s&apos;effectuer soit par virement bancaire, soit par cartes
+            bancaires, étant précisé que seules les cartes Visa et MasterCard,
+            émises en France, sont acceptées, à l&apos;exclusion de tout autre
+            moyen de paiement. Aucune carte bancaire étrangère n&apos;est
+            acceptée sur le Site Internet de PARIS EXCHANGE.
+          </p>
+          <p>
+            Pour les pièces et lingots d&apos;or : Le règlement des acomptes
+            pour des achats de pièces d&apos;or et lingots d&apos;or, pièces
+            d&apos;argent et lingots d&apos;argent, peut s&apos;effectuer par
+            virement bancaire ou par chèque personnel. Les commandes fermes de
+            pièces ou lingots d&apos;or, de pièces ou lingots d&apos;argent,
+            peuvent également être réglées par cartes bancaires.
+          </p>
         </p>
 
         <h4 className="text-xl font-semibold p-1">2. Frais</h4>
 
         <p>
-          En cas de règlement par virement ou mandat, le Client aura à sa charge
-          les frais liés à ce mode de paiement. Les frais de port,
-          d&apos;affranchissement, d&apos;assurance sont à la charge du Client.
-          Ceux-ci sont fonction du poids et de la valeur des devises ou des
-          pièces d&apos;or expédiées. Ils seront indiqués lors de la commande du
-          Client.
+          <p>
+            Si le Client choisit de régler par virement ou mandat, les frais
+            associés à ce mode de paiement seront à sa charge. De même, les
+            frais de port, d&apos;affranchissement et d&apos;assurance seront
+            supportés par le Client, et leur montant dépendra du poids et de la
+            valeur des devises ou des pièces d&apos;or expédiées. Ces frais
+            seront clairement spécifiés au moment de la passation de la commande
+            par le Client.
+          </p>
         </p>
 
         <h4 className="text-xl font-semibold p-1">
@@ -261,48 +306,50 @@ export default function CGV() {
         </h4>
 
         <p>
-          Les informations en rapport avec la commande du Client font
-          l&apos;objet d&apos;un traitement automatisé de données dont le
-          responsable est PayBox. Ce traitement automatisé de données a pour
-          finalité de définir un niveau d&apos;analyse d&apos;une transaction et
-          de lutter contre la fraude à la carte bancaire. PayBox et le PARIS
-          EXCHANGE sont les destinataires des données relatives à la commande du
-          Client. Le défaut de transmission des données relatives à la commande
-          du Client empêche la réalisation et l&apos;analyse de la transaction.
+          Les informations liées à la commande du Client sont soumises à un
+          traitement automatisé des données, dont le responsable est PayBox. Ce
+          processus automatisé a pour objectif de déterminer le niveau
+          d&apos;analyse d&apos;une transaction et de prévenir la fraude par
+          carte bancaire. PayBox et PARIS EXCHANGE sont les destinataires des
+          données associées à la commande du Client. Le non-transfert de ces
+          données relatives à la commande du Client entraînerait
+          l&apos;impossibilité d&apos;effectuer et d&apos;analyser la
+          transaction
         </p>
 
         <h4 className="text-xl font-semibold p-1">4. Sécurisation</h4>
 
         <p>
-          Les paiements seront réalisés par le biais d&apos;un système sécurisé
-          utilisant le protocole SSL (mise en place d&apos;une connexion SSL 128
-          bits), de telle sorte que les informations et données bancaires soient
-          cryptées (par un logiciel) et qu&apos;aucun tiers ne puisse en prendre
-          connaissance au cours du transport sur le réseau internet. PARIS
-          EXCHANGE ne recevra, ni n&apos;obtiendra aucune des données bancaires
-          du Client (sauf dans le cas d&apos;un règlement par virement). La
-          sécurisation des paiements sur internet est effectuée par : Paybox
-          Services 130/136 avenue Joseph Kessel  Actipôle 78960 Voisins le
-          Bretonneux
+          Les paiements seront effectués au moyen d&apos;un système sécurisé qui
+          utilise le protocole SSL (avec une connexion SSL 128 bits),
+          garantissant ainsi que les informations et données bancaires sont
+          cryptées par un logiciel, et qu&apos;aucun tiers ne peut les
+          intercepter lors de leur transmission sur Internet. PARIS EXCHANGE ne
+          collectera ni n&apos;aura accès aux données bancaires du Client, à
+          moins que le paiement ne soit effectué par virement. La sécurisation
+          des paiements en ligne est gérée par Paybox Services, situé au 130/136
+          avenue Joseph Kessel, Actipôle 78960 Voisins-le-Bretonneux.
         </p>
 
         <h4 className="text-xl font-semibold p-1">5. Délai de règlement</h4>
 
         <p>
-          Pour les devises : A défaut d&apos;encaissement complet du prix de la
-          vente, de ses frais et accessoires, dans les 5 jours calendaires de la
-          validation de la commande par la Société, la vente sera purement et
-          simplement résolue. La Société en informera le Client par email. Pour
-          les métaux précieux sous forme de pièces et lingots d&apos;or ou
-          d&apos;argent : A défaut d&apos;encaissement complet de l&apos;acompte
-          défini lors d&apos;un achat sur ordre au mieux ou d&apos;un achat sur
-          ordre limité dans les 48h de la validation de la commande par la
-          Société, l&apos;ordre d&apos;achat sera purement et simplement résolu.
-          La Société en informera le Client par email. A défaut
-          d&apos;encaissement complet du prix de la vente pour un achat ferme,
-          de ses frais et accessoires, dans les 48h de la validation de la
-          commande par la Société, la vente sera purement et simplement résolue.
-          La Société en informera le Client par email.
+          Pour les devises : En l&apos;absence de paiement intégral du prix de
+          la vente, de ses frais et accessoires dans un délai de 5 jours
+          calendaires à compter de la validation de la commande par la Société,
+          la vente sera résiliée de manière immédiate. Le Client sera notifié de
+          cette résiliation par voie électronique, par email. Pour les métaux
+          précieux sous forme de pièces et lingots d&apos;or ou d&apos;argent :
+          En cas de non-paiement complet de l&apos;acompte stipulé lors
+          d&apos;un achat sur ordre au mieux ou d&apos;un achat sur ordre limité
+          dans un délai de 48 heures à partir de la validation de la commande
+          par la Société, l&apos;ordre d&apos;achat sera résilié de manière
+          immédiate. Le Client sera informé de cette résiliation par voie
+          électronique, par email. En cas de non-paiement intégral du prix de la
+          vente, y compris ses frais et accessoires, dans les 48 heures à
+          compter de la validation de la commande par la Société, la vente sera
+          résiliée de manière immédiate. Le Client sera notifié de cette
+          résiliation par voie électronique, par email.
         </p>
 
         <h3 className="text-primary text-2xl font-semibold font-logoFont  mt-4">
@@ -310,8 +357,8 @@ export default function CGV() {
         </h3>
 
         <p>
-          Les devises et pièces d&apos;or achetées sur le Site Internet ne sont
-          livrées qu&apos;en France métropolitaine et en Corse.
+          Les devises et les pièces d&apos;or achetées sur le site internet ne
+          sont expédiées qu&apos;en France métropolitaine et en Corse.
         </p>
 
         <h3 className="text-primary text-2xl font-semibold font-logoFont  mt-4">
@@ -319,10 +366,9 @@ export default function CGV() {
         </h3>
 
         <p>
-          Les devises et pièces d&apos;or achetées sur le Site Internet peuvent
-          faire l&apos;objet d&apos;une livraison par transporteur privé ou
-          postal soit d&apos;une mise à disposition dans les bureaux de PARIS
-          EXCHANGE.
+          Les devises et les pièces d&apos;or achetées sur le site internet
+          peuvent être livrées par un transporteur privé ou postal, ou mises à
+          disposition dans les bureaux de PARIS EXCHANGE.
         </p>
 
         <p>
@@ -334,23 +380,23 @@ export default function CGV() {
         <h5>Pour les devises :</h5>
 
         <p>
-          En tout état de cause, pour tout règlement par virement bancaire, la
-          livraison ne pourra intervenir qu&apos;après d&apos;une part,
-          l&apos;expiration du délai de rétractation si le Client n&apos;a pas
-          demandé l&apos;exécution intégrale immédiate du contrat et
-          d&apos;autre part, l&apos;encaissement par la Société de la vente de
-          devises, de ses frais et accessoires, la réception d&apos;un accusé de
-          virement indiquant le nom et le prénom de l&apos;émetteur enfin, la
-          réception ou la présentation selon le cas des documents nécessaires en
-          fonction du montant cumulé ou non de la vente de devises visés à
-          l&apos;article 1. Pour tout règlement par Carte Bancaire la livraison
-          ne pourra intervenir qu&apos;après d&apos;une part, l&apos;expiration
-          du délai de rétractation si le Client n&apos;a pas demandé
-          l&apos;exécution intégrale immédiate du contrat et d&apos;autre part,
-          la visualisation par la Société du paiement du Client sur la
-          plateforme de paiement Paybox Services, enfin, la réception ou la
-          présentation selon le cas des documents nécessaires en fonction du
-          montant cumulé ou non de la vente de devises visés à l&apos;article 1.
+          Dans tous les cas, en ce qui concerne les règlements par virement
+          bancaire, la livraison ne pourra avoir lieu qu&apos;après :
+          L&apos;expiration du délai de rétractation, sauf si le Client demande
+          l&apos;exécution immédiate complète du contrat. L&apos;encaissement
+          par la Société du paiement relatif à la vente de devises, y compris
+          ses frais et accessoires. La réception d&apos;un accusé de virement
+          indiquant le nom et le prénom de l&apos;émetteur. La réception ou la
+          présentation, selon le cas, des documents nécessaires, en fonction du
+          montant cumulé ou non de la vente de devises, comme spécifié à
+          l&apos;article 1. Pour les règlements par Carte Bancaire, la livraison
+          sera conditionnée par : L&apos;expiration du délai de rétractation,
+          sauf si le Client demande l&apos;exécution immédiate complète du
+          contrat. La vérification par la Société du paiement effectué par le
+          Client sur la plateforme de paiement Paybox Services. La réception ou
+          la présentation, selon le cas, des documents nécessaires, en fonction
+          du montant cumulé ou non de la vente de devises, comme stipulé à
+          l&apos;article 1.
         </p>
 
         <h5>
@@ -385,24 +431,25 @@ export default function CGV() {
 
         <p>
           En cas de mise à disposition dans les locaux de PARIS EXCHANGE, le
-          Client peut venir prendre possession des devises ou des métaux
-          précieux commandés en se munissant d&apos;une pièce d&apos;identité en
-          cours de validité. Seule la personne mentionnée sur la commande pourra
-          venir prendre possession de la commande. Cette dernière devra vérifier
-          la conformité des devises ou métaux précieux mis à disposition avec la
-          commande puis, en cas d&apos;accord, dater et signer le bon de mise à
-          disposition. Aucune mise à disposition des devises ou des métaux
-          précieux ne sera possible sans la signature et l&apos;apposition de la
-          date par le Client sur le bon de mise à disposition. Si le Client ne
-          peut pas venir retirer ses devises, il pourra mandater une tierce
-          personne qui devra se présenter au bureau du PARIS EXCHANGE munie du
-          email de confirmation de la commande, d&apos;une pièce d&apos;identité
-          du Client en cours de validité, d&apos;une pièce d&apos;identité
-          personnelle en cours de validité et d&apos;un pouvoir manuscrit daté
-          et signé par le Client l&apos;autorisant à effectuer ce retrait en son
-          nom. Pour tout règlement par Carte Bancaire, le client ou la personne
-          mandatée devra également présenter la Carte Bancaire utilisée lors du
-          paiement en ligne.
+          Client a la possibilité de récupérer les devises ou les métaux
+          précieux qu&apos;il a commandés en présentant une pièce
+          d&apos;identité valide. Seule la personne dont le nom figure sur la
+          commande est autorisée à récupérer celle-ci. Il est de sa
+          responsabilité de vérifier que les devises ou les métaux précieux
+          correspondent à sa commande. En cas d&apos;accord, elle devra dater et
+          signer le bon de mise à disposition. Aucune remise des devises ou des
+          métaux précieux ne sera effectuée sans la signature du Client et la
+          mention de la date sur le bon de mise à disposition. Si le Client
+          n&apos;est pas en mesure de récupérer sa commande en personne, il peut
+          donner procuration à une tierce personne. Cette personne devra se
+          rendre au bureau de PARIS EXCHANGE en étant munie du courriel de
+          confirmation de la commande, d&apos;une pièce d&apos;identité valide
+          du Client, d&apos;une pièce d&apos;identité personnelle valide, ainsi
+          que d&apos;une procuration manuscrite datée et signée par le Client,
+          l&apos;autorisant à effectuer le retrait en son nom. En cas de
+          paiement par carte bancaire, le Client ou la personne mandatée devra
+          également présenter la carte bancaire utilisée lors du paiement en
+          ligne.
         </p>
 
         <h4 className="text-xl font-semibold p-1">2. Facture</h4>
