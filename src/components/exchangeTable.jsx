@@ -65,7 +65,7 @@ export default function ExchangeTable({ setGold }) {
   return (
     <div className="">
       <div className=" flex flex-row justify-center">
-        <p className="lg:text-2xl text-xl font-semibold font-logoFont p-7 my-5 border-y-2">{`Taux de change du: ${todayDate.toLocaleDateString()}`}</p>
+        <p className="lg:text-xl text-xl font-semibold font-logoFont p-7 mb-2 mt-7 border-y-2">{`Taux de change du: ${todayDate.toLocaleDateString()}`}</p>
       </div>
 
       <div className="flex flex-col items-center">

@@ -10,31 +10,31 @@ const Navbar = () => {
           href="/"
           className="text-lg font-extrabold flex place-items-center justify-center lg:flex-1 lg:justify-center lg:ml-32 lg:text-xl "
         >
-          <p className="lg:text-4xl text-2xl font-logoFont lg:mt-3">
+          <p className="lg:text-4xl text-2xl font-logoFont lg:mt-3 lg:tracking-wider">
             PARIS EXCHANGE
           </p>
         </Link>
-        <div href="/" className="lg:mr-4 lg:visible  invisible">
+        <div href="/" className="lg:mr-4 lg:visible invisible">
           <p className="font-logoFont font-[600]"> Tél: +33 954 455 444</p>
         </div>
       </div>
       <div className="tabs lg:ml-3  ">
         <Link
           // className="tab tabs-boxed tab-lg"
-          className="lg:btn lg:text-lg lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
+          className="lg:btn lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
           href="/"
         >
           Acceuil
         </Link>
 
         <Link
-          className="lg:btn lg:text-lg lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
+          className="lg:btn lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
           href="/contact"
         >
           Contact
         </Link>
         <Link
-          className="lg:btn lg:text-lg lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
+          className="lg:btn lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
           href="/info"
         >
           Info

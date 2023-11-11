@@ -7,15 +7,14 @@ const Hero = () => {
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-2xl">
-          <h2 className="mb-5 lg:text-5xl text-3xl font-bold font-logoFont">
+          <h2 className="mb-5 lg:text-5xl text-3xl font-bold font-logoFont tracking-wide">
             Bureau de change sur Paris
           </h2>
-          <p className="">
-            Notre bureau de change est situé aux 4 boulevard saint michel
+          <p className="tracking-wide text-lg">
+            Notre bureau de change est situé aux 4 boulevard saint michel A
+            gauche de la fontaine de saint michel Meilleurs prix de change
+            garanties
           </p>
-
-          <p className=" ">A gauche de la fontaine de saint michel</p>
-          <p className="mb-5 ">Meilleurs prix de change garanties</p>
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ function CountrySelect({ selectedValue, setValue, setCountry, exchangeData }) {
     <div className="">
       <div className="form-control w-full max-w-xs">
         <label>
-          <p className="text-lg font-semibold pl-1 animate-pulse-blackred ">
+          <p className="text-lg font-semibold pl-1 animate-pulse-blackred my-5">
             Choisissez le pays que vous voulez:
           </p>
         </label>

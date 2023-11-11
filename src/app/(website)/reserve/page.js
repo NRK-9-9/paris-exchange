@@ -59,54 +59,59 @@ const Order = () => {
   return (
     <div className="lg:flex lg:justify-center">
       <div className="card bg-base-200 shadow-xl">
-        <h1 className="text-2xl font-bold font-logoFont flex justify-center mt-7">
+        <h1 className="text-2xl font-bold font-logoFont flex justify-center mt-7 tracking-widest">
           RESERVER DEVISE
         </h1>
         <form
-          className="grid lg:grid-cols-2 grid-cols-1 p-7 gap-7"
+          className="grid  grid-cols-1 py-7 lg:px-7 px-4 gap-5"
           ref={form}
           onSubmit={sendEmail}
         >
           <div>
-            <div className="form-control w-full max-w-xs">
-              <label className="label">
-                <span className="label-text font-logoFont text-lg">
-                  Nom/Last name:
-                </span>
-              </label>
-              <input
-                onChange={(e) => {
-                  setNom(e.target.value);
-                }}
-                value={nom}
-                name="from_nom"
-                required
-                type="text"
-                placeholder="Nom"
-                className="input input-bordered w-full max-w-xs"
-              />
+            <div className="flex justify-center items-center lg:gap-5 gap-4">
+              <div className="form-control w-full max-w-xs">
+                <label className="label">
+                  <span className="label-text font-logoFont text-lg tracking-wide">
+                    Nom:
+                  </span>
+                </label>
+                <input
+                  onChange={(e) => {
+                    setNom(e.target.value);
+                  }}
+                  value={nom}
+                  name="from_nom"
+                  required
+                  type="text"
+                  placeholder="Nom"
+                  className="input input-bordered w-full max-w-xs"
+                />
+              </div>
+              <div className="form-control w-full max-w-xs ">
+                <label className="label">
+                  <span className="label-text font-logoFont text-lg tracking-wide">
+                    Prenom:
+                  </span>
+                </label>
+                <input
+                  onChange={(e) => {
+                    setPrenom(e.target.value);
+                  }}
+                  value={prenom}
+                  name="from_prenom"
+                  required
+                  type="text"
+                  placeholder="Prenom"
+                  className="input input-bordered w-full max-w-xs"
+                />
+              </div>
             </div>
+
             <div className="form-control w-full max-w-xs mt-5">
               <label className="label">
-                <span className="label-text font-logoFont text-lg">
-                  Prenom:
+                <span className="label-text w-full max-w-lg font-logoFont text-lg">
+                  Email:
                 </span>
-              </label>
-              <input
-                onChange={(e) => {
-                  setPrenom(e.target.value);
-                }}
-                value={prenom}
-                name="from_prenom"
-                required
-                type="text"
-                placeholder="Prenom"
-                className="input input-bordered w-full max-w-xs"
-              />
-            </div>
-            <div className="form-control w-full max-w-xs mt-5">
-              <label className="label">
-                <span className="label-text font-logoFont text-lg">Email:</span>
               </label>
               <input
                 onChange={(e) => {
@@ -122,7 +127,9 @@ const Order = () => {
             </div>
             <div className="form-control w-full max-w-xs mt-5">
               <label className="label">
-                <span className="label-text font-logoFont text-lg">Phone:</span>
+                <span className="label-text font-logoFont text-lg tracking-wide">
+                  Phone:
+                </span>
               </label>
               <input
                 onChange={(e) => {
@@ -138,7 +145,7 @@ const Order = () => {
             </div>
             <div className="form-control w-full max-w-xs mt-5 flex-row place-items-center">
               <label className="label">
-                <span className="label-text text-lg font-logoFont ">
+                <span className="label-text text-lg font-logoFont tracking-wide">
                   Day/Month:
                 </span>
               </label>
@@ -157,27 +164,15 @@ const Order = () => {
               </div>
             </div>
           </div>
-          <div>
-            <div className="form-control w-full max-w-xs mt-5 flex-col ">
-              <h1 className="text-xl font-logoFont">INFORMATION:</h1>
+          <div className="flex justify-between items-start">
+            <div className="">
+              <h1 className="text-xl font-logoFont font-bold mt-1">
+                INFORMATION:
+              </h1>
               <p>
-                I am{" "}
-                <text className="font-semibold">{` ${order_type}`}ing </text>
-              </p>
-              <p>
-                <text className="font-semibold">Currency:</text>
-                {` ${currency}`}
-              </p>
-              <p>
-                <text className="font-semibold">Currency amount:</text>{" "}
-                {` ${currency_amount}`}
-              </p>
-              <p>
-                <text className="font-semibold">Euro amount:</text> {eur_amount}
+                {`I am ${order_type}ing ${currency_amount} ${currency} for ${eur_amount} EUR`}
               </p>
             </div>
-          </div>
-          <div className="flex flex-row justify-end ">
             <button className="btn btn-primary" type="submit">
               reserver
             </button>
