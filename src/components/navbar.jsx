@@ -14,12 +14,8 @@ const Navbar = () => {
             PARIS EXCHANGE
           </p>
         </Link>
-        <div
-          href="/"
-          className="lg:mr-4 lg:visible text-xs flex justify-start items-end"
-        >
+        <div href="/" className="lg:mr-4 lg:visible text-xs lg:text-lg">
           <Link className="font-logoFont font-[600]" href="tel:+33 954 455 444">
-            {" "}
             Tél: +33 954 455 444
           </Link>
         </div>
