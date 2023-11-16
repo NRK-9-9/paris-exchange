@@ -77,13 +77,13 @@ export default function ExchangeTable({ setGold }) {
         />
         {exchangeData ? (
           <div className="flex lg:flex-row-reverse flex-col-reverse gap-2">
-            <Table
+            {/* <Table
               exchangeData={shownData}
               selectedCountry={selectedCountry}
               type="sell"
               toggle={togg}
               dataToggle={dataToggle}
-            />
+            /> */}
             {/* <TableSkeleton></TableSkeleton> */}
 
             <Table
