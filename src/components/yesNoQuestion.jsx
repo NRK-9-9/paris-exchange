@@ -15,7 +15,7 @@ const YesNoQuestion = ({ Question1, Question2, noFunc, yesData }) => {
           Retour
         </button>
         <Link
-          className="btn btn-xs btn-primary"
+          className="btn btn-xs btn-secondary"
           href={{
             pathname: "/reserve/",
             query: {

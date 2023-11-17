@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-2xl">
           <h2 className="mb-5 lg:text-5xl text-2xl font-bold font-logoFont tracking-wide">
-            Bureau de change sur Paris
+            Bureau De Change sur Paris
           </h2>
           <p className="tracking-wide text-lg">
             Bureau de change situé au Boulevard Saint-Michel A gauche de la
