@@ -103,8 +103,8 @@ const ExchangeTableRow = ({
               <div>
                 {reserveType === "1" ? (
                   <YesNoQuestion
-                    Question1={`${buyCur} ${currency} = `}
-                    Question2={`${buyEur} EUR?`}
+                    Question1={`Vous auriez ${buyCur} ${currency}`}
+                    Question2={` pour ${buyEur} EUR?`}
                     noFunc={() => setquestionCUR(null)}
                     yesData={{
                       orderType: "buy",
@@ -115,8 +115,8 @@ const ExchangeTableRow = ({
                   />
                 ) : reserveType === "2" ? (
                   <YesNoQuestion
-                    Question1={`${buyEur} EUR = `}
-                    Question2={`${buyCur} ${currency}?`}
+                    Question1={`Pour ${buyEur} EUR `}
+                    Question2={`vous auriez ${buyCur} ${currency}?`}
                     noFunc={() => setquestionCUR(null)}
                     yesData={{
                       orderType: "buy",
@@ -131,8 +131,8 @@ const ExchangeTableRow = ({
               <div>
                 {reserveType === "1" ? (
                   <YesNoQuestion
-                    Question1={`${buyEur} EUR = ${buyCur} ${currency}`}
-                    Question2={``}
+                    Question1={`Pour ${buyEur} EUR `}
+                    Question2={`vous auriez ${buyCur} ${currency}?`}
                     noFunc={() => setquestionCUR(null)}
                     yesData={{
                       orderType: "sell",
