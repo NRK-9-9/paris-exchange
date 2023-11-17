@@ -72,7 +72,7 @@ const Order = () => {
               <div className="form-control w-full max-w-xs">
                 <label className="label">
                   <span className="label-text font-logoFont text-lg tracking-wide">
-                    Nom:
+                    Nom/Surname:
                   </span>
                 </label>
                 <input
@@ -90,7 +90,7 @@ const Order = () => {
               <div className="form-control w-full max-w-xs ">
                 <label className="label">
                   <span className="label-text font-logoFont text-lg tracking-wide">
-                    Prenom:
+                    Prenom/First Name:
                   </span>
                 </label>
                 <input
