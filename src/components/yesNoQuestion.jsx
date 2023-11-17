@@ -12,7 +12,7 @@ const YesNoQuestion = ({ Question1, Question2, noFunc, yesData }) => {
       </p>
       <div className="flex flex-row justify-evenly mt-3">
         <button className="btn btn-xs btn-ghost" onClick={noFunc}>
-          back
+          Retour
         </button>
         <Link
           className="btn btn-xs btn-primary"
