@@ -77,22 +77,22 @@ export default function ExchangeTable({ setGold }) {
         />
         {exchangeData ? (
           <div className="flex flex-col">
-            {/* <Table                          //enable this when asad wants table dachat back
+            <Table //enable this when asad wants table dachat back
               exchangeData={shownData}
               selectedCountry={selectedCountry}
               type="sell"
               toggle={togg}
               dataToggle={dataToggle}
-            /> */}
+            />
             {/* <TableSkeleton></TableSkeleton> */}
 
-            <Table
+            {/* <Table
               exchangeData={shownData}
               selectedCountry={selectedCountry}
               type="buy"
               toggle={togg}
               dataToggle={dataToggle}
-            />
+            /> */}
           </div>
         ) : (
           <div className="flex lg:flex-row-reverse flex-col-reverse gap-2">

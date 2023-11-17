@@ -173,7 +173,7 @@ const Order = () => {
                 {`I am ${order_type}ing ${currency_amount} ${currency} for ${eur_amount} EUR`}
               </p>
             </div>
-            <button className="btn btn-primary" type="submit">
+            <button className="btn btn-secondary" type="submit">
               reserver
             </button>
           </div>
