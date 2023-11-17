@@ -15,7 +15,7 @@ const MetalPrice = ({ gold }) => {
         <div className="flex flex-col justify-center place-items-center m-3 mt-5">
           <Image src={goldpng} width={150} height={150} alt="gold_png"></Image>
         </div>
-        <div className="bg-neutral-800 p-4 text-neutral-content rounded-b-md">
+        <div className="bg-neutral-800 p-4 text-neutral-content rounded-b-lg">
           <p className="flex justify-center text-2xl font-semibold">
             Nous Achetons:
           </p>

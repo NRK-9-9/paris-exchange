@@ -6,7 +6,6 @@ import Sentence from "@/components/sentence";
 const Home = () => {
   return (
     <div>
-      <Sentence />
       <Hero />
       <IndexPage></IndexPage>
     </div>

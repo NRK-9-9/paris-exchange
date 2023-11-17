@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Sentence from "./sentence";
 
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-neutral text-neutral-content shadow-lg flex">
+      <div className="navbar bg-neutral text-neutral-content shadow-lg flex ">
         <Link
           href="/"
           className="text-lg font-extrabold flex place-items-center justify-center lg:flex-1 lg:justify-center lg:ml-32 lg:text-xl "
@@ -14,7 +15,7 @@ const Navbar = () => {
             PARIS EXCHANGE
           </p>
         </Link>
-        <div href="/" className="lg:mr-4 lg:visible text-xs lg:text-lg">
+        <div href="/" className="lg:mr-4 lg:visible lg:text-lg text-xs">
           <Link className="font-logoFont font-[600]" href="tel:+33 954 455 444">
             Tél: +33 954 455 444
           </Link>

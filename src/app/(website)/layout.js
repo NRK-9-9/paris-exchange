@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import Sentence from "@/components/sentence";
 import "../globals.css";
 
 export const metadata = {
@@ -29,7 +30,6 @@ export const metadata = {
     { name: "Mark Hammoud" },
     { name: "Najib Mansour", url: "https://github.com/Najibmansour" },
   ],
-  colorScheme: "light",
   creator: "Najib Mansour",
   openGraph: {
     title: "Paris Exchange Saint Michel",
@@ -62,7 +62,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body>
+        <Sentence />
         <Navbar />
+
         {children}
         <Footer />
       </body>
