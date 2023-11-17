@@ -28,7 +28,13 @@ const Order = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    // console.log(form.current);
+    console.log(form.current);
+    console.log(order_type);
+
+    const serial = `${order_type == "buy" ? "VC" : "AC"}-${Math.floor(
+      Date.now() / 1000
+    )}`;
+    console.log(serial);
 
     send(
       "service_65urbzf",
@@ -38,11 +44,12 @@ const Order = () => {
         currency: currency,
         currency_amount: currency_amount,
         euro_amount: eur_amount,
-        from_nom: nom,
-        from_prenom: prenom,
+        from_nom: prenom,
+        from_prenom: nom,
         from_email: email,
         exchange_date: date,
         phone_num: phone,
+        serial: serial,
       },
       "PS8ZYXeBp37p8U570"
     ).then(

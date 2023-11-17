@@ -42,7 +42,7 @@ const Info = () => {
             <PhoneIcon />
             <Link
               className="font-semibold lg:p-2 p-1 lg:pl-3 pl-2 text-sm lg:text-lg text-gray-600 underline underline-offset-4"
-              href="tel:+33 954 455 444"
+              href="tel:+33 9 54 45 54 44"
             >
               +33 954 455 444
             </Link>
