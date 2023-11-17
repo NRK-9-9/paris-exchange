@@ -10,10 +10,9 @@ const Hero = () => {
           <h2 className="mb-5 lg:text-5xl text-2xl font-bold font-logoFont tracking-wide">
             Bureau de change sur Paris
           </h2>
-          <p className="tracking-wide text-md">
-            Notre bureau de change est situé aux 4 boulevard saint michel A
-            gauche de la fontaine de saint michel Meilleurs prix de change
-            garanties
+          <p className="tracking-wide text-lg">
+            Bureau de change situé au Boulevard Saint-Michel A gauche de la
+            fontaine
           </p>
         </div>
       </div>
