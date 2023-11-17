@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     // <div className="hero min-h-[43vh] bg-[url('https://media.istockphoto.com/id/1322201350/photo/digitally-enhanced-shot-of-a-graph-showing-the-ups-and-downs-shares-on-the-stock-market.jpg?s=1024x1024&w=is&k=20&c=0h4cOcoSUslAF9JNqNZv_4dsLqEA3JxT5Vq-NlEDsSk=')]">
-    <div className="hero lg:min-h-[43vh] min-h-[30vh] bg-[url('https://static.vecteezy.com/system/resources/previews/002/151/433/large_2x/global-currency-exchange-network-and-technology-on-blue-background-vector.jpg')]">
+    <div className="hero lg:min-h-[43vh] min-h-[30vh] bg-[url('https://i.imgur.com/Bq2sNWj.jpeg')]">
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-2xl">
