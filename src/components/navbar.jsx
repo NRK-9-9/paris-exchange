@@ -6,38 +6,38 @@ import Sentence from "./sentence";
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-neutral text-neutral-content shadow-lg flex ">
+      <div className="navbar bg-neutral text-neutral-content shadow-lg">
         <Link
           href="/"
-          className="text-lg font-extrabold flex place-items-center justify-center lg:flex-1 lg:justify-center lg:ml-32 lg:text-xl "
+          className="text-lg font-extrabold flex-1 justify-between place-items-center lg:ml-[39%] lg:text-xl "
         >
           <p className="lg:text-4xl text-2xl font-logoFont lg:mt-3 lg:tracking-wider">
             PARIS EXCHANGE
           </p>
         </Link>
-        <div href="/" className="lg:mr-4 lg:visible lg:text-lg text-xs">
+        <div className="lg:mr-4 lg:visible lg:text-lg text-xs ">
           <Link className="font-logoFont font-[600]" href="tel:+33 954 455 444">
-            Tél: +33 954 455 444
+            Tél: +33 9 54 45 54 44
           </Link>
         </div>
       </div>
-      <div className="tabs lg:ml-3  ">
+      <div className="tabs lg:ml-3 flex justify-center">
         <Link
           // className="tab tabs-boxed tab-lg"
-          className="lg:btn lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
+          className="lg:btn hover-underline-animation lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4  lg:hover:font-bold"
           href="/"
         >
           Acceuil
         </Link>
 
         <Link
-          className="lg:btn lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
+          className="lg:btn hover-underline-animation  lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4  lg:hover:font-bold"
           href="/contact"
         >
           Contact
         </Link>
         <Link
-          className="lg:btn lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4 lg:hover:underline lg:hover:font-bold hover:underline-offset-8"
+          className="lg:btn hover-underline-animation  lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost btn-sm underline underline-offset-4  lg:hover:font-bold"
           href="/info"
         >
           Info

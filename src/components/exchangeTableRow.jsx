@@ -39,7 +39,7 @@ const ExchangeTableRow = ({
 
   return (
     <tr
-      className={`${color} hover:bg-sky-600 hover:text-secondary-content text-neutral-500`}
+      className={`${color} hover:transition-colors hover:bg-secondary hover:bg-opacity-90 hover:text-secondary-content text-neutral-500`}
     >
       <td className="p-2">
         <FlagCoded code={code} />

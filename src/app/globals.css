@@ -37,3 +37,40 @@ body {
 .animate-conveyor-belt {
   animation: move-left-to-right linear 12.5s infinite;
 }
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
+.hover-row-animation {
+  content: "";
+}
+
+.hover-row-animation::after {
+  background-color: #ff00ff;
+  transform: background 0.5 ease-in-out;
+}
+.hover-row-animation::hover::after {
+  background-color: #00ff00;
+  transform: background 0.5 ease-in-out;
+}

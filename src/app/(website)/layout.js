@@ -64,7 +64,6 @@ export default function RootLayout({ children }) {
       <body>
         <Sentence />
         <Navbar />
-
         {children}
         <Footer />
       </body>
