@@ -41,7 +41,7 @@ body {
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: #0087ca;
+  color: #57588c;
 }
 
 .hover-underline-animation::after {
@@ -52,7 +52,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #0087ca;
+  background-color: #57588c;
   transform-origin: bottom center;
   transition: transform 0.25s ease-out;
 }
@@ -60,17 +60,4 @@ body {
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom center;
-}
-
-.hover-row-animation {
-  content: "";
-}
-
-.hover-row-animation::after {
-  background-color: #ff00ff;
-  transform: background 0.5 ease-in-out;
-}
-.hover-row-animation::hover::after {
-  background-color: #00ff00;
-  transform: background 0.5 ease-in-out;
 }
