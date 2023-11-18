@@ -14,16 +14,16 @@ export default function Table({
       <table className="mt-5 lg:w-[30vw]">
         <thead className="">
           <tr>
-            <th className="bg-neutral lg:text-xs text-xs text-neutral-content px-6 py-3 rounded-tl-lg">
+            <th className="bg-neutral-focus lg:text-xs text-xs text-neutral-content px-6 py-3 rounded-tl-lg">
               Pays
             </th>
             <th
-              className="bg-neutral lg:text-xs text-xs text-neutral-content px-6 py-3 rounded-tr-lg "
+              className="bg-neutral-focus lg:text-xs text-xs text-neutral-content px-6 py-3 rounded-tr-lg "
               colSpan={2}
             >
               {type === "sell" ? "PARS EXCHANGE VEND" : "PARS EXCHANGE ACHETE"}
             </th>
-            {/* <th className="bg-neutral lg:text-xs text-xs text-neutral-content px-6 py-3 rounded-tr-lg">
+            {/* <th className="bg-neutral-focus lg:text-xs text-xs text-neutral-content px-6 py-3 rounded-tr-lg">
               {type === "sell" ? "PE VEND" : "PE ACHETE"}
             </th> */}
           </tr>
@@ -63,7 +63,7 @@ export default function Table({
         </tbody>
       </table>
       <div
-        className="flex justify-center w-full bg-secondary-focus hover:bg-secondary text-secondary-content rounded-b-sm"
+        className="flex justify-center w-full bg-neutral  hover:bg-opacity-90 text-secondary-content rounded-b-sm"
         onClick={toggle}
       >
         {dataToggle ? (
