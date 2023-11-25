@@ -19,9 +19,16 @@ module.exports = {
   daisyui: {
     themes: [
       {
+        mytheme: {
+          primary: "#13BFAB",
+          "primary-focus": "#13BFAB",
+          "base-100": "#FFFFFF",
+          neutral: "#000000",
+        },
+      },
+      {
         light: {
           ...require("daisyui/src/colors/themes")["[data-theme=emerald]"],
-          "primary-dark": "#4B6BFB",
         },
       },
     ],
