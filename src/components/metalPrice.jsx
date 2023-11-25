@@ -7,7 +7,7 @@ const MetalPrice = ({ gold }) => {
   return (
     <div className="p-3">
       <div className="flex justify-center mb-3">
-        <h1 className="font-semibold text-3xl animate-pulse-blackred">
+        <h1 className="font-semibold text-3xl animate-pulse-blackred font-logoFont">
           Prix Or du jour:
         </h1>
       </div>
@@ -15,14 +15,17 @@ const MetalPrice = ({ gold }) => {
         <div className="flex flex-col justify-center place-items-center m-3 mt-5">
           <Image src={goldpng} width={150} height={150} alt="gold_png"></Image>
         </div>
-        <div className="bg-neutral-800 p-4 text-neutral-content rounded-b-lg">
-          <p className="flex justify-center text-2xl font-semibold">
+        <div className="bg-neutral p-4 text-neutral-content rounded-b-lg">
+          <p className="flex justify-center text-2xl font-semibold ">
             Nous Achetons:
           </p>
           <div className="flex flex-col justify-center place-items-center mt-2 text-xl gap-4">
             <p>Pour 1 gram d&apos;Or 18k</p>
             <p className="font-bold text-5xl">{gold && gold}€</p>
           </div>
+          <p className="text-sm text-neutral-400 text-center">
+            *Payment par chèque
+          </p>
         </div>
       </div>
     </div>

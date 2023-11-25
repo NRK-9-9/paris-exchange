@@ -11,7 +11,7 @@ export default function Table({
 
   return (
     <div>
-      <table className="mt-5 lg:w-[30vw]">
+      <table className="mt-5 lg:w-[60vw]">
         <thead className="">
           <tr>
             <th className="bg-neutral-focus lg:text-xs text-xs text-neutral-content px-6 py-3 rounded-tl-lg">
@@ -23,9 +23,6 @@ export default function Table({
             >
               {type === "sell" ? "PARS EXCHANGE VEND" : "PARS EXCHANGE ACHETE"}
             </th>
-            {/* <th className="bg-neutral-focus lg:text-xs text-xs text-neutral-content px-6 py-3 rounded-tr-lg">
-              {type === "sell" ? "PE VEND" : "PE ACHETE"}
-            </th> */}
           </tr>
         </thead>
         <tbody>

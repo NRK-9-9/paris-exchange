@@ -61,3 +61,12 @@ body {
   transform: scaleX(1);
   transform-origin: bottom center;
 }
+
+.body {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(162, 241, 232, 1) 100%
+  );
+}
