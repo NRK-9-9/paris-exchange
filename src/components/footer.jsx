@@ -2,12 +2,9 @@
 import React from "react";
 import Image from "next/image";
 import LOGO from "../../public/LOGO.png";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 const Footer = () => {
-  const router = useRouter();
-
   return (
     <footer className="flex flex-col">
       <div className="footer p-10 mt-10 bg-neutral text-neutral-content lg:px-80">
@@ -36,13 +33,14 @@ const Footer = () => {
         </div>
 
         <div>
-          <span className="footer-title">Legal</span>
+          <span className="footer-title">Informations lÉgales</span>
           <Link href="/cgv" className="link link-hover">
             CGV
           </Link>
           <Link href="/antiblanc">Lutte Anti-Blachiment</Link>
-          <Link href="/">Cookie policy</Link>
           <Link href="/lclbd">LCLBD</Link>
+
+          <Link href="protection-des-donnees">Protections Des Donnees</Link>
         </div>
       </div>
       <footer className="footer footer-center p-4 bg-neutral text-neutral-content border-t-[1px] border-t-neutral-600">
