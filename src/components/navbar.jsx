@@ -5,8 +5,8 @@ import Sentence from "./sentence";
 
 const Navbar = () => {
   return (
-    <div>
-      <div className="navbar bg-neutral text-neutral-content shadow-lg">
+    <div className="shadow-sm">
+      <div className="navbar bg-neutral text-neutral-content ">
         <Link
           href="/"
           className="text-lg font-extrabold flex-1 justify-between place-items-center lg:ml-[39%] lg:text-xl "

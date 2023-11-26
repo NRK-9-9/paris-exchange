@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import FlagCoded from "../components/flagCoded";
 import YesNoQuestion from "./yesNoQuestion";
+import Image from "next/image";
+
+import { exchangePng } from "@/images/exchange.png";
+import ExchangeIcon from "./icons/exchangeIcon";
 
 const ExchangeTableRow = ({
   code,
@@ -39,7 +43,7 @@ const ExchangeTableRow = ({
 
   return (
     <tr
-      className={`${color} hover:transition-colors hover:bg-secondary hover:bg-opacity-90 hover:text-secondary-content text-neutral-500`}
+      className={`${color} hover:transition-colors hover:bg-primary hover:bg-opacity-20 hover:text-primary-content text-neutral-500`}
     >
       <td className="p-2">
         <FlagCoded code={code} />
@@ -51,7 +55,7 @@ const ExchangeTableRow = ({
             1 EUR = {(1 * Rate).toFixed(3)} {currency}
           </p>
           <div className="divider lg:divider-horizontal hidden lg:block">
-            OU
+            <ExchangeIcon />
           </div>
           <p className="text-xs  lg:text-lg ">
             1 {currency} = {(1 / Rate).toFixed(3)} EUR

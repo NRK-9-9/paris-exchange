@@ -11,6 +11,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      listStyleImage: {
+        tower: 'url("/images/eiffel-tower.png")',
+        exchange: 'url("https://icons8.com/icon/61998/exchange")',
+      },
       fontFamily: {
         logoFont: "Agrandir",
       },
@@ -23,6 +27,7 @@ module.exports = {
           ...require("daisyui/src/colors/themes")["[data-theme=emerald]"],
           secondary: "#13BFAB",
           neutral: "#373F4F",
+          primary: "#13BFAB",
         },
       },
     ],

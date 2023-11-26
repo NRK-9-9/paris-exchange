@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import LOGO from "../../public/LOGO.png";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Footer = () => {
   const router = useRouter();
@@ -26,50 +27,22 @@ const Footer = () => {
         </div>
         <div>
           <span className="footer-title">A propos</span>
-          <button
-            onClick={() => {
-              router.push("/info");
-            }}
-            className="link link-hover"
-          >
+          <Link href="/info" className="link link-hover">
             Qui sommes nous?
-          </button>
-          <button
-            onClick={() => {
-              router.push("/contact");
-            }}
-            className="link link-hover"
-          >
+          </Link>
+          <Link href="/contact" className="link link-hover">
             Contactez-nous
-          </button>
+          </Link>
         </div>
 
         <div>
           <span className="footer-title">Legal</span>
-          <button
-            onClick={() => {
-              router.push("/cgv");
-            }}
-            className="link link-hover"
-          >
-            CGV{" "}
-          </button>
-          <button
-            onClick={() => {
-              router.push("/antiblanc");
-            }}
-            className="link link-hover"
-          >
-            Lutte Anti-Blachiment
-          </button>
-          <button
-            onClick={() => {
-              router.push("/");
-            }}
-            className="link link-hover"
-          >
-            Cookie policy
-          </button>
+          <Link href="/cgv" className="link link-hover">
+            CGV
+          </Link>
+          <Link href="/antiblanc">Lutte Anti-Blachiment</Link>
+          <Link href="/">Cookie policy</Link>
+          <Link href="/lclbd">LCLBD</Link>
         </div>
       </div>
       <footer className="footer footer-center p-4 bg-neutral text-neutral-content border-t-[1px] border-t-neutral-600">

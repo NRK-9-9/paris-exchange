@@ -1,11 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: "./build",
   images: {
     remotePatterns: [
       {
         protocol: "https",
         hostname: "flagcdn.com",
+        port: "",
+        pathname: "/**/**",
+      },
+      {
+        protocol: "https",
+        hostname: "icons8.com",
         port: "",
         pathname: "/**/**",
       },
