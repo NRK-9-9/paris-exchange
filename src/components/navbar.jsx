@@ -11,7 +11,7 @@ const Navbar = () => {
           href="/"
           className="text-lg font-extrabold flex-1 justify-between place-items-center lg:ml-[39%] lg:text-xl "
         >
-          <p className="lg:text-4xl text-2xl font-logoFont lg:mt-3 lg:tracking-wider">
+          <p className="lg:text-4xl text-2xl font-logoFont lg:mt-3 lg:tracking-widest">
             PARIS EXCHANGE
           </p>
         </Link>
