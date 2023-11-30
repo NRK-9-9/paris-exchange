@@ -78,7 +78,7 @@ const Order = () => {
             <div className="flex justify-center items-center lg:gap-5 gap-4">
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text font-logoFont text-lg tracking-wide">
+                  <span className="label-text font-logoFont text-sm tracking-wide">
                     Nom/Surname:
                   </span>
                 </label>
@@ -96,7 +96,7 @@ const Order = () => {
               </div>
               <div className="form-control w-full max-w-xs ">
                 <label className="label">
-                  <span className="label-text font-logoFont text-lg tracking-wide">
+                  <span className="label-text font-logoFont text-sm tracking-wide">
                     Prenom/First Name:
                   </span>
                 </label>
@@ -116,7 +116,7 @@ const Order = () => {
 
             <div className="form-control w-full max-w-xs mt-5">
               <label className="label">
-                <span className="label-text w-full max-w-lg font-logoFont text-lg">
+                <span className="label-text w-full max-w-lg font-logoFont text-sm">
                   Email:
                 </span>
               </label>
@@ -134,7 +134,7 @@ const Order = () => {
             </div>
             <div className="form-control w-full max-w-xs mt-5">
               <label className="label">
-                <span className="label-text font-logoFont text-lg tracking-wide">
+                <span className="label-text font-logoFont text-sm tracking-wide">
                   Phone:
                 </span>
               </label>
@@ -152,7 +152,7 @@ const Order = () => {
             </div>
             <div className="form-control w-full max-w-xs mt-5 flex-row place-items-center">
               <label className="label">
-                <span className="label-text text-lg font-logoFont tracking-wide">
+                <span className="label-text text-sm font-logoFont tracking-wide">
                   Day/Month:
                 </span>
               </label>
@@ -177,7 +177,9 @@ const Order = () => {
                 INFORMATION:
               </h1>
               <p>
-                {`I am ${order_type}ing ${currency_amount} ${currency} for ${eur_amount} EUR`}
+                {`${
+                  order_type == "buy" ? "J'achete" : "Je vend"
+                } ${currency_amount} ${currency} pour ${eur_amount} EUR`}
               </p>
             </div>
             <button className="btn btn-secondary" type="submit">

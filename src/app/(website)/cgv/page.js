@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function CGV() {
@@ -16,8 +17,7 @@ export default function CGV() {
           CGV.
         </p>
         <h3 className="text-2xl text-primary tracking-wider">
-          {" "}
-          Produits et Disponibilité{" "}
+          Produits et Disponibilité
         </h3>
         <p className="first-letter:ml-3">
           Les produits disponibles à la vente sur notre site sont des devises
@@ -57,7 +57,6 @@ export default function CGV() {
           ligne.
         </p>
         <h3 className="text-2xl text-primary tracking-wider">
-          {" "}
           Préparation des Commandes
         </h3>
         <p className="first-letter:ml-3">
@@ -69,7 +68,6 @@ export default function CGV() {
           politiques de confidentialité et de sécurité.
         </p>
         <h3 className="text-2xl text-primary tracking-wider">
-          {" "}
           Droit de Rétractation
         </h3>
         <p className="first-letter:ml-3">
@@ -80,16 +78,23 @@ export default function CGV() {
           informer par écrit (courrier ou e-mail) de votre décision. Les frais
           de retour des produits sont à votre charge.
         </p>
-        <h3 className="text-2xl text-primary tracking-wider">
-          {" "}
-          Responsabilité
-        </h3>
+        <h3 className="text-2xl text-primary tracking-wider">Responsabilité</h3>
         <p className="first-letter:ml-3">
           Paris Exchange ne pourra être tenue responsable en cas de
           non-exécution ou de mauvaise exécution du contrat résultant de
           circonstances indépendantes de notre volonté, telles que des
           événements de force majeure, des problèmes techniques, ou des erreurs
           de la part du client.
+        </p>
+        <h3 className="text-2xl text-primary tracking-wider">
+          Protections des Données Personelles
+        </h3>
+        <p className="first-letter:ml-3">
+          Nous nous engageons a protéger vos données personnelles conformément a
+          notre politique de{" "}
+          <Link className="link" href="/protection-des-donnees">
+            Protections Des Donnees
+          </Link>
         </p>
       </div>
     </div>

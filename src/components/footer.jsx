@@ -19,7 +19,7 @@ const Footer = () => {
           <p>
             Paris Exchange.
             <br />
-            Fournir des taux de change fiables depuis 2017
+            Fournir des taux de change fiables.
           </p>
         </div>
         <div>
@@ -34,13 +34,22 @@ const Footer = () => {
 
         <div>
           <span className="footer-title">Informations lÉgales</span>
+          <Link href="/mentions-legales" className="link link-hover">
+            Mentions légales
+          </Link>
           <Link href="/cgv" className="link link-hover">
             CGV
           </Link>
-          <Link href="/antiblanc">Lutte Anti-Blachiment</Link>
-          <Link href="/lclbd">LCLBD</Link>
+          <Link className="link link-hover" href="/antiblanc">
+            Lutte Anti-Blachiment
+          </Link>
+          <Link className="link link-hover" href="/lcbd-ft">
+            LCBD-FT
+          </Link>
 
-          <Link href="protection-des-donnees">Protections Des Donnees</Link>
+          <Link className="link link-hover" href="protection-des-donnees">
+            Protections Des Données
+          </Link>
         </div>
       </div>
       <footer className="footer footer-center p-4 bg-neutral text-neutral-content border-t-[1px] border-t-neutral-600">

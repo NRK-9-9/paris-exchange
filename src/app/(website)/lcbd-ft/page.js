@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Lclbd = () => {
@@ -61,9 +62,15 @@ const Lclbd = () => {
             et en observant scrupuleusement nos obligations légales.
           </p>
           <p className="first-letter:text-xl first-letter:ml-4 mt-2">
-            Décret n°2012-1125 du 3 octobre 2012 et l&apos;article R561-10
-            modifiant les seuils de l&apos;opération change manuel au premier
-            euro dès que le client n&apos;est pas présent physiquement
+            {
+              "Décret n°2012-1125 du 3 octobre 2012 et l'article R561-10 modifiant les seuils de l'opération change manuel au premiereuro dès que le client n'est pas présent physiquement "
+            }
+            <Link
+              className="link"
+              href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000026457407"
+            >
+              https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000026457407
+            </Link>
           </p>
         </div>
       </div>

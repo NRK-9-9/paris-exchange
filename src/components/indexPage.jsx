@@ -6,11 +6,11 @@ import MetalPrice from "./metalPrice";
 const IndexPage = () => {
   const [gold, setGold] = useState();
   return (
-    <div className="lg:mt-10 mt-2 lg:grid lg:grid-cols-4 lg:gap-10 lg:mx-10">
+    <div className="lg:mt-10 mt-2 flex flex-col lg:flex-row justify-center lg:gap-20 lg:items-start ">
       <div className="lg:col-span-3 place-items-center">
         <ExchangeTable setGold={setGold} />
       </div>
-      <div className="card lg:w-full lg:h-full bg-base-200 p-3 lg:m-0 m-7 lg:mt-0 mt-14 flex flex-col justify-center">
+      <div className="card lg:min-w-max lg:h-min-w-max bg-primary bg-opacity-20 p-3 lg:m-0 m-7 lg:mt-10 mt-14 flex flex-col justify-center">
         <MetalPrice gold={gold} />
       </div>
     </div>

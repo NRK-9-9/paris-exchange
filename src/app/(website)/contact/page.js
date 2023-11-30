@@ -53,7 +53,7 @@ const Info = () => {
               className="font-semibold lg:p-2 p-1 lg:pl-3 pl-2 text-sm lg:text-lg text-gray-600 underline underline-offset-4"
               href="mailto:najibmansour2005@gmail.com"
             >
-              testparisexchange@gmail.com
+              contact@paris-change.com
             </Link>
           </div>
         </div>

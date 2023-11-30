@@ -7,7 +7,7 @@ export default function Info() {
         Qui somme nous?
       </h1>
       <h5 className="lg:text-lg text-md  text-neutral text-opacity-90 ">
-        <p className="mt-2 first-letter:ml-4 first-letter:text-xl">
+        <p className="mt-2 first-letter:ml-4 first-letter:text-xl ">
           Paris Exchange est votre solution fiable pour changer les devises sur
           Paris Saint-Michel. Nous vous proposons une grande variété de devises
           étrangères avec l&apos;un des meilleurs taux de change à proposer,
@@ -16,12 +16,12 @@ export default function Info() {
           service professionnel, transparent, efficace et sécurisé avec chacune
           de vos visites.
         </p>
-        <p className="mt-2 first-letter:ml-4 first-letter:text-xl">
+        <p className="mt-2 first-letter:ml-4 first-letter:text-xl ">
           Notre équipe d&apos;opérateurs et conseillers sont des experts dans
           leurs domaine, bien formés et informés sur les nécessités du change
           pour pouvoir vous guider et garantir votre satisfaction.
         </p>
-        <p className="mt-2 first-letter:ml-4 first-letter:text-xl">
+        <p className="mt-2 first-letter:ml-4 first-letter:text-xl ">
           Nous nous engageons à toujours être à jour avec le marché et les
           tendances économiques mondiales pour vous garantir des conseils
           fiables et éprouvés, et une expérience satisfaisante et agréable.

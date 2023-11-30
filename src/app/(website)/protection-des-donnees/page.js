@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const ProtDesDonnes = () => {
@@ -29,7 +30,10 @@ const ProtDesDonnes = () => {
           personnelles (noms, prénoms, date de naissance, une copie de votre
           titre d&apos;identité, etc…) Ces informations sont nécessaires pour
           vérifier votre identité et respecter nos obligations légales en
-          matière de (Protection des données personnelles).
+          matière de (Protection des données personnelles).{" "}
+          <Link className="link" href="/LCBD-FT">
+            LCBD-FT
+          </Link>
         </p>
         <p className="first-letter:ml-3">
           Vos informations personnelles ne sont utilisées que dans le cadre de
@@ -67,8 +71,10 @@ const ProtDesDonnes = () => {
           d&apos;accéder à vos données, les rectifier, les supprimer, limiter
           leur traitement ou de vous opposer a leur traitement. Pour exercer ces
           droits, ou pour toutes autres questions, préoccupations et/ou
-          renseignement veuillez ne pas hésiter à nous contacter à (Conditions
-          générales de vente).
+          renseignement veuillez ne pas hésiter à nous contacter à{" "}
+          <Link className="link" href="mailto:contact@paris-change.com">
+            contact@paris-change.com
+          </Link>
         </p>
         <p className="first-letter:ml-3">
           Nous nous engageons à toujours respecter votre vie privée et à essayer
