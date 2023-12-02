@@ -64,13 +64,13 @@ const Order = () => {
   };
 
   return (
-    <div className="lg:flex lg:justify-center">
+    <div className="lg:flex lg:justify-center mt-10">
       <div className="card bg-base-200 shadow-xl">
         <h1 className="text-2xl font-bold font-logoFont flex justify-center mt-7 tracking-widest">
           RESERVER DEVISE
         </h1>
         <form
-          className="grid  grid-cols-1 py-7 lg:px-7 px-4 gap-5"
+          className="grid grid-cols-1 py-7 lg:px-7 px-4 gap-5"
           ref={form}
           onSubmit={sendEmail}
         >
@@ -150,7 +150,14 @@ const Order = () => {
                 className="input input-bordered w-full max-w-xs"
               />
             </div>
-            <div className="form-control w-full max-w-xs mt-5 flex-row place-items-center">
+            <div className="flex max-w-prose mt-5 text-sm text-neutral-500">
+              <p>
+                *Réservation uniquement valide après réception de confirmation
+                par mail ou téléphone Réservation confirmée valable pendant 24h
+                uniquement
+              </p>
+            </div>
+            {/* <div className="form-control w-full max-w-xs mt-5 flex-row place-items-center">
               <label className="label">
                 <span className="label-text text-sm font-logoFont tracking-wide">
                   Day/Month:
@@ -169,7 +176,7 @@ const Order = () => {
                   </option>
                 </select>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="flex justify-between items-start">
             <div className="">
