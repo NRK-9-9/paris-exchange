@@ -149,12 +149,12 @@ const Order = () => {
                 className="input input-bordered w-full max-w-xs"
               />
             </div>
-            <div className="flex max-w-prose mt-5 text-sm text-neutral-500">
+            <div className="flex flex-col max-w-prose mt-5 text-sm text-neutral-500">
               <p>
                 *Réservation uniquement valide après réception de confirmation
-                par mail ou téléphone Réservation confirmée valable pendant 24h
-                uniquement
+                par mail ou téléphone
               </p>
+              <p>*Réservation confirmée valable pendant 24h uniquement</p>
             </div>
             {/* <div className="form-control w-full max-w-xs mt-5 flex-row place-items-center">
               <label className="label">
