@@ -31,7 +31,7 @@ const ProtDesDonnes = () => {
           titre d&apos;identité, etc…) Ces informations sont nécessaires pour
           vérifier votre identité et respecter nos obligations légales en
           matière de (Protection des données personnelles).{" "}
-          <Link className="link" href="/LCBD-FT">
+          <Link className="link" href="/lcbd-ft">
             LCBD-FT
           </Link>
         </p>

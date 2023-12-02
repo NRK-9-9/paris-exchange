@@ -66,9 +66,9 @@ export default function Table({
         onClick={toggle}
       >
         {dataToggle ? (
-          <p>Visualise toutes les devises</p>
+          <p>Visualiser toutes les devises</p>
         ) : (
-          <p>Visualise moins de devises</p>
+          <p>Visualiser moins de devises</p>
         )}
       </div>
     </div>

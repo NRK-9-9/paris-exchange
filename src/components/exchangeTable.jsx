@@ -17,6 +17,8 @@ export default function ExchangeTable({ setGold }) {
   const [loading, setLoading] = useState(true);
   const todayDate = new Date();
 
+  const numOfDeviseShown = 5;
+
   useEffect(() => {
     setLoading(true);
     async function exCall() {
@@ -39,7 +41,7 @@ export default function ExchangeTable({ setGold }) {
       });
       newData.push(...data);
       setExchangeData(newData);
-      setShownData(newData.slice(0, 3));
+      setShownData(newData.slice(0, numOfDeviseShown));
       setLoading(false);
     }
     exCall();
@@ -57,7 +59,7 @@ export default function ExchangeTable({ setGold }) {
     if (dataToggle == true) {
       setShownData(exchangeData);
     } else {
-      setShownData(exchangeData.slice(0, 3));
+      setShownData(exchangeData.slice(0, numOfDeviseShown));
     }
     // console.log(shownData);
   };

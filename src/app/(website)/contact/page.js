@@ -39,7 +39,7 @@ const Info = () => {
             </Link>
           </div>
           <div className="p-3 flex flex-row place-items-center border-l-base-300 border-l-2  ">
-            <PhoneIcon />
+            <PhoneIcon className="w-9 h-9 " />
             <Link
               className="font-semibold lg:p-2 p-1 lg:pl-3 pl-2 text-sm lg:text-lg text-gray-600 underline underline-offset-4"
               href="tel:+33 9 54 45 54 44"
