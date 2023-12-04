@@ -5,7 +5,7 @@ export default async function Sentence() {
   const sen = await getSentence();
   console.log(sen[0]);
   return (
-    <div>
+    <div className="">
       {sen[0].message !== "none" ? (
         <div className="flex flex-row bg-neutral-focus lg:text-2xl text-sm w-full overflow-hidden py-1">
           <p className="animate-conveyor-belt text-secondary uppercase font-mono font-[550] whitespace-nowrap ">

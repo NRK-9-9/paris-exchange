@@ -40,9 +40,9 @@ const Footer = () => {
           <Link href="/cgv" className="link link-hover">
             CGV
           </Link>
-          <Link className="link link-hover" href="/antiblanc">
+          {/* <Link className="link link-hover" href="/antiblanc">
             Lutte Anti-Blachiment
-          </Link>
+          </Link> */}
           <Link className="link link-hover" href="/lcbd-ft">
             LCBD-FT
           </Link>

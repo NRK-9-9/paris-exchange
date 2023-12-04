@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="shadow-sm">
+    <div className="shadow-sm ">
       <div className="navbar bg-neutral text-neutral-content ">
         <Link
           href="/"
