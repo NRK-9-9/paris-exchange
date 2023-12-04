@@ -7,7 +7,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="flex flex-col">
-      <div className="footer p-10 mt-10 bg-neutral text-neutral-content lg:px-80">
+      <div className="footer p-7  mt-10 bg-neutral text-neutral-content lg:px-80">
         <div>
           <Image
             src={LOGO}
@@ -52,7 +52,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <footer className="footer footer-center p-4 bg-neutral text-neutral-content border-t-[1px] border-t-neutral-600">
+      <footer className="footer footer-center text-xs p-4 bg-neutral text-neutral-content border-t-[1px] border-t-neutral-600">
         <div>
           <p>
             Copyright © {new Date().getFullYear()} - Tous droits réservés par

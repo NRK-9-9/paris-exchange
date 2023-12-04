@@ -21,7 +21,7 @@ const MetalPrice = ({ gold }) => {
           </p>
           <div className="flex flex-col justify-center place-items-center mt-2 text-lg gap-4">
             <p>Pour 1 gram d&apos;Or 18k</p>
-            <p className="font-bold text-3xl tracking-wide">{gold && gold}€</p>
+            <p className="font-bold text-2xl tracking-wide">{gold && gold}€</p>
           </div>
           <p className="text-sm text-neutral-400 text-center">
             *Payment par chèque

@@ -145,7 +145,7 @@ const Order = () => {
                 name="from_email"
                 required
                 type="tel"
-                placeholder="+33 777 888 999"
+                placeholder="+33 66 77 88 99"
                 className="input input-bordered w-full max-w-xs"
               />
             </div>
