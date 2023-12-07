@@ -66,6 +66,9 @@ const ExchangeTableRow = ({
         {questionCUR != currency ? (
           <div className="lg:flex lg:flex-row gap-1 lg:gap-4">
             <div className="flex flex-col gap-1">
+              <p className="text-xs text-neutral-500 text-center tracking-widest">
+                PE Vend
+              </p>
               <div className="gap-1 flex place-items-center">
                 <input
                   className="text-neutral-700 input input-bordered font-semibold lg:input-xs input-xs resize-none w-24 lg:w-32  "

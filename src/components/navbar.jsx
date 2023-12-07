@@ -37,20 +37,6 @@ const Navbar = () => {
           <p className="lg:block hidden">Acceuil</p>
         </Link>
         <Link
-          href="/contact"
-          className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost lg:hover:font-bold  gap-2"
-        >
-          <PhoneIcon className="w-9 h-9 " />
-          <p className="lg:block hidden">Contact</p>
-        </Link>
-        <Link
-          href="/info"
-          className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost lg:hover:font-bold  gap-2"
-        >
-          <InfoIcon className="w-8 h-8 " />
-          <p className="lg:block hidden">Info</p>
-        </Link>
-        <Link
           href="/info"
           className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost lg:hover:font-bold  gap-2"
         >
@@ -62,7 +48,22 @@ const Navbar = () => {
           className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost lg:hover:font-bold  gap-2"
         >
           <ReserveIcon className="w-8 h-8" />
-          <p className="lg:block hidden">Reservation</p>
+          <p className="lg:block hidden">Reserver devises</p>
+        </Link>
+
+        <Link
+          href="/info"
+          className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost lg:hover:font-bold  gap-2"
+        >
+          <InfoIcon className="w-8 h-8 " />
+          <p className="lg:block hidden">Info</p>
+        </Link>
+        <Link
+          href="/contact"
+          className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost lg:hover:font-bold  gap-2"
+        >
+          <PhoneIcon className="w-9 h-9 " />
+          <p className="lg:block hidden">Contact</p>
         </Link>
       </div>
     </div>

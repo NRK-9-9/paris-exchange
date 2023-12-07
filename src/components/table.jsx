@@ -22,8 +22,8 @@ export default function Table({
               colSpan={2}
             >
               {type === "sell"
-                ? "PARIS EXCHANGE VEND"
-                : "PARIS EXCHANGE ACHETE"}
+                ? "PARIS EXCHANGE VOUS VEND DES DEVISES"
+                : "VOUS ACEHTEZ DE PARIS EXCHANGE DES DEVISES"}
             </th>
           </tr>
         </thead>

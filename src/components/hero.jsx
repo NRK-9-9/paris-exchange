@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <div className="flex justify-center ">
-      <div className="hero  lg:min-h-[48vh] min-h-[20vh] bg-[url('https://i.imgur.com/Bq2sNWj.jpeg')]">
+      <div className="hero  lg:min-h-[40vh] min-h-[19vh] bg-[url('https://i.imgur.com/Bq2sNWj.jpeg')]">
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-2xl">

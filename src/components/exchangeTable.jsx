@@ -68,8 +68,21 @@ export default function ExchangeTable({ setGold }) {
 
   return (
     <div className="">
-      <div className=" flex flex-row justify-center">
-        <p className="lg:text-xl text-sm font-semibold font-logoFont p-3 mb-2 mt-7 lg:mt-3 border-y-2">{`Taux de change du: ${todayDate.toLocaleDateString()}`}</p>
+      <div className=" flex flex-col items-center">
+        <div className="lg:text-xl text-md flex flex-row gap-1 font-semibold font-logoFont p-3 mb-2 mt-7 lg:mt-3 border-y-2">
+          <p>{`Taux de change ${todayDate.toLocaleDateString()}`}</p>
+          <p className="font-bold">du vente :</p>
+        </div>
+        <div className="px-4 lg:text-center">
+          {" "}
+          <p className="text-sm italic">
+            *(PARIS EXCHANGE vous vend de devise - vous achetez)
+          </p>
+          <p className="text-sm italic">
+            *Appelez nous pour vous vendez vos devises (nous achetons vos
+            devises afin de négocier le meilleur prix)
+          </p>
+        </div>
       </div>
 
       <div className="flex flex-col items-center">
