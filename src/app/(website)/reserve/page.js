@@ -1,38 +1,75 @@
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { send } from "emailjs-com";
+import { atom, useAtom } from "jotai";
+
+const dataAtom = atom(async () => {
+  const res = await fetch("/api/countryexchange", {
+    headers: {
+      "Content-Type": "application/json",
+      "X-Api-Key": process.env.NEXT_PUBLIC_YODAFOREX,
+    },
+  });
+  let data = await res.json();
+
+  data = data.filter(function (obj) {
+    return obj.id !== 1;
+  });
+  return data;
+});
 
 const Order = () => {
-  const sp = useSearchParams();
+  // atoms
+  const countData = useAtom(dataAtom)[0];
+  // extract params from search
   const router = useRouter();
 
-  const order_type = sp.get("order_type");
-  const currency = sp.get("currency");
-  const currency_amount = sp.get("currency_amount");
-  const eur_amount = sp.get("eur_amount");
+  const sp = useSearchParams();
+
+  // setting up order config
+  // const order_type = sp.get("order_type");
+  // const currency = sp.get("currency");
+  // const currency_amount = sp.get("currency_amount");
+  // const eur_amount = sp.get("eur_amount");
+
+  const [order_type, setOrder_type] = useState(sp.get("order_type"));
+  const [currency, setCurrency] = useState(sp.get("currency"));
+  const [currency_amount, setCurrency_amount] = useState(
+    sp.get("currency_amount")
+  );
+  const [eur_amount, setEur_amount] = useState(sp.get("eur_amount"));
 
   const [nom, setNom] = useState();
   const [prenom, setPrenom] = useState();
   const [date, setExchangeDate] = useState();
   const [email, setEmail] = useState();
   const [phone, setPhone] = useState();
-
-  // if (order_type === null) {
-  //   router.push("/");
-  // }
+  const [remarque, setRemarque] = useState();
 
   const form = useRef();
-
   const sendEmail = (e) => {
     e.preventDefault();
     console.log(form.current);
     console.log(order_type);
 
-    const serial = `${order_type == "buy" ? "VC" : "AC"}-${Math.floor(
-      Date.now() / 1000
-    )}`;
+    let dateOfDay = new Date().toLocaleDateString("en-US", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+    dateOfDay =
+      dateOfDay.slice(0, 2) +
+      dateOfDay.slice(3, 5) +
+      dateOfDay.slice(6, 8) +
+      dateOfDay.slice(10, 12) +
+      dateOfDay.slice(13, 15) +
+      dateOfDay.slice(16, 17);
+    const serial = `${order_type == "buy" ? "VC" : "AC"}-${dateOfDay}`;
     console.log(serial);
 
     send(
@@ -49,6 +86,7 @@ const Order = () => {
         exchange_date: date,
         phone_num: phone,
         serial: serial,
+        remarque: remarque,
       },
       "PS8ZYXeBp37p8U570"
     ).then(
@@ -62,10 +100,20 @@ const Order = () => {
     router.push("/");
   };
 
+  //auto conversion
+  const multiplier = (iso) => {
+    let data = countData.find((o) => o.iso === iso);
+    return data.webSellRate;
+  };
+
+  useEffect(() => {
+    setEur_amount((currency_amount / multiplier(currency)).toFixed(2));
+  }, [currency]);
+
   return (
-    <div className="lg:flex lg:justify-center mt-10">
+    <div className="lg:flex lg:justify-center lg:mt-10 mt-5 mx-4">
       <div className="card bg-base-200 shadow-xl">
-        <h1 className="text-2xl font-bold font-logoFont flex justify-center mt-7 tracking-widest">
+        <h1 className="text-2xl underline underline-offset-4 font-bold font-logoFont flex justify-center mt-7 tracking-widest">
           RESERVER DEVISE
         </h1>
         <form
@@ -74,6 +122,55 @@ const Order = () => {
           onSubmit={sendEmail}
         >
           <div>
+            <div className="mb-4">
+              <h1 className="text-xl font-logoFont font-bold mt-2">
+                INFORMATION:
+              </h1>
+              <div className="flex flex-row items-center gap-1 mt-3">
+                <p>Je vend </p>
+                <div className="">
+                  <input
+                    onChange={(e) => {
+                      setCurrency_amount(e.target.value);
+                      setEur_amount(
+                        (e.target.value / multiplier(currency)).toFixed(2)
+                      );
+                    }}
+                    type="text"
+                    placeholder=""
+                    value={currency_amount}
+                    className="input p-2 input-bordered input-sm w-14 rounded-r-none border-l-0"
+                  />
+                  <select
+                    value={currency}
+                    className="select select-sm select-bordered rounded-l-none"
+                    onChange={(e) => {
+                      setCurrency(e.target.value);
+                    }}
+                  >
+                    {countData.map((count) => (
+                      <option key={count.id} value={count.iso}>
+                        {count.iso}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <p>{"pour"}</p>
+                <input
+                  value={eur_amount}
+                  onChange={(e) => {
+                    setEur_amount(e.target.value);
+                    setCurrency_amount(
+                      (e.target.value * multiplier(currency)).toFixed(2)
+                    );
+                  }}
+                  type="text"
+                  placeholder=""
+                  className="input p-2 input-bordered input-sm w-14 "
+                />
+                <p className="font-bold">EUR</p>
+              </div>
+            </div>
             <div className="flex justify-center items-center lg:gap-5 gap-4">
               <div className="form-control w-full max-w-xs">
                 <label className="label">
@@ -149,6 +246,18 @@ const Order = () => {
                 className="input input-bordered w-full max-w-xs"
               />
             </div>
+            <div className="mt-5">
+              <label className="label">
+                <span className="label-text font-logoFont text-sm tracking-wide">
+                  Remarque:
+                </span>
+              </label>
+              <textarea
+                className="textarea textarea-bordered w-full"
+                placeholder="Remarque"
+                onChange={(e) => setRemarque(e.target.value)}
+              ></textarea>
+            </div>
             <div className="flex flex-col max-w-prose mt-5 text-sm text-neutral-500">
               <p>
                 *Réservation uniquement valide après réception de confirmation
@@ -156,38 +265,8 @@ const Order = () => {
               </p>
               <p>*Réservation confirmée valable pendant 24h uniquement.</p>
             </div>
-            {/* <div className="form-control w-full max-w-xs mt-5 flex-row place-items-center">
-              <label className="label">
-                <span className="label-text text-sm font-logoFont tracking-wide">
-                  Day/Month:
-                </span>
-              </label>
-              <div className="ml-3 gap-1">
-                <select
-                  className="select select-sm"
-                  onChange={(e) => {
-                    setExchangeDate(e.target.value);
-                  }}
-                >
-                  <option value={new Date().toString()}>Today</option>
-                  <option value={addDays(new Date(), 1).toString()}>
-                    Tomorrow
-                  </option>
-                </select>
-              </div>
-            </div> */}
           </div>
-          <div className="flex justify-between items-start">
-            <div className="">
-              <h1 className="text-xl font-logoFont font-bold mt-1">
-                INFORMATION:
-              </h1>
-              <p>
-                {`${
-                  order_type == "buy" ? "J'achete" : "Je vend"
-                } ${currency_amount} ${currency} pour ${eur_amount} EUR`}
-              </p>
-            </div>
+          <div className="flex justify-end items-start ">
             <button className="btn btn-secondary" type="submit">
               reserver
             </button>

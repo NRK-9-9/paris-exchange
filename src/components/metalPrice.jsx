@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const MetalPrice = ({ gold }) => {
   return (
-    <div className="p-3 ">
-      <div className="flex justify-center mb-3">
+    <div className="lg:p-3 p-2">
+      <div className="flex justify-center">
         <h1 className="font-semibold text-2xl animate-pulse-blackred font-logoFont">
           Prix Or du jour:
         </h1>
@@ -21,7 +21,7 @@ const MetalPrice = ({ gold }) => {
           </p>
           <div className="flex flex-col justify-center place-items-center mt-2 text-lg gap-4">
             <p>Pour 1 gram d&apos;Or 18k</p>
-            <p className="font-bold text-2xl tracking-wide">{gold && gold}€</p>
+            <p className="font-bold text-3xl tracking-wide">{gold && gold}€</p>
           </div>
           <p className="text-sm text-neutral-400 text-center">
             *Payment par chèque

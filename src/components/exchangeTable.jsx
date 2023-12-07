@@ -3,7 +3,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import CountrySelect from "./countrySelect";
 import Table from "./table";
 import TableSkeleton from "./skeletons/tableSkeleton";
-import { setQuarter } from "date-fns";
+import { useAtom } from "jotai";
 
 export default function ExchangeTable({ setGold }) {
   const [exchangeData, setExchangeData] = useState();
@@ -29,9 +29,11 @@ export default function ExchangeTable({ setGold }) {
         },
       });
       let data = await res.json();
+      //setting Gold
       const indx = data.findIndex((v) => v.id === 1);
       setGold(data[indx].webBuyRate);
       data.splice(indx, 1);
+      //sorting countries in specific order
       let newData = [];
       const arr = ["USD", "GBP", "CHF", "JPY", "CAD", "AUD"];
       arr.forEach((x) => {

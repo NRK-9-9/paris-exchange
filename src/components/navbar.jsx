@@ -4,6 +4,8 @@ import HomeIcon from "./icons/homeIcon";
 import PhoneIcon from "./icons/phoneIcon";
 import InfoIcon from "./icons/infoIcon";
 import Link from "next/link";
+import ReserveIcon from "./icons/reserveIcon";
+import DollarIcon from "./icons/dollarIcon";
 
 const Navbar = () => {
   return (
@@ -47,6 +49,20 @@ const Navbar = () => {
         >
           <InfoIcon className="w-8 h-8 " />
           <p className="lg:block hidden">Info</p>
+        </Link>
+        <Link
+          href="/info"
+          className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost lg:hover:font-bold  gap-2"
+        >
+          <DollarIcon className="w-8 h-8 " />
+          <p className="lg:block hidden">Taux </p>
+        </Link>
+        <Link
+          href="/reserve?order_type=buy&currency=USD&currency_amount=1&eur_amount=0.935"
+          className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost lg:hover:font-bold  gap-2"
+        >
+          <ReserveIcon className="w-8 h-8" />
+          <p className="lg:block hidden">Reservation</p>
         </Link>
       </div>
     </div>

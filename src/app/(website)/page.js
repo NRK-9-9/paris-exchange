@@ -1,7 +1,8 @@
+import Carouselhero from "@/components/carouselhero";
 import Hero from "@/components/hero";
 import IndexPage from "@/components/indexPage";
+import { atom } from "jotai";
 import React from "react";
-import Sentence from "@/components/sentence";
 
 const Home = () => {
   return (
