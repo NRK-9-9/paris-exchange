@@ -35,11 +35,11 @@ const Order = () => {
   // const eur_amount = sp.get("eur_amount");
 
   const [order_type, setOrder_type] = useState(sp.get("order_type"));
-  const [currency, setCurrency] = useState(sp.get("currency"));
+  const [currency, setCurrency] = useState(sp.get("currency") || "GBP");
   const [currency_amount, setCurrency_amount] = useState(
-    sp.get("currency_amount")
+    sp.get("currency_amount") || 0
   );
-  const [eur_amount, setEur_amount] = useState(sp.get("eur_amount"));
+  const [eur_amount, setEur_amount] = useState(sp.get("eur_amount") || 0);
 
   const [nom, setNom] = useState();
   const [prenom, setPrenom] = useState();
@@ -47,6 +47,8 @@ const Order = () => {
   const [email, setEmail] = useState();
   const [phone, setPhone] = useState();
   const [remarque, setRemarque] = useState();
+
+  const [multiplier, setMultiplier] = useState();
 
   const form = useRef();
   const sendEmail = (e) => {
@@ -101,13 +103,17 @@ const Order = () => {
   };
 
   //auto conversion
-  const multiplier = (iso) => {
-    let data = countData.find((o) => o.iso === iso);
-    return data?.webSellRate;
-  };
+  // const multiplier = (iso) => {
+  //   let data = countData.find((o) => o.iso === iso);
+  //   console.log(currency, iso, countData);
+  //   return data.webSellRate;
+  // };
 
   useEffect(() => {
-    setEur_amount((currency_amount / multiplier(currency)).toFixed(2));
+    // console.log(currency, countData);
+    let mult = countData.find((o) => o.iso == currency);
+    setMultiplier(mult.webSellRate);
+    setEur_amount((currency_amount / mult.webSellRate).toFixed(2));
   }, [currency]);
 
   return (
@@ -126,24 +132,22 @@ const Order = () => {
               <h1 className="text-xl font-logoFont font-bold mt-2">
                 INFORMATION:
               </h1>
-              <div className="flex flex-row items-center gap-1 mt-3">
+              <div className="flex flex-row lg:items-center gap-1 mt-3">
                 <p>Je vend </p>
                 <div className="">
                   <input
                     onChange={(e) => {
                       setCurrency_amount(e.target.value);
-                      setEur_amount(
-                        (e.target.value / multiplier(currency)).toFixed(2)
-                      );
+                      setEur_amount((e.target.value / multiplier).toFixed(2));
                     }}
                     type="text"
                     placeholder=""
                     value={currency_amount}
-                    className="input p-2 input-bordered input-sm w-14 rounded-r-none border-l-0"
+                    className="input p-1 input-bordered lg:input-sm input-xs lg:w-14 w-10  rounded-r-none border-l-0"
                   />
                   <select
                     value={currency}
-                    className="select select-sm select-bordered rounded-l-none"
+                    className="select lg:select-sm select-xs select-bordered rounded-l-none"
                     onChange={(e) => {
                       setCurrency(e.target.value);
                     }}
@@ -161,12 +165,12 @@ const Order = () => {
                   onChange={(e) => {
                     setEur_amount(e.target.value);
                     setCurrency_amount(
-                      (e.target.value * multiplier(currency)).toFixed(2)
+                      (e.target.value * multiplier).toFixed(2)
                     );
                   }}
                   type="text"
                   placeholder=""
-                  className="input p-2 input-bordered input-sm w-14 "
+                  className="input p-1 input-bordered lg:input-sm input-xs lg:w-14 w-10  "
                 />
                 <p className="font-bold">EUR</p>
               </div>
