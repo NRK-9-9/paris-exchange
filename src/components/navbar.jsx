@@ -37,7 +37,7 @@ const Navbar = () => {
           <p className="lg:block hidden">Acceuil</p>
         </Link>
         <Link
-          href="/info"
+          href="/#section-1"
           className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal my-2 btn btn-ghost lg:hover:font-bold  gap-2"
         >
           <DollarIcon className="w-8 h-8 " />

@@ -3,7 +3,6 @@ import React, { Suspense, useEffect, useState } from "react";
 import CountrySelect from "./countrySelect";
 import Table from "./table";
 import TableSkeleton from "./skeletons/tableSkeleton";
-import { useAtom } from "jotai";
 
 export default function ExchangeTable({ setGold }) {
   const [exchangeData, setExchangeData] = useState();
