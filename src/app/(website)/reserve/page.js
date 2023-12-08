@@ -103,7 +103,7 @@ const Order = () => {
   //auto conversion
   const multiplier = (iso) => {
     let data = countData.find((o) => o.iso === iso);
-    return data.webSellRate;
+    return data?.webSellRate;
   };
 
   useEffect(() => {
