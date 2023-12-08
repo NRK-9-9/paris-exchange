@@ -22,12 +22,15 @@ export default function ExchangeTable({ setGold }) {
   useEffect(() => {
     setLoading(true);
     async function exCall() {
-      const res = await fetch("/api/countryexchange", {
-        headers: {
-          "Content-Type": "application/json",
-          "X-Api-Key": process.env.NEXT_PUBLIC_YODAFOREX,
-        },
-      });
+      const res = await fetch(
+        process.env.NEXT_PUBLIC_URL + "/api/countryexchange",
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "X-Api-Key": process.env.NEXT_PUBLIC_YODAFOREX,
+          },
+        }
+      );
       let data = await res.json();
       //setting Gold
       const indx = data.findIndex((v) => v.id === 1);

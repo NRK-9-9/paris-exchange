@@ -5,22 +5,41 @@ import React, { useEffect, useRef, useState } from "react";
 import { send } from "emailjs-com";
 import { atom, useAtom } from "jotai";
 
-const dataAtom = atom(async () => {
-  const res = await fetch("/api/countryexchange", {
-    headers: {
-      "Content-Type": "application/json",
-      "X-Api-Key": process.env.NEXT_PUBLIC_YODAFOREX,
-    },
-  });
-  let data = await res.json();
-
-  data = data.filter(function (obj) {
-    return obj.id !== 1;
-  });
-  return data;
-});
-
 const Order = () => {
+  const dataAtom = atom(async () => {
+    const res = await fetch(
+      process.env.NEXT_PUBLIC_URL + "/api/countryexchange",
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "X-Api-Key": process.env.NEXT_PUBLIC_YODAFOREX,
+        },
+      }
+    );
+    let data = await res.json();
+
+    data = data.filter(function (obj) {
+      return obj.id !== 1;
+    });
+    const dataAtom = atom(async () => {
+      const res = await fetch(
+        process.env.NEXT_PUBLIC_URL + "/api/countryexchange",
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "X-Api-Key": process.env.NEXT_PUBLIC_YODAFOREX,
+          },
+        }
+      );
+      let data = await res.json();
+
+      data = data.filter(function (obj) {
+        return obj.id !== 1;
+      });
+      return data;
+    });
+    return data;
+  });
   // atoms
   const countData = useAtom(dataAtom)[0];
   // extract params from search
