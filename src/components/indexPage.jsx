@@ -1,14 +1,25 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ExchangeTable from "./exchangeTable";
 import MetalPrice from "./metalPrice";
 
 const IndexPage = () => {
   const [gold, setGold] = useState();
+
+  const ref = useRef(null);
+
+  // const scrollToElement = () => {
+  //   ref.current?.scrollIntoView({ behavior: "smooth" });
+  // };
+
+  // useEffect(() => {
+  //   scrollToElement();
+  // }, []);
+
   return (
     <div className="lg:mt-10 mt-2 flex flex-col lg:flex-row justify-center lg:gap-20 lg:items-start ">
       <div className="lg:col-span-3 place-items-center">
-        <section id="section-1">
+        <section id="section-1" ref={ref}>
           <ExchangeTable setGold={setGold} />
         </section>
       </div>

@@ -11,14 +11,14 @@ export default function Table({
 
   return (
     <div>
-      <table className="mt-5 lg:w-[60vw]">
+      <table className="mt-5 lg:w-[60vw] lg:mx-0 mx-3">
         <thead className="">
           <tr>
             <th className="bg-neutral-focus  text-sm text-neutral-content px-6 py-3 rounded-tl-lg">
               Pays
             </th>
             <th
-              className="bg-neutral-focus  text-sm text-neutral-content px-6 py-3 rounded-tr-lg "
+              className="bg-neutral-focus  lg:text-sm text-xs text-neutral-content px-6 py-3 rounded-tr-lg "
               colSpan={2}
             >
               {type === "sell"
