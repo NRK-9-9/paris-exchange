@@ -28,7 +28,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <div className="tabs lg:ml-3 flex justify-evenly lg:justify-center gap-2">
+      <div className="lg:ml-3 flex justify-evenly lg:justify-center gap-2">
         <Link
           href="/"
           className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal lg:my-2 my-0 btn btn-ghost lg:hover:font-bold  lg:gap-2 "
