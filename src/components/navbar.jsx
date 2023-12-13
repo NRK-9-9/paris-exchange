@@ -28,42 +28,42 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <div className="lg:ml-3 flex justify-evenly lg:justify-center gap-2">
+      <div className="lg:ml-3 flex justify-center lg:justify-center lg:gap-2">
         <Link
           href="/"
-          className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal lg:my-2 my-0 btn btn-ghost lg:hover:font-bold  lg:gap-2 "
+          className="lg:btn hover-underline-animation flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-ghost lg:hover:font-bold lg:gap-2 "
         >
-          <HomeIcon className="lg:w-8 lg:h-8 w-7 h-7 " />
-          <p className="lg:block hidden">Acceuil</p>
+          <HomeIcon className="lg:w-8 lg:h-8 w-6 h-6" />
+          <p className="text-xs">Acceuil</p>
         </Link>
         <Link
           href="/#section-1"
-          className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal lg:my-2 my-0 btn btn-ghost lg:hover:font-bold  lg:gap-2 "
+          className="lg:btn hover-underline-animation flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-ghost lg:hover:font-bold lg:gap-2 "
         >
-          <DollarIcon className="lg:w-8 lg:h-8 w-7 h-7 " />
-          <p className="lg:block hidden">Taux </p>
+          <DollarIcon className="lg:w-8 lg:h-8 w-6 h-6" />
+          <p className="text-xs">Taux</p>
         </Link>
         <Link
           href="/reserve?order_type=buy&currency=USD&currency_amount=1&eur_amount=0.935"
-          className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal lg:my-2 my-0 btn btn-ghost lg:hover:font-bold  lg:gap-2 "
+          className="lg:btn hover-underline-animation flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-ghost lg:hover:font-bold lg:gap-2 "
         >
-          <ReserveIcon className="lg:w-8 lg:h-8 w-7 h-7" />
-          <p className="lg:block hidden">Reserver devises</p>
+          <ReserveIcon className="lg:w-8 lg:h-8 w-6 h-6" />
+          <p className="text-xs">Reservation</p>
         </Link>
 
         <Link
           href="/info"
-          className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal lg:my-2 my-0 btn btn-ghost lg:hover:font-bold  lg:gap-2 "
+          className="lg:btn hover-underline-animation flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-ghost lg:hover:font-bold lg:gap-2 "
         >
-          <InfoIcon className="lg:w-8 lg:h-8 w-7 h-7 " />
-          <p className="lg:block hidden">Info</p>
+          <InfoIcon className="lg:w-8 lg:h-8 w-6 h-6" />
+          <p className="text-xs">Info</p>
         </Link>
         <Link
           href="/contact"
-          className="lg:btn hover-underline-animation pt-2 lg:text-lg tracking-wide lg:btn-ghost font-normal lg:my-2 my-0 btn btn-ghost lg:hover:font-bold  lg:gap-2 "
+          className="lg:btn hover-underline-animation flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-ghost lg:hover:font-bold lg:gap-2 "
         >
-          <PhoneIcon className="lg:w-8 lg:h-8 w-7 h-7" />
-          <p className="lg:block hidden">Contact</p>
+          <PhoneIcon className="lg:w-8 lg:h-8 w-7 h7" />
+          <p className="text-xs">Contact</p>
         </Link>
       </div>
     </div>
