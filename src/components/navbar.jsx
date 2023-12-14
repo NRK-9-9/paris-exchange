@@ -33,37 +33,47 @@ const Navbar = () => {
           href="/"
           className="lg:btn hover-underline-animation flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-ghost lg:hover:font-bold lg:gap-2 "
         >
-          <HomeIcon className="lg:w-8 lg:h-8 w-6 h-6" />
-          <p className="text-xs">Acceuil</p>
+          <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0">
+            <HomeIcon className="lg:w-8 lg:h-8 w-6 h-6" />
+            <p className="text-xs lg:text-lg">Acceuil</p>
+          </div>
         </Link>
         <Link
           href="/#section-1"
           className="lg:btn hover-underline-animation flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-ghost lg:hover:font-bold lg:gap-2 "
         >
-          <DollarIcon className="lg:w-8 lg:h-8 w-6 h-6" />
-          <p className="text-xs">Taux</p>
+          <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0 ">
+            <DollarIcon className="lg:w-8 lg:h-8 w-6 h-6" />
+            <p className="text-xs lg:text-lg">Taux</p>
+          </div>
         </Link>
         <Link
           href="/reserve?order_type=buy&currency=USD&currency_amount=1&eur_amount=0.935"
           className="lg:btn hover-underline-animation flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-ghost lg:hover:font-bold lg:gap-2 "
         >
-          <ReserveIcon className="lg:w-8 lg:h-8 w-6 h-6" />
-          <p className="text-xs">Reservation</p>
+          <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0">
+            <ReserveIcon className="lg:w-8 lg:h-8 w-6 h-6" />
+            <p className="text-xs lg:text-lg">Reservation</p>
+          </div>
         </Link>
 
         <Link
           href="/info"
           className="lg:btn hover-underline-animation flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-ghost lg:hover:font-bold lg:gap-2 "
         >
-          <InfoIcon className="lg:w-8 lg:h-8 w-6 h-6" />
-          <p className="text-xs">Info</p>
+          <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0">
+            <InfoIcon className="lg:w-8 lg:h-8 w-6 h-6" />
+            <p className="text-xs lg:text-lg">Info</p>
+          </div>
         </Link>
         <Link
           href="/contact"
           className="lg:btn hover-underline-animation flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-ghost lg:hover:font-bold lg:gap-2 "
         >
-          <PhoneIcon className="lg:w-8 lg:h-8 w-7 h7" />
-          <p className="text-xs">Contact</p>
+          <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0">
+            <PhoneIcon className="lg:w-8 lg:h-8 w-7 h7" />
+            <p className="text-xs lg:text-lg">Contact</p>
+          </div>
         </Link>
       </div>
     </div>
