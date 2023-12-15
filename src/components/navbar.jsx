@@ -9,7 +9,7 @@ import DollarIcon from "./icons/dollarIcon";
 
 const Navbar = () => {
   return (
-    <div className="shadow-sm ">
+    <div className="shadow-sm mb-5 lg:mb-0">
       <div className="navbar bg-neutral text-neutral-content ">
         <Link
           href="/"
@@ -28,51 +28,61 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      <div className="lg:ml-3 flex justify-center lg:gap-2">
+      <div className="lg:ml-3 flex justify-center lg:justify-center lg:gap-2">
         <Link
           href="/"
-          className="lg:btn hover-underline-animation lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-xs -p-1 btn-ghost lg:hover:font-bold lg:gap-2 "
+          className="lg:btn flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-xs  btn-ghost hover:bg-base-100 lg:hover:font-bold lg:gap-2 "
         >
           <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0">
             <HomeIcon className="lg:w-8 lg:h-8 w-5 h-5" />
-            <p className="text-[0.67rem] lg:text-lg">Acceuil</p>
+            <p className="text-[0.69rem] lg:text-lg hover-underline-animation ">
+              Acceuil
+            </p>
           </div>
         </Link>
         <Link
           href="/#section-1"
-          className="lg:btn hover-underline-animation lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-xs -p-1 btn-ghost lg:hover:font-bold lg:gap-2 "
+          className="lg:btn flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-xs  btn-ghost hover:bg-base-100 lg:hover:font-bold lg:gap-2 "
         >
           <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0 ">
             <DollarIcon className="lg:w-8 lg:h-8 w-5 h-5" />
-            <p className="text-[0.67rem] lg:text-lg">Taux</p>
+            <p className="text-[0.69rem] lg:text-lg hover-underline-animation  ">
+              Taux
+            </p>
           </div>
         </Link>
         <Link
-          href="/reserve?order_type=buy&currency=USD&currency_amount=1"
-          className="lg:btn hover-underline-animation lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-xs -p-1 btn-ghost lg:hover:font-bold lg:gap-2 "
+          href="/reserve?order_type=buy&currency=USD&currency_amount=1&eur_amount=0.935"
+          className="lg:btn flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-xs  btn-ghost hover:bg-base-100 lg:hover:font-bold lg:gap-2 "
         >
           <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0">
             <ReserveIcon className="lg:w-8 lg:h-8 w-5 h-5" />
-            <p className="text-[0.67rem] lg:text-lg">Reservation</p>
+            <p className="text-[0.69rem] lg:text-lg hover-underline-animation  ">
+              Reservation
+            </p>
           </div>
         </Link>
 
         <Link
           href="/info"
-          className="lg:btn hover-underline-animation lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-xs -p-1 btn-ghost lg:hover:font-bold lg:gap-2 "
+          className="lg:btn flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-xs  btn-ghost hover:bg-base-100 lg:hover:font-bold lg:gap-2 "
         >
           <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0">
             <InfoIcon className="lg:w-8 lg:h-8 w-5 h-5" />
-            <p className="text-[0.67rem] lg:text-lg">Info</p>
+            <p className="text-[0.69rem] lg:text-lg hover-underline-animation  ">
+              Info
+            </p>
           </div>
         </Link>
         <Link
           href="/contact"
-          className="lg:btn hover-underline-animation lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-xs -p-1 btn-ghost lg:hover:font-bold lg:gap-2 "
+          className="lg:btn flex flex-center  lg:text-lg lg:btn-ghost lg:my-2 mt-0 btn btn-xs  btn-ghost hover:bg-base-100 lg:hover:font-bold lg:gap-2 "
         >
           <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0">
             <PhoneIcon className="lg:w-8 lg:h-8 w-5 h-5" />
-            <p className="text-[0.67rem] lg:text-lg">Contact</p>
+            <p className="text-[0.69rem] lg:text-lg hover-underline-animation  ">
+              Contact
+            </p>
           </div>
         </Link>
       </div>
