@@ -35,7 +35,7 @@ const Navbar = () => {
         >
           <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0">
             <HomeIcon className="lg:w-8 lg:h-8 w-5 h-5" />
-            <p className="text-[0.69rem] lg:text-lg hover-underline-animation ">
+            <p className="text-[0.72rem] lg:text-lg hover-underline-animation ">
               Acceuil
             </p>
           </div>
@@ -46,7 +46,7 @@ const Navbar = () => {
         >
           <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0 ">
             <DollarIcon className="lg:w-8 lg:h-8 w-5 h-5" />
-            <p className="text-[0.69rem] lg:text-lg hover-underline-animation  ">
+            <p className="text-[0.72rem] lg:text-lg hover-underline-animation  ">
               Taux
             </p>
           </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
         >
           <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0">
             <ReserveIcon className="lg:w-8 lg:h-8 w-5 h-5" />
-            <p className="text-[0.69rem] lg:text-lg hover-underline-animation  ">
+            <p className="text-[0.72rem] lg:text-lg hover-underline-animation  ">
               Reservation
             </p>
           </div>
@@ -69,7 +69,7 @@ const Navbar = () => {
         >
           <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0">
             <InfoIcon className="lg:w-8 lg:h-8 w-5 h-5" />
-            <p className="text-[0.69rem] lg:text-lg hover-underline-animation  ">
+            <p className="text-[0.72rem] lg:text-lg hover-underline-animation  ">
               Info
             </p>
           </div>
@@ -80,7 +80,7 @@ const Navbar = () => {
         >
           <div className="flex items-center flex-col lg:flex-row lg:gap-1 pt-1 lg:pt-0">
             <PhoneIcon className="lg:w-8 lg:h-8 w-5 h-5" />
-            <p className="text-[0.69rem] lg:text-lg hover-underline-animation  ">
+            <p className="text-[0.72rem] lg:text-lg hover-underline-animation  ">
               Contact
             </p>
           </div>
