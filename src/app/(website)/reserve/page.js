@@ -120,13 +120,13 @@ const Order = () => {
   }, [currency]);
 
   return (
-    <div className="lg:flex lg:justify-center lg:mt-10 mt-5 mx-4">
+    <div className="lg:flex lg:justify-center lg:mt-10 mt-7 mx-4">
       <div className="card bg-base-200 shadow-xl">
         <h1 className="text-2xl underline underline-offset-4 font-bold font-logoFont flex justify-center mt-7 tracking-widest">
           RESERVER DEVISE
         </h1>
         <form
-          className="grid grid-cols-1 py-7 lg:px-7 px-4 gap-5"
+          className="grid grid-cols-1 py-7 lg:px-7 px-2 gap-5"
           ref={form}
           onSubmit={sendEmail}
         >
@@ -136,7 +136,7 @@ const Order = () => {
                 INFORMATION:
               </h1>
               <div className="flex flex-row lg:items-center gap-1 mt-3">
-                <p>Je vend </p>
+                <p className="text-sm lg:text-lg">J&apos;achète</p>
                 <div className="">
                   <input
                     onChange={(e) => {
@@ -150,7 +150,7 @@ const Order = () => {
                   />
                   <select
                     value={currency}
-                    className="select lg:select-sm select-xs select-bordered rounded-l-none"
+                    className="select lg:select-sm select-xs select-bordered rounded-l-none "
                     onChange={(e) => {
                       setCurrency(e.target.value);
                     }}
@@ -162,7 +162,7 @@ const Order = () => {
                     ))}
                   </select>
                 </div>
-                <p>{"pour"}</p>
+                <p className="text-sm lg:text-lg">{"pour"}</p>
                 <input
                   value={eur_amount}
                   onChange={(e) => {
@@ -175,13 +175,13 @@ const Order = () => {
                   placeholder=""
                   className="input p-1 input-bordered lg:input-sm input-xs lg:w-14 w-10  "
                 />
-                <p className="font-bold">EUR</p>
+                <p className="font-bold text-sm lg:text-lg">EUR</p>
               </div>
             </div>
-            <div className="flex justify-center items-center lg:gap-5 gap-4">
+            <div className="flex justify-center items-center lg:gap-5 gap-2">
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text font-logoFont text-sm tracking-wide">
+                  <span className="label-text font-logoFont text-xs lg:text-sm tracking-wide">
                     Nom/Surname:
                   </span>
                 </label>
@@ -194,12 +194,12 @@ const Order = () => {
                   required
                   type="text"
                   placeholder="Nom"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered lg:input-md input-sm w-full max-w-xs"
                 />
               </div>
               <div className="form-control w-full max-w-xs ">
                 <label className="label">
-                  <span className="label-text font-logoFont text-sm tracking-wide">
+                  <span className="label-text font-logoFont text-xs lg:text-sm tracking-wide">
                     Prenom/First Name:
                   </span>
                 </label>
@@ -212,14 +212,14 @@ const Order = () => {
                   required
                   type="text"
                   placeholder="Prenom"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered lg:input-md input-sm w-full max-w-xs"
                 />
               </div>
             </div>
 
-            <div className="form-control w-full max-w-xs mt-5">
+            <div className="form-control w-full max-w-xs lg:mt-5 mt-3">
               <label className="label">
-                <span className="label-text w-full max-w-lg font-logoFont text-sm">
+                <span className="label-text w-full max-w-lg font-logoFont text-xs lg:text-sm">
                   Email:
                 </span>
               </label>
@@ -232,12 +232,12 @@ const Order = () => {
                 required
                 type="email"
                 placeholder="johndoe@gmail.com"
-                className="input input-bordered w-full max-w-xs"
+                className="input input-bordered lg:input-md input-sm w-full max-w-xs"
               />
             </div>
-            <div className="form-control w-full max-w-xs mt-5">
+            <div className="form-control w-full max-w-xs lg:mt-5 mt-3">
               <label className="label">
-                <span className="label-text font-logoFont text-sm tracking-wide">
+                <span className="label-text font-logoFont text-xs lg:text-sm tracking-wide">
                   Phone:
                 </span>
               </label>
@@ -250,12 +250,12 @@ const Order = () => {
                 required
                 type="tel"
                 placeholder="+33 66 77 88 99"
-                className="input input-bordered w-full max-w-xs"
+                className="input input-bordered lg:input-md input-sm w-full max-w-xs"
               />
             </div>
-            <div className="mt-5">
+            <div className="lg:mt-5 mt-3">
               <label className="label">
-                <span className="label-text font-logoFont text-sm tracking-wide">
+                <span className="label-text font-logoFont text-xs lg:text-sm tracking-wide">
                   Remarque:
                 </span>
               </label>
@@ -265,7 +265,7 @@ const Order = () => {
                 onChange={(e) => setRemarque(e.target.value)}
               ></textarea>
             </div>
-            <div className="flex flex-col max-w-prose mt-5 text-sm text-neutral-500">
+            <div className="flex flex-col max-w-prose lg:mt-5 mt-3 text-sm text-neutral-500">
               <p>
                 *Réservation uniquement valide après réception de confirmation
                 par mail ou téléphone.
