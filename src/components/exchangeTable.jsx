@@ -82,13 +82,13 @@ export default function ExchangeTable({ setGold }) {
         <div className="px-4 lg:text-center">
           {" "}
           <p className="lg:text-sm text-xs italic">
-            *(Paris Exchange vous vend des devises - VOUS achetez)
+            *Paris Exchange VOUS VEND des devises - VOUS ACHETEZ
           </p>
           <p className="lg:text-sm text-xs italic">
-            *Appelez nous pour vendre vos devises (PE achete vos devises)
+            *Appelez nous pour vendre VOS devises (PE ACHETE )
           </p>
           <p className="lg:text-sm text-xs italic">
-            *Appelez nous afin de négocier le meilleur prix
+            *Appelez nous pour négocier le meilleur prix
           </p>
         </div>
       </div>

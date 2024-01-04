@@ -11,7 +11,7 @@ const Hero = () => {
               Bureau De Change
             </h2>
             <p className="tracking-wide lg:text-lg text-xs">
-              Situé au 4 Boulevard Saint-Michel 75006 A gauche de la fontaine
+              4 Bd. St-Michel 75006
             </p>
           </div>
         </div>
