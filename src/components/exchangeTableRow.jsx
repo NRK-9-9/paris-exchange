@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import FlagCoded from "../components/flagCoded";
 import YesNoQuestion from "./yesNoQuestion";
 import Image from "next/image";
 
-import { exchangePng } from "@/images/exchange.png";
 import ExchangeIcon from "./icons/exchangeIcon";
+import FlagCoded from "./flagCoded";
 
 const ExchangeTableRow = ({
   code,

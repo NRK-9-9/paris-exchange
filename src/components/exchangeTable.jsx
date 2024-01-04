@@ -3,6 +3,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import CountrySelect from "./countrySelect";
 import Table from "./table";
 import TableSkeleton from "./skeletons/tableSkeleton";
+import { logging } from "../../next.config";
 
 export default function ExchangeTable({ setGold }) {
   const [exchangeData, setExchangeData] = useState();
@@ -44,6 +45,9 @@ export default function ExchangeTable({ setGold }) {
         data.splice(indx, 1);
       });
       newData.push(...data);
+      // console.log("-----------------------------------------------------");
+      newData.forEach((e) => (e.countryIso2 = e.countryIso2.toUpperCase()));
+
       setExchangeData(newData);
       setShownData(newData.slice(0, numOfDeviseShown));
       setLoading(false);
