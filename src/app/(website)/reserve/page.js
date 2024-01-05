@@ -78,8 +78,8 @@ const Order = () => {
     console.log(serial);
 
     send(
-      "service_65urbzf",
-      "template_bwgmapv",
+      "service_2pcvelf", //service_okb8odt {{order_type}} {{devise_or_metal}} {{from_prenom}} {{from_nom}}
+      "template_7zelano",
       {
         order_type: order_type,
         currency: currency,
@@ -93,7 +93,7 @@ const Order = () => {
         serial: serial,
         remarque: remarque,
       },
-      "PS8ZYXeBp37p8U570"
+      "KQzl7aHqeIUNqL7Cd"
     ).then(
       (result) => {
         console.log(result.text);
