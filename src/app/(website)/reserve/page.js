@@ -123,7 +123,8 @@ const Order = () => {
           <h3 className="font-bold text-xl ">TITLE TITLE</h3>
           <p className="py-4 text-lg">
             Votre réservation va bientôt être prise en charge par nos agents,
-            merci d'attendre la confirmation sur votre mail ou votre téléphone
+            merci d&apos;attendre la confirmation sur votre mail ou votre
+            téléphone
           </p>
           <div className="modal-action">
             <form method="dialog">
