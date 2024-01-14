@@ -120,17 +120,16 @@ const Order = () => {
     <>
       <dialog id="my_modal_5" className="modal-box ">
         <div className="">
-          <h3 className="font-bold text-xl ">TITLE TITLE</h3>
+          <h3 className="font-bold text-xl ">Merci Pour Votre Confiance</h3>
           <p className="py-4 text-lg">
             Votre réservation va bientôt être prise en charge par nos agents,
-            merci d&apos;attendre la confirmation sur votre mail ou votre
-            téléphone
+            merci d&apos;attendre la confirmation par mail ou par téléphone.
           </p>
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
               <button className="btn" onClick={() => router.push("/")}>
-                Close
+                Retour à la page d&apos;accueil
               </button>
             </form>
           </div>
