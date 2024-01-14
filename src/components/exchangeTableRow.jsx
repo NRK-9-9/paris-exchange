@@ -21,14 +21,14 @@ const ExchangeTableRow = ({
   function changebuyCur(e) {
     setbuyEur(e.target.value.replace(/\D/, ""));
     e.target.value != ""
-      ? setbuyCur((e.target.value.replace(/\D/, "") * Rate).toFixed(3))
+      ? setbuyCur((e.target.value.replace(/\D/, "") * Rate).toFixed(4))
       : setbuyCur("");
   }
 
   function changebuyEur(e) {
     setbuyCur(e.target.value.replace(/\D/, ""));
     e.target.value != ""
-      ? setbuyEur((e.target.value.replace(/\D/, "") / Rate).toFixed(3))
+      ? setbuyEur((e.target.value.replace(/\D/, "") / Rate).toFixed(4))
       : setbuyEur("");
   }
 
@@ -51,13 +51,13 @@ const ExchangeTableRow = ({
       <td>
         <div className="flex flex-col lg:flex-row justify-evenly items-center">
           <p className="text-md font-bold  lg:text-lg ">
-            1 EUR = {(1 * Rate).toFixed(3)} {currency}
+            1 EUR = {(1 * Rate).toFixed(4)} {currency}
           </p>
           <div className="divider lg:divider-horizontal hidden lg:block">
             <ExchangeIcon />
           </div>
           <p className="text-xs  lg:text-lg ">
-            1 {currency} = {(1 / Rate).toFixed(3)} EUR
+            1 {currency} = {(1 / Rate).toFixed(4)} EUR
           </p>
         </div>
       </td>

@@ -1,5 +1,4 @@
 "use client";
-
 import { useSearchParams, useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import { send } from "emailjs-com";
@@ -26,17 +25,19 @@ const dataAtom = atom(async () => {
 const Order = () => {
   // atoms
   const countData = useAtom(dataAtom)[0];
-  // extract params from search
   const router = useRouter();
-
+  // extract params from search
   const sp = useSearchParams();
-
   // setting up order config
   // const order_type = sp.get("order_type");
   // const currency = sp.get("currency");
   // const currency_amount = sp.get("currency_amount");
   // const eur_amount = sp.get("eur_amount");
 
+  //modal
+  const [modal, setModal] = useState(false);
+
+  //search params to state
   const [order_type, setOrder_type] = useState(sp.get("order_type"));
   const [currency, setCurrency] = useState(sp.get("currency") || "GBP");
   const [currency_amount, setCurrency_amount] = useState(
@@ -102,15 +103,11 @@ const Order = () => {
         console.log(error.text);
       }
     );
-    router.push("/");
-  };
 
-  //auto conversion
-  // const multiplier = (iso) => {
-  //   let data = countData.find((o) => o.iso === iso);
-  //   console.log(currency, iso, countData);
-  //   return data.webSellRate;
-  // };
+    // setModal(true);
+    document.querySelector("dialog").showModal();
+    // router.push("#my_modal_8");
+  };
 
   useEffect(() => {
     // console.log(currency, countData);
@@ -120,167 +117,189 @@ const Order = () => {
   }, [currency]);
 
   return (
-    <div className="lg:flex lg:justify-center lg:mt-10 mt-7 mx-4">
-      <div className="card bg-base-200 shadow-xl">
-        <h1 className="text-2xl underline underline-offset-4 font-bold font-logoFont flex justify-center mt-7 tracking-widest">
-          RESERVER DEVISE
-        </h1>
-        <form
-          className="grid grid-cols-1 py-7 lg:px-7 px-2 gap-5"
-          ref={form}
-          onSubmit={sendEmail}
-        >
-          <div>
-            <div className="mb-4">
-              <h1 className="text-xl font-logoFont font-bold mt-2">
-                INFORMATION:
-              </h1>
-              <div className="flex flex-row lg:items-center gap-1 mt-3">
-                <p className="text-sm lg:text-lg">J&apos;achète</p>
-                <div className="">
+    <>
+      <dialog id="my_modal_5" className="modal-box ">
+        <div className="">
+          <h3 className="font-bold text-xl ">TITLE TITLE</h3>
+          <p className="py-4 text-lg">
+            Votre réservation va bientôt être prise en charge par nos agents,
+            merci d'attendre la confirmation sur votre mail ou votre téléphone
+          </p>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn" onClick={() => router.push("/")}>
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <div className="lg:flex lg:justify-center lg:mt-10 mt-7 mx-4">
+        <div className="card bg-base-200 shadow-xl">
+          <h1 className="text-2xl underline underline-offset-4 font-bold font-logoFont flex justify-center mt-7 tracking-widest">
+            RESERVER DEVISE
+          </h1>
+          <form
+            className="grid grid-cols-1 py-7 lg:px-7 px-2 gap-5"
+            ref={form}
+            onSubmit={sendEmail}
+          >
+            <div>
+              <div className="mb-4">
+                <h1 className="text-xl font-logoFont font-bold mt-2">
+                  INFORMATION:
+                </h1>
+                <div className="flex flex-row lg:items-center flex-wrap gap-1 mt-3">
+                  <p className="text-sm lg:text-lg">J&apos;achète</p>
+                  <div className="">
+                    <input
+                      onChange={(e) => {
+                        setCurrency_amount(e.target.value);
+                        setEur_amount((e.target.value / multiplier).toFixed(2));
+                      }}
+                      type="text"
+                      placeholder=""
+                      value={currency_amount}
+                      className="input p-1 input-bordered lg:input-sm lg:p-1 input-xs lg:w-auto w-auto  rounded-r-none border-l-0"
+                    />
+                    <select
+                      value={currency}
+                      className="select lg:select-sm select-xs select-bordered rounded-l-none "
+                      onChange={(e) => {
+                        setCurrency(e.target.value);
+                      }}
+                    >
+                      {countData.map((count) => (
+                        <option key={count.id} value={count.iso}>
+                          {count.iso}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <p className="text-sm lg:text-lg">{"pour"}</p>
                   <input
+                    value={eur_amount}
                     onChange={(e) => {
-                      setCurrency_amount(e.target.value);
-                      setEur_amount((e.target.value / multiplier).toFixed(2));
+                      setEur_amount(e.target.value);
+                      setCurrency_amount(
+                        (e.target.value * multiplier).toFixed(2)
+                      );
                     }}
                     type="text"
                     placeholder=""
-                    value={currency_amount}
-                    className="input p-1 input-bordered lg:input-sm input-xs lg:w-14 w-10  rounded-r-none border-l-0"
+                    className="input p-1  input-bordered lg:input-sm input-xs lg:w-auto w-auto  "
                   />
-                  <select
-                    value={currency}
-                    className="select lg:select-sm select-xs select-bordered rounded-l-none "
-                    onChange={(e) => {
-                      setCurrency(e.target.value);
-                    }}
-                  >
-                    {countData.map((count) => (
-                      <option key={count.id} value={count.iso}>
-                        {count.iso}
-                      </option>
-                    ))}
-                  </select>
+                  <p className="font-bold text-sm lg:text-lg">EUR</p>
                 </div>
-                <p className="text-sm lg:text-lg">{"pour"}</p>
-                <input
-                  value={eur_amount}
-                  onChange={(e) => {
-                    setEur_amount(e.target.value);
-                    setCurrency_amount(
-                      (e.target.value * multiplier).toFixed(2)
-                    );
-                  }}
-                  type="text"
-                  placeholder=""
-                  className="input p-1 input-bordered lg:input-sm input-xs lg:w-14 w-10  "
-                />
-                <p className="font-bold text-sm lg:text-lg">EUR</p>
               </div>
-            </div>
-            <div className="flex justify-center items-center lg:gap-5 gap-2">
-              <div className="form-control w-full max-w-xs">
-                <label className="label">
-                  <span className="label-text font-logoFont text-xs lg:text-sm tracking-wide">
-                    Nom/Surname:
-                  </span>
-                </label>
-                <input
-                  onChange={(e) => {
-                    setNom(e.target.value);
-                  }}
-                  value={nom}
-                  name="from_nom"
-                  required
-                  type="text"
-                  placeholder="Nom"
-                  className="input input-bordered lg:input-md input-sm w-full max-w-xs"
-                />
+              <div className="flex justify-center items-center lg:gap-5 gap-2">
+                <div className="form-control w-full max-w-xs">
+                  <label className="label">
+                    <span className="label-text font-logoFont text-xs lg:text-sm tracking-wide">
+                      Nom/Surname:
+                    </span>
+                  </label>
+                  <input
+                    onChange={(e) => {
+                      setNom(e.target.value);
+                    }}
+                    value={nom}
+                    name="from_nom"
+                    required
+                    type="text"
+                    placeholder="Nom"
+                    className="input input-bordered lg:input-md input-sm w-full max-w-xs"
+                  />
+                </div>
+                <div className="form-control w-full max-w-xs ">
+                  <label className="label">
+                    <span className="label-text font-logoFont text-xs lg:text-sm tracking-wide">
+                      Prenom/First Name:
+                    </span>
+                  </label>
+                  <input
+                    onChange={(e) => {
+                      setPrenom(e.target.value);
+                    }}
+                    value={prenom}
+                    name="from_prenom"
+                    required
+                    type="text"
+                    placeholder="Prenom"
+                    className="input input-bordered lg:input-md input-sm w-full max-w-xs"
+                  />
+                </div>
               </div>
-              <div className="form-control w-full max-w-xs ">
-                <label className="label">
-                  <span className="label-text font-logoFont text-xs lg:text-sm tracking-wide">
-                    Prenom/First Name:
-                  </span>
-                </label>
-                <input
-                  onChange={(e) => {
-                    setPrenom(e.target.value);
-                  }}
-                  value={prenom}
-                  name="from_prenom"
-                  required
-                  type="text"
-                  placeholder="Prenom"
-                  className="input input-bordered lg:input-md input-sm w-full max-w-xs"
-                />
-              </div>
-            </div>
 
-            <div className="form-control w-full max-w-xs lg:mt-5 mt-3">
-              <label className="label">
-                <span className="label-text w-full max-w-lg font-logoFont text-xs lg:text-sm">
-                  Email:
-                </span>
-              </label>
-              <input
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-                value={email}
-                name="from_email"
-                required
-                type="email"
-                placeholder="johndoe@gmail.com"
-                className="input input-bordered lg:input-md input-sm w-full max-w-xs"
-              />
+              <div className="form-control w-full max-w-xs lg:mt-5 mt-3">
+                <label className="label">
+                  <span className="label-text w-full max-w-lg font-logoFont text-xs lg:text-sm">
+                    Email:
+                  </span>
+                </label>
+                <input
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  value={email}
+                  name="from_email"
+                  required
+                  type="email"
+                  placeholder="johndoe@gmail.com"
+                  className="input input-bordered lg:input-md input-sm w-full max-w-xs"
+                />
+              </div>
+              <div className="form-control w-full max-w-xs lg:mt-5 mt-3">
+                <label className="label">
+                  <span className="label-text font-logoFont text-xs lg:text-sm tracking-wide">
+                    Phone:
+                  </span>
+                </label>
+                <input
+                  onChange={(e) => {
+                    setPhone(e.target.value);
+                  }}
+                  value={phone}
+                  name="from_email"
+                  required
+                  type="tel"
+                  placeholder="+33 66 77 88 99"
+                  className="input input-bordered lg:input-md input-sm w-full max-w-xs"
+                />
+              </div>
+              <div className="lg:mt-5 mt-3">
+                <label className="label">
+                  <span className="label-text font-logoFont text-xs lg:text-sm tracking-wide">
+                    Remarque:
+                  </span>
+                </label>
+                <textarea
+                  className="textarea textarea-bordered w-full"
+                  placeholder="Remarque"
+                  onChange={(e) => setRemarque(e.target.value)}
+                ></textarea>
+              </div>
+              <div className="flex flex-col max-w-prose lg:mt-5 mt-3 text-sm text-neutral-500">
+                <p>
+                  *Réservation uniquement valide après réception de confirmation
+                  par mail ou téléphone.
+                </p>
+                <p>*Réservation confirmée valable pendant 24h uniquement.</p>
+              </div>
             </div>
-            <div className="form-control w-full max-w-xs lg:mt-5 mt-3">
-              <label className="label">
-                <span className="label-text font-logoFont text-xs lg:text-sm tracking-wide">
-                  Phone:
-                </span>
-              </label>
-              <input
-                onChange={(e) => {
-                  setPhone(e.target.value);
-                }}
-                value={phone}
-                name="from_email"
-                required
-                type="tel"
-                placeholder="+33 66 77 88 99"
-                className="input input-bordered lg:input-md input-sm w-full max-w-xs"
-              />
+            <div className="flex justify-end items-start ">
+              <button
+                // onClick={() => window.alert("asdadasdas")}
+                className="btn btn-secondary"
+              >
+                reserver
+              </button>
             </div>
-            <div className="lg:mt-5 mt-3">
-              <label className="label">
-                <span className="label-text font-logoFont text-xs lg:text-sm tracking-wide">
-                  Remarque:
-                </span>
-              </label>
-              <textarea
-                className="textarea textarea-bordered w-full"
-                placeholder="Remarque"
-                onChange={(e) => setRemarque(e.target.value)}
-              ></textarea>
-            </div>
-            <div className="flex flex-col max-w-prose lg:mt-5 mt-3 text-sm text-neutral-500">
-              <p>
-                *Réservation uniquement valide après réception de confirmation
-                par mail ou téléphone.
-              </p>
-              <p>*Réservation confirmée valable pendant 24h uniquement.</p>
-            </div>
-          </div>
-          <div className="flex justify-end items-start ">
-            <button className="btn btn-secondary" type="submit">
-              reserver
-            </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
