@@ -35,7 +35,7 @@ export const metadata = {
     title: "Paris Exchange Saint Michel",
     description:
       "Meilleur bureau de change sur paris Saint michel pour changes les devises exchange états unis, canada, suisse, japon, etc... Meilleurs taux garanties",
-    url: "https://paris-exchange.vercel.app",
+    url: "https://paris-change.com",
     siteName: "Paris Exchange Saint Michel",
     images: [
       {
