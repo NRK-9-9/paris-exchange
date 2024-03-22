@@ -7,7 +7,7 @@ export default async function Sentence() {
   return (
     <div className="">
       {sen[0].message !== "none" ? (
-        <div className="flex flex-row bg-neutral-focus lg:text-2xl text-xs pt-1 w-full overflow-hidden py-1 ">
+        <div className="flex flex-row bg-[#13CFAB] bg-opacity-80 lg:text-2xl text-xs pt-1 w-full overflow-hidden py-1 ">
           <p className="animate-conveyor-belt text-secondary uppercase font-mono font-[550] whitespace-nowrap ">
             {sen[0].message}
           </p>

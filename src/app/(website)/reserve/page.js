@@ -28,14 +28,6 @@ const Order = () => {
   const router = useRouter();
   // extract params from search
   const sp = useSearchParams();
-  // setting up order config
-  // const order_type = sp.get("order_type");
-  // const currency = sp.get("currency");
-  // const currency_amount = sp.get("currency_amount");
-  // const eur_amount = sp.get("eur_amount");
-
-  //modal
-  const [modal, setModal] = useState(false);
 
   //search params to state
   const [order_type, setOrder_type] = useState(sp.get("order_type"));
@@ -79,8 +71,8 @@ const Order = () => {
     console.log(serial);
 
     send(
-      "service_2pcvelf", //service_okb8odt {{order_type}} {{devise_or_metal}} {{from_prenom}} {{from_nom}}
-      "template_7zelano",
+      process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE, //service_okb8odt {{order_type}} {{devise_or_metal}} {{from_prenom}} {{from_nom}}
+      process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE,
       {
         order_type: order_type,
         currency: currency,
@@ -94,7 +86,7 @@ const Order = () => {
         serial: serial,
         remarque: remarque,
       },
-      "KQzl7aHqeIUNqL7Cd"
+      process.env.NEXT_PUBLIC_EMAIL_JS_API
     ).then(
       (result) => {
         console.log(result.text);
@@ -103,10 +95,7 @@ const Order = () => {
         console.log(error.text);
       }
     );
-
-    // setModal(true);
     document.querySelector("dialog").showModal();
-    // router.push("#my_modal_8");
   };
 
   useEffect(() => {

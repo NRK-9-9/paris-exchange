@@ -1,9 +1,8 @@
 "use client";
-import React, { Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import CountrySelect from "./countrySelect";
 import Table from "./table";
 import TableSkeleton from "./skeletons/tableSkeleton";
-import { logging } from "../../next.config";
 
 export default function ExchangeTable({ setGold }) {
   const [exchangeData, setExchangeData] = useState();
