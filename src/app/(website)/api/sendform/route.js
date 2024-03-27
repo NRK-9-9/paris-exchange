@@ -19,7 +19,7 @@ export async function POST(req, res) {
 
   try {
     await tpt.sendMail({
-      from: from_email,
+      from: process.env.NEXT_PUBLIC_NODEMAILER_MAIL,
       to: process.env.NEXT_PUBLIC_NODEMAILER_MAIL,
       replyTo: from_email,
       subject: `Reservation ${from_email}`,

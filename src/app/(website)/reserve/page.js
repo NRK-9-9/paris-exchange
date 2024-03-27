@@ -92,7 +92,18 @@ const Order = () => {
       serial: serial,
       remarque: remarque,
     });
+
+    setNom("");
+    setPhone("");
+    setPrenom("");
+    setEmail("");
+    setRemarque("");
+
     document.querySelector("dialog").showModal();
+
+    setTimeout(function () {
+      router.push("/");
+    }, 5000);
   };
 
   useEffect(() => {
@@ -111,6 +122,7 @@ const Order = () => {
             Votre réservation va bientôt être prise en charge par nos agents,
             merci d&apos;attendre la confirmation par mail ou par téléphone.
           </p>
+          <small>You will be redirected to main page in 5 seconds</small>
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
