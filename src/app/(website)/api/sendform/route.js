@@ -37,10 +37,14 @@ export async function POST(req, res) {
         remarque
       ),
     });
-
-    return NextResponse.json({ message: "Success: email was sent" });
+    return NextResponse.json(
+      {
+        message: "Success: email was sent",
+      },
+      { status: 200 }
+    );
   } catch (error) {
     console.log(error);
-    NextResponse.status(500).json({ message: error });
+    NextResponse.json({ message: error }, { status: 500 });
   }
 }
