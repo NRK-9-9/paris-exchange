@@ -22,7 +22,7 @@ export async function POST(req, res) {
       from: from_email,
       to: process.env.NEXT_PUBLIC_NODEMAILER_MAIL,
       replyTo: from_email,
-      subject: `Edenmen FeedBack from Website ${from_email}`,
+      subject: `Reservation ${from_email}`,
       html: compileFeedbackTemplate(
         order_type,
         currency,
@@ -41,6 +41,6 @@ export async function POST(req, res) {
     return NextResponse.json({ message: "Success: email was sent" });
   } catch (error) {
     console.log(error);
-    NextResponse.status(500).json({ message: "COULD NOT SEND MESSAGE" });
+    NextResponse.status(500).json({ message: error });
   }
 }

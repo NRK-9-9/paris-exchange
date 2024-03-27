@@ -3,6 +3,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import { atom, useAtom } from "jotai";
 import { sendForm } from "@/lib/api/sendFormApi";
+import { useForm } from "react-hook-form";
 
 const dataAtom = atom(async () => {
   const res = await fetch(
@@ -46,6 +47,14 @@ const Order = () => {
 
   const [multiplier, setMultiplier] = useState();
 
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   watch,
+  //   reset,
+  //   formState: { errors },
+  // } = useForm();
+
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -70,31 +79,6 @@ const Order = () => {
     const serial = `${order_type == "buy" ? "VC" : "AC"}-${dateOfDay}`;
     console.log(serial);
 
-    // send(
-    //   process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE, //service_okb8odt {{order_type}} {{devise_or_metal}} {{from_prenom}} {{from_nom}}
-    //   process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE,
-    //   {
-    //     order_type: order_type,
-    //     currency: currency,
-    //     currency_amount: currency_amount,
-    //     euro_amount: eur_amount,
-    //     from_nom: prenom,
-    //     from_prenom: nom,
-    //     from_email: email,
-    //     exchange_date: date,
-    //     phone_num: phone,
-    //     serial: serial,
-    //     remarque: remarque,
-    //   },
-    //   process.env.NEXT_PUBLIC_EMAIL_JS_API
-    // ).then(
-    //   (result) => {
-    //     console.log(result.text);
-    //   },
-    //   (error) => {
-    //     console.log(error.text);
-    //   }
-    // );
     sendForm({
       order_type: order_type,
       currency: currency,
