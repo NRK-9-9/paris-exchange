@@ -33,7 +33,7 @@ export function ReviewCarrousel() {
           >
             <div className="p-1 h-40 ">
               <Card>
-                <CardContent className="flex bg-[#13CFAB] items-center h-32 justify-center ">
+                <CardContent className="flex bg-primary items-center h-32 justify-center ">
                   <span className="">Test Name </span>
                   <p>FAKE TEST REVIEW</p>
                 </CardContent>
