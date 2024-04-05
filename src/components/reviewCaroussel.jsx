@@ -31,9 +31,9 @@ export function ReviewCarrousel() {
             key={index}
             className="basis-1/2 md:basis-1/2 lg:basis-1/5"
           >
-            <div className="p-1 h-40">
+            <div className="p-1 h-40 ">
               <Card>
-                <CardContent className="flex items-center h-32 justify-center ">
+                <CardContent className="flex bg-[#13CFAB] items-center h-32 justify-center ">
                   <span className="">Test Name </span>
                   <p>FAKE TEST REVIEW</p>
                 </CardContent>
